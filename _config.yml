@@ -3,11 +3,11 @@ description: A creature-collecting RPG you play inside Discord, with your whole 
 lang: en-GB
 
 # Fill these in before going live. Each TODO is used on more than one page.
-url: https://TODO-your-domain
+url: https://4cube.org
 baseurl: ""
-contact: TODO@your-domain
-stable_client_id: "TODO"
-beta_form: https://formspree.io/f/TODO
+contact: mark@4cube.org
+stable_client_id: "1552498713778196500"
+beta_form: https://formspree.io/f/mnpngyvj
 
 repo: https://github.com/Four-Cube-Games/super-adventure
 board: https://github.com/orgs/Four-Cube-Games/projects/TODO
