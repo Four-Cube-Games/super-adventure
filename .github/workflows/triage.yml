@@ -26,7 +26,7 @@ jobs:
           ADDED: ${{ github.event.label.name }}
         run: |
           set -euo pipefail
-          triage=("won't do" "bug" "enhancement" "new feature" "needs triage")
+          triage=("won't do" "spike" "bug" "enhancement" "new feature" "needs triage")
           is_triage() { for t in "${triage[@]}"; do [[ "$1" == "$t" ]] && return 0; done; return 1; }
 
           issue=$(gh issue view "$NUMBER" --repo "$REPO" --json labels,state,stateReason)

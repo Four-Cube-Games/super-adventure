@@ -23,7 +23,7 @@ Run it locally with `docker run --rm -p 4000:4000 -v "$PWD:/srv/jekyll" jekyll/j
 
 ## Feedback and triage
 
-Every issue carries one of five labels, and the board has a column for each:
+Every issue carries one of six labels, and the board has a column for each:
 
 | Label | Means |
 |---|---|
@@ -31,6 +31,7 @@ Every issue carries one of five labels, and the board has a column for each:
 | `new feature` | something the game doesn't do |
 | `enhancement` | a change to something it does |
 | `bug` | something broken |
+| `spike` | an idea that needs research before it can be decided |
 | `won't do` | considered and declined; the issue is closed as not planned |
 
 `.github/workflows/triage.yml` keeps them tidy. A new issue with none gets `needs triage`. Adding
@@ -48,7 +49,7 @@ and moving a declined issue to any other label reopens it.
    ```fish
    gh label delete enhancement --repo Four-Cube-Games/super-adventure --yes
    gh label delete bug --repo Four-Cube-Games/super-adventure --yes
-   for label in "needs triage:ededed" "new feature:3e8f4f" "enhancement:1f6feb" "bug:c8343f" "won't do:6e7781"
+   for label in "needs triage:ededed" "new feature:3e8f4f" "enhancement:1f6feb" "bug:c8343f" "spike:8250df" "won't do:6e7781"
        set parts (string split : $label)
        gh label create $parts[1] --color $parts[2] --repo Four-Cube-Games/super-adventure --force
    end
@@ -56,7 +57,7 @@ and moving a declined issue to any other label reopens it.
 
 4. **Board:** create a public organisation project (*Four-Cube-Games → Projects → New project →
    Board*) called *Super Adventure feedback*. Add a single-select field **Triage** with the options
-   `Needs Triage`, `New Feature`, `Enhancement`, `Bug`, `Won't Do`, in that order, and set the board
+   `Needs Triage`, `New Feature`, `Enhancement`, `Bug`, `Spike`, `Won't Do`, in that order, and set the board
    view's columns to it. Under *Settings*, make it public.
 5. **Sync:** create a fine-grained token owned by the organisation, with *Projects: read and write*
    on the organisation and nothing else. Add it to this repo as the secret `BOARD_TOKEN`, and the
