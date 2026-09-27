@@ -31,6 +31,7 @@ jobs:
 
           issue=$(gh issue view "$NUMBER" --repo "$REPO" --json labels,state,stateReason)
           mapfile -t labels < <(jq -r '.labels[].name' <<<"$issue")
+          for l in "${labels[@]}"; do [[ "$l" == "epic" ]] && exit 0; done
 
           state=""
           if [[ -n "$ADDED" ]] && is_triage "$ADDED"; then

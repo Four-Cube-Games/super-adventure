@@ -38,6 +38,9 @@ Every issue carries one of six labels, and the board has a column for each:
 a triage label removes the others and moves the card to its column. `won't do` closes the issue,
 and moving a declined issue to any other label reopens it.
 
+An `epic` groups related tickets as its sub-issues. Epics carry no triage label and stay off the
+board's columns; the board's *Parent issue* field shows which epic a card belongs to.
+
 ## Setting it up, once
 
 1. **Pages:** *Settings → Pages → Deploy from a branch*, `main`, `/ (root)`.
@@ -49,7 +52,7 @@ and moving a declined issue to any other label reopens it.
    ```fish
    gh label delete enhancement --repo Four-Cube-Games/super-adventure --yes
    gh label delete bug --repo Four-Cube-Games/super-adventure --yes
-   for label in "needs triage:ededed" "new feature:3e8f4f" "enhancement:1f6feb" "bug:c8343f" "spike:8250df" "won't do:6e7781"
+   for label in "needs triage:ededed" "new feature:3e8f4f" "enhancement:1f6feb" "bug:c8343f" "spike:8250df" "won't do:6e7781" "epic:0e8a16"
        set parts (string split : $label)
        gh label create $parts[1] --color $parts[2] --repo Four-Cube-Games/super-adventure --force
    end
