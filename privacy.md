@@ -51,7 +51,7 @@ We also keep a weekly count of servers and players, to see how the game is doing
   rematches and challenges.
 - **Us**, to run the game, approve servers and fix problems.
 
-We don't sell, rent or share your data with anyone, except where the law requires it.
+We don't sell, rent or share your data with anyone.
 
 ## Where it's kept, and for how long
 
