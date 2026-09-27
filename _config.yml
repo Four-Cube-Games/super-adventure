@@ -2,7 +2,6 @@ title: Super Adventure
 description: A creature-collecting RPG you play inside Discord, with your whole server, on a map nobody has seen before.
 lang: en-GB
 
-# Fill these in before going live. Each TODO is used on more than one page.
 url: https://adventure.4cube.org
 baseurl: ""
 contact: mark@4cube.org
@@ -10,7 +9,7 @@ stable_client_id: "1552498713778196500"
 beta_form: https://formspree.io/f/mnpngyvj
 
 repo: https://github.com/Four-Cube-Games/super-adventure
-board: https://github.com/orgs/Four-Cube-Games/projects/TODO
+board: https://github.com/orgs/Four-Cube-Games/projects/1
 
 tabs:
   - title: Home
