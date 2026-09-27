@@ -5,6 +5,8 @@ lang: en-GB
 url: https://adventure.4cube.org
 baseurl: ""
 contact: mark@4cube.org
+discord_contact_id: "273632735367528448"
+discord_contact_name: mynameismawky
 stable_client_id: "1552498713778196500"
 beta_form: https://formspree.io/f/mnpngyvj
 

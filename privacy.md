@@ -65,13 +65,18 @@ recognised.
 
 ## Deleting your data
 
-Email [{{ site.contact }}](mailto:{{ site.contact }}) from any address, with your Discord username
-and user id (in Discord: *Settings → Advanced → Developer Mode*, then right-click yourself and
-*Copy User ID*). We'll delete your account, saves, creatures and records within 30 days, and
-confirm when it's done. Copies in backups disappear as the backups roll over, within 14 days after
-that. A server's owner can ask the same for their server.
+Ask on Discord, from the account the data belongs to: that's how we know the request is really
+yours. Message [{{ site.discord_contact_name }}](https://discord.com/users/{{ site.discord_contact_id }})
+and say you'd like your data deleted. If Discord won't let you send a message, send a friend request
+from that profile first.
 
-You can also ask what we hold about you, or for it to be corrected.
+<p><a class="button" href="https://discord.com/users/{{ site.discord_contact_id }}">Message {{ site.discord_contact_name }} on Discord</a></p>
+
+We'll delete your account, saves, creatures and records within 30 days, and confirm when it's
+done. Copies in backups disappear as the backups roll over, within 14 days after that. A server's
+owner can ask the same for their server, from the owner's account.
+
+You can ask what we hold about you, or for it to be corrected, the same way.
 
 ## This website
 
