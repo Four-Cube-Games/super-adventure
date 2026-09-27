@@ -3,7 +3,7 @@ description: A creature-collecting RPG you play inside Discord, with your whole 
 lang: en-GB
 
 # Fill these in before going live. Each TODO is used on more than one page.
-url: https://4cube.org
+url: https://adventure.4cube.org
 baseurl: ""
 contact: mark@4cube.org
 stable_client_id: "1552498713778196500"
