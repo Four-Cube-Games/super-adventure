@@ -61,7 +61,7 @@ to fix problems.
 
 Your data is kept while you play. If you stop, it stays, so that you can come back to your worlds.
 A server's settings and standing are kept after the bot leaves, so a returning server is
-recognised.
+recognized.
 
 ## Deleting your data
 

@@ -14,7 +14,7 @@ Feedback lands in this repo's issues and on the org's feedback board.
 | `handbook.html` | every rule, each with a feedback button that opens the issue form |
 | `play.md` | adding the stable bot, and asking to join the beta |
 | `terms.md`, `privacy.md` | the policies linked from the Discord applications |
-| `licences.md` | third-party notices |
+| `licenses.md` | third-party notices |
 
 Settings shared by several pages, such as the contact address, the install link's client id, the
 beta form and the board, are in `_config.yml`.
@@ -45,7 +45,7 @@ board's columns; the board's *Parent issue* field shows which epic a card belong
 
 1. **Pages:** *Settings → Pages → Deploy from a branch*, `main`, `/ (root)`.
 2. **Domain:** add it under *Settings → Pages → Custom domain*, which commits a `CNAME` file. Point
-   DNS as GitHub shows you, then tick *Enforce HTTPS*. Verify the domain under the organisation's
+   DNS as GitHub shows you, then tick *Enforce HTTPS*. Verify the domain under the organization's
    *Settings → Pages* too. Set `url` in `_config.yml` to match.
 3. **Labels:**
 
@@ -58,12 +58,12 @@ board's columns; the board's *Parent issue* field shows which epic a card belong
    end
    ```
 
-4. **Board:** create a public organisation project (*Four-Cube-Games → Projects → New project →
+4. **Board:** create a public organization project (*Four-Cube-Games → Projects → New project →
    Board*) called *Super Adventure feedback*. Add a single-select field **Triage** with the options
    `Needs Triage`, `New Feature`, `Enhancement`, `Bug`, `Spike`, `Won't Do`, in that order, and set the board
    view's columns to it. Under *Settings*, make it public.
-5. **Sync:** create a fine-grained token owned by the organisation, with *Projects: read and write*
-   on the organisation and nothing else. Add it to this repo as the secret `BOARD_TOKEN`, and the
+5. **Sync:** create a fine-grained token owned by the organization, with *Projects: read and write*
+   on the organization and nothing else. Add it to this repo as the secret `BOARD_TOKEN`, and the
    project's number (from its URL) as the variable `BOARD`.
 6. **Beta form:** create a form on Formspree, and put its endpoint in `beta_form`.
 7. Fill in the rest of `_config.yml`: `contact`, `stable_client_id` (stable's *Application ID*),

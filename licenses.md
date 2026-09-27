@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Licences
+title: Licenses
 description: Third-party software and fonts used by Super Adventure.
 prose: true
-permalink: /licences/
+permalink: /licenses/
 ---
 
-# Licences
+# Licenses
 
 Super Adventure is built on other people's work. Thank you to all of them.
 
 ## In the bot
 
-| Work | Licence |
+| Work | License |
 |---|---|
 | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), by CodeMan38 | [SIL Open Font License 1.1](https://openfontlicense.org) |
 | [GNU Unifont](https://unifoundry.com/unifont/), by Roman Czyborra, Paul Hardy and contributors | [SIL Open Font License 1.1](https://openfontlicense.org) |
@@ -23,7 +23,7 @@ Super Adventure is built on other people's work. Thank you to all of them.
 
 ## On this site
 
-| Work | Licence |
+| Work | License |
 |---|---|
 | [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible), by the Braille Institute | [SIL Open Font License 1.1](https://openfontlicense.org) |
 | [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans), by Stefie Justprince | [SIL Open Font License 1.1](https://openfontlicense.org) |
