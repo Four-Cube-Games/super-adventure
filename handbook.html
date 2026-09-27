@@ -1,0 +1,651 @@
+---
+layout: default
+title: Player Handbook
+description: Every rule of Super Adventure in plain language, with a feedback button on each one.
+styles: /assets/handbook.css
+---
+<header class="masthead">
+  <div>
+    <p class="eyebrow">Super Adventure</p>
+    <h1>Player Handbook</h1>
+    <p class="lede">Mark is building <strong>the classic Red and Blue games, played inside Discord</strong>, with your friends, on a map nobody has seen before. This is every rule we've settled on so far. Some are straight from the games; plenty are new. <strong>Tell us which ones you'd change.</strong></p>
+  </div>
+  <div class="screen">
+    <img src="{{ '/assets/handbook/battle.png' | relative_url }}" alt="A battle in the style of Ruby and Sapphire: your creature from behind on the near base, a wild one on the far base, a box with name, level and health for each, your HP as numbers, and "What will EMBERKIT do?" in the message box." width="480" height="320">
+  </div>
+</header>
+
+<aside class="how" aria-label="How to give feedback">
+  <h2>How to weigh in</h2>
+  <div><b>1. Read a rule</b><span>Each card says what happens and why.</span></div>
+  <div><b>2. Answer its question</b><span>The yellow box is the thing we're least sure about.</span></div>
+  <div><b>3. Press "Give feedback"</b><span>It opens a form on GitHub with the rule filled in, and your note lands on the <a href="{{ site.board }}">feedback board</a>. Hate a rule? Say so. Love one? Say that too.</span></div>
+</aside>
+
+<nav class="contents" aria-label="Chapters">
+  <a href="#start">Getting started</a>
+  <a href="#map">The map</a>
+  <a href="#days">Days</a>
+  <a href="#battles">Battles</a>
+  <a href="#evolution">Evolution</a>
+  <a href="#shops">Shops</a>
+  <a href="#preserve">The preserve</a>
+  <a href="#legends">Legendaries</a>
+  <a href="#seasons">Seasons</a>
+  <a href="#winning">Winning</a>
+  <a href="#trainer">Your trainer</a>
+  <a href="#missing">What next</a>
+</nav>
+
+<section class="chapter" id="start">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 1</p>
+    <h2>Getting started</h2>
+    <p>There's no overworld to walk around. You play with slash commands and buttons, and everything you see is private to you, so a whole server can play in one channel without spamming it.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/starters.png' | relative_url }}" alt="Three starter creatures on cards, each named underneath." width="656" height="264"></div>
+      <figcaption>Pictures in this handbook use placeholder silhouettes. In the bot itself they're the real sprites.</figcaption>
+    </figure>
+    <div class="legend">
+      <span><b>/start</b> in a server joins that server's shared world.</span>
+      <span><b>/start</b> in a direct message makes a world just for you.</span>
+      <span><b>/play</b> opens your game. <b>/leaderboard</b> and <b>/worlds</b> do what they say.</span>
+    </div>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="starters">
+      <h3>Your starter is one of three, but not always the famous three</h3>
+      <p class="said">Every world offers three starters: uncommon creatures that can evolve, each of a different type. One server might choose between Eevee, Dratini and Bulbasaur. Everyone in a server is offered the same three.</p>
+      <p class="ask">Would you rather always get Bulbasaur, Charmander and Squirtle?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Your%20starter%20is%20one%20of%20three%2C%20but%20not%20always%20the%20famous%20three&amp;rule=Your%20starter%20is%20one%20of%20three%2C%20but%20not%20always%20the%20famous%20three">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="kit">
+      <h3>You set out with 5 balls and 500 coins</h3>
+      <p class="said">Enough to catch a few things before your first trainer battle pays out. In Red and Blue you started with 3,000 money and no balls at all.</p>
+      <p class="ask">Is that too stingy?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20You%20set%20out%20with%205%20balls%20and%20500%20coins&amp;rule=You%20set%20out%20with%205%20balls%20and%20500%20coins">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="map">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 2</p>
+    <h2>The map</h2>
+    <p>Every world is generated from a random seed, so each server gets a different region: different routes, different gym types, different creatures in different places. Each world is also one region, and it keeps that region's creatures and moves for good.</p>
+    <p>Places have made-up names of their own: towns like <b>Barleymoor Town</b>, a <b>City</b> wherever there's a gym, <b>Basalt Cave</b>, <b>Thunder Bike Road</b>, <b>Lantern Shrine</b> and hideouts like the <b>Old Foundry</b>. Routes are numbered in order. No two places in a world share a name.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/map.png' | relative_url }}" alt="A region map in Ruby and Sapphire's style: coloured squares for each place along a winding route on an island, with you standing in a red cursor and ground not yet opened in grey." width="480" height="384"></div>
+      <figcaption>The region map, one button away, in the style of Ruby and Sapphire's map.</figcaption>
+    </figure>
+    <div class="legend">
+      <span><b>Red squares</b> are towns with a gym, marked gold once you've got the badge. <b>Blue squares</b> are towns without one.</span>
+      <span><b>The wild:</b> sand-coloured routes, brown caves, grey tunnels, pale blue bike roads.</span>
+      <span><b>Dark purple</b> is a villain hideout, <b>violet</b> a shrine, and <b>gold</b>, at the very end, the Elite Four.</span>
+      <span><b>Grey</b> ground hasn't been opened yet. You stand in the red cursor.</span>
+    </div>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/town.png' | relative_url }}" alt="A top-down town: a Center with a red roof, a Mart with a blue roof and a bigger gym with a grey star, its leader waiting outside, trees along the edges." width="480" height="320"></div>
+      <figcaption>Wherever you are, the bot draws the place from above, the way Ruby and Sapphire did. This town has a gym whose badge you haven't won yet.</figcaption>
+    </figure>
+    <div class="legend">
+      <span><b>Towns</b> show their buildings: the Center (red roof), the shop (blue), a gym with a star that turns gold once you've got its badge, and the preserve's gate if the town has one.</span>
+      <span><b>Routes, caves and hideouts</b> are laid out fresh for every world, with tall grass, ledges, boulders and the trainers waiting there, faded once you've beaten them.</span>
+      <span><b>At a shrine</b> the legend sleeps on its altar as a shadow, until you've had your one shot at it.</span>
+    </div>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="regions">
+      <h3>A world is one region, with that game's dex and moves</h3>
+      <p class="said">A Johto world has the 251 species in Gold and Silver's Johto dex, Pidgey and Onix included, and they learn the moves they learned in Gold and Silver. Every region from Kanto to Paldea works the same way. In the last three days of a season, everyone playing in your server votes on where the next one goes with <code>/region vote</code>, and can change their vote until it closes; the season you're in stays where it is. The most votes wins, a tie is drawn between the leaders, and with no votes at all it's the bot's home region. <code>/region show</code> has the tally. A private world can pick its own when you <code>/start</code> it in a direct message.</p>
+      <p class="ask">Which region would you vote for next season, and is three days long enough to vote?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20world%20is%20one%20region%2C%20with%20that%20game%27s%20dex%20and%20moves&amp;rule=A%20world%20is%20one%20region%2C%20with%20that%20game%27s%20dex%20and%20moves">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="gyms">
+      <h3>Eight gyms, each a random type</h3>
+      <p class="said">Gym types are drawn from the region, as different from each other as possible. Your eighth gym might be Fairy. Levels climb steadily: the first gym leader is level 14, the last level 56. The way to the first gym starts gently, with at least three stretches of wild beginning at level 2 and climbing no more than three levels each.</p>
+      <p class="ask">Should gym types follow the originals (Rock, Water, Electric…) instead?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Eight%20gyms%2C%20each%20a%20random%20type&amp;rule=Eight%20gyms%2C%20each%20a%20random%20type">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="gym-trainers">
+      <h3>Gym trainers first, back to back</h3>
+      <p class="said">Every gym has trainers before its leader: two at the first gym, four by the eighth, using the gym's type a few levels below the leader. You fight them in order with no healing in between, and the leader won't see you until they're all down. Lose to anyone, or step out to heal at the Center, and they're all waiting again.</p>
+      <p class="ask">Too harsh, or just what a gym should feel like?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Gym%20trainers%20first%2C%20back%20to%20back&amp;rule=Gym%20trainers%20first%2C%20back%20to%20back">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="rares">
+      <h3>Rare creatures hide in one spot each, and some aren't in your world at all</h3>
+      <p class="said">A few rare ones hide in a single place each, usually a cave. The rest simply don't exist in that world, so which ones you can't get changes from world to world. <em>That's what makes playing more than one season worth it.</em></p>
+      <p class="ask">Is "some rares just aren't here" exciting, or annoying?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Rare%20creatures%20hide%20in%20one%20spot%20each%2C%20and%20some%20aren%27t%20in%20your%20world%20at%20all&amp;rule=Rare%20creatures%20hide%20in%20one%20spot%20each%2C%20and%20some%20aren%27t%20in%20your%20world%20at%20all">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="terrain">
+      <h3>Where you are changes what you meet</h3>
+      <p class="said">Routes have lots of trainers and common creatures. Caves have few trainers and more unusual ones. Bike roads and tunnels are packed with trainers, and there's no way around them.</p>
+      <p class="ask">Anything you'd expect a cave or a route to have that we've missed?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Where%20you%20are%20changes%20what%20you%20meet&amp;rule=Where%20you%20are%20changes%20what%20you%20meet">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="hideouts">
+      <h3>Villain hideouts: three or four grunts, then a boss</h3>
+      <p class="said">From the third gym on, a couple of hideouts sit in the way. You fight straight through with nowhere to heal, and if you black out you start the hideout again from the first grunt.</p>
+      <p class="ask">Is losing the whole run too harsh?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Villain%20hideouts%3A%20three%20or%20four%20grunts%2C%20then%20a%20boss&amp;rule=Villain%20hideouts%3A%20three%20or%20four%20grunts%2C%20then%20a%20boss">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="people">
+      <h3>Everyone has a name, and something to say</h3>
+      <p class="said">Trainers suit where they stand: a Youngster or a Lass on a route, Hikers underground, Bikers on the bike road, Ace Trainers in a gym, Grunts in a hideout. Each one has a line when the fight starts and another when it ends: <em>“I've been lost for three days. Battle me so it feels like progress.”</em> Leaders talk about their type and hand over the badge themselves. In every town a local has something to say that changes each day, and it's often a real tip about what's ahead, like where something rare hides or what type the next leader uses. The nurse, the shop clerk and the preserve's warden say hello too.</p>
+      <p class="ask">Which line made you smile, and which one should we rewrite?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Everyone%20has%20a%20name%2C%20and%20something%20to%20say&amp;rule=Everyone%20has%20a%20name%2C%20and%20something%20to%20say">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="days">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 3</p>
+    <h2>Days, and playing together</h2>
+    <p>This is the biggest difference from the games. The map is split into stretches that each end at a town, and <strong>you can push into one new stretch a day</strong>, or more if your server picks a faster pace. Going back over ground you've already covered is always free.</p>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="one-a-day">
+      <h3>One new stretch of map per day, unless your server speeds up</h3>
+      <p class="said">Leaving a town for ground you've never seen costs your day's move. Inside a stretch you can go as far as you like, so you can always finish a day somewhere safe. At a faster pace you get two or three new stretches a day instead.</p>
+      <p class="ask">Would you play more or less if this limit weren't there?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20One%20new%20stretch%20of%20map%20per%20day%2C%20unless%20your%20server%20speeds%20up&amp;rule=One%20new%20stretch%20of%20map%20per%20day%2C%20unless%20your%20server%20speeds%20up">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="time-zone">
+      <h3>A new day starts at midnight where your server is</h3>
+      <p class="said">Each server picks its time zone with <code>/timezone set</code>, suggested as you type. Until it does, days turn over at midnight UTC. Changing it never costs or gives anyone a day: the day you're in just runs on to the next midnight in the new zone, so it can get longer, but never shorter. Private worlds stay on UTC.</p>
+      <p class="ask">Is midnight the right time for a new day, or would the morning suit your server better?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20new%20day%20starts%20at%20midnight%20where%20your%20server%20is&amp;rule=A%20new%20day%20starts%20at%20midnight%20where%20your%20server%20is">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="first-through">
+      <h3>The first person to reach a town opens the way for everyone</h3>
+      <p class="said">A server moves through the map together. Nobody can go past the furthest town anyone has reached, and whoever gets there first holds the door for the rest. The server hears about it: <em>"Ada reached Fernford City first."</em></p>
+      <p class="ask">Fun race, or frustrating wait?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20The%20first%20person%20to%20reach%20a%20town%20opens%20the%20way%20for%20everyone&amp;rule=The%20first%20person%20to%20reach%20a%20town%20opens%20the%20way%20for%20everyone">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="healing">
+      <h3>Healing at a Center ends your day</h3>
+      <p class="said">Heal up and you're done until tomorrow. Or pay coins to keep going, which costs twice as much each time you do it in one day (200, then 400, then 800). You never have to heal to finish a day: it ends by itself at midnight, and once you've used today's new ground you can keep searching, battling and training where you are.</p>
+      <p class="ask">Is ending the day the right price for a full heal?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Healing%20at%20a%20Center%20ends%20your%20day&amp;rule=Healing%20at%20a%20Center%20ends%20your%20day">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="blackout">
+      <h3>Blacking out costs half your coins, but not your day</h3>
+      <p class="said">You're patched up and sent back to the last Center you passed. If blacking out ended your day too, fainting on purpose would be a free heal and nobody would ever use a Center.</p>
+      <p class="ask">Half your coins: too much, too little?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Blacking%20out%20costs%20half%20your%20coins%2C%20but%20not%20your%20day&amp;rule=Blacking%20out%20costs%20half%20your%20coins%2C%20but%20not%20your%20day">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="battles">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 4</p>
+    <h2>Battles and catching</h2>
+    <p>Battles work like Red and Blue: faster creatures go first, same-type moves hit harder, type matchups matter, moves can poison, paralyse or put to sleep, you can swap creatures mid-fight, and you can run from wild ones but not trainers. On top of that come later games' pieces: critical hits, abilities, weather and screens. Catching uses the original formula: the weaker it is, the easier it is to catch.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/ailments.png' | relative_url }}" alt="A battle with a paralysed foe and a poisoned creature of your own: a small coloured PAR plate and PSN plate sit where each one's level would be." width="480" height="320"></div>
+      <figcaption>An ailment's plate takes the level's place, as in Ruby and Sapphire. (Made-up test creatures; in play it's the real sprites.)</figcaption>
+    </figure>
+    <div class="legend">
+      <span><b>PSN</b> poisoned and <b>BRN</b> burned: they lose an eighth of their HP every turn, and a burn halves physical attacks.</span>
+      <span><b>PAR</b> paralysed: a quarter of the speed, and one turn in four it can't move.</span>
+      <span><b>SLP</b> asleep for one to three turns; <b>FRZ</b> frozen until it thaws, one turn in five.</span>
+    </div>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="balls">
+      <h3>Every throw uses a ball</h3>
+      <p class="said">Plain balls are the basic throw, Great Balls are 1.5 times as likely, Ultra Balls twice. A catch pays you 10 coins a level, so a good catch roughly pays for its ball.</p>
+      <p class="ask">Should catches pay coins at all?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Every%20throw%20uses%20a%20ball&amp;rule=Every%20throw%20uses%20a%20ball">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="shiny">
+      <h3>One wild creature in 1,024 is shiny</h3>
+      <p class="said">A shiny comes in its own colours, with a sparkle beside it and a ✨ by its name, and a shiny encounter opens with <em>“✨ A shiny Pidgey appeared!”</em> It's no stronger than any other. It stays shiny when you catch it and when it evolves, your server hears when you catch one, and your trainer card counts the shinies you own.</p>
+      <p class="ask">Is 1 in 1,024 rare enough to feel special, but common enough that you'll meet one?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20One%20wild%20creature%20in%201%2C024%20is%20shiny&amp;rule=One%20wild%20creature%20in%201%2C024%20is%20shiny">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="box">
+      <h3>You carry six, and the box holds everything else</h3>
+      <p class="said">Anything you catch with six already in your party goes to your box, and the box has no limit. A cap would only make you let creatures go to make room. The <b>Party</b> button swaps creatures between party and box whenever you're out of battle. They go as they are, so the box won't heal them.</p>
+      <p class="ask">Would you ever want to release a creature, or trade one away for good?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20You%20carry%20six%2C%20and%20the%20box%20holds%20everything%20else&amp;rule=You%20carry%20six%2C%20and%20the%20box%20holds%20everything%20else">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="exp">
+      <h3>Everyone who fought shares the experience</h3>
+      <p class="said">Like Red and Blue: every creature that was out against a foe and is still standing splits its experience evenly, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>, and from then on the rest of your party takes half as well. It's part of that world's run, not something you keep: nothing permanent makes you better at the game.</p>
+      <p class="ask">Is the third badge the right time for the Exp. Share?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Everyone%20who%20fought%20shares%20the%20experience&amp;rule=Everyone%20who%20fought%20shares%20the%20experience">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="training">
+      <h3>No two creatures are quite alike, and they grow by what they beat</h3>
+      <p class="said">Like the later games. Every wild creature, and your starter, has a <b>nature</b>: most raise one stat by a tenth and lower another, a few do neither. It also has <b>potential</b>, 0 to 31 in each stat, which your party screen grades S to D. Both are fixed for life, so a second Pidgey can be a better Pidgey. Beating a creature <b>trains</b> everyone who earns experience from it in the stat its species teaches: a Pidgey teaches Speed, an Onix Defense. That's up to 252 in a stat and 510 in all. Trainers' creatures have more potential the higher up the trainer: the Elite Four have the most.</p>
+      <p class="ask">Is this fun to chase, or too much to keep track of?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20No%20two%20creatures%20are%20quite%20alike%2C%20and%20they%20grow%20by%20what%20they%20beat&amp;rule=No%20two%20creatures%20are%20quite%20alike%2C%20and%20they%20grow%20by%20what%20they%20beat">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="switching">
+      <h3>Swap creatures whenever you like, for a turn</h3>
+      <p class="said">Call one back and send another out. It costs your turn, like using an item, and the other side gets a free hit on whoever comes in.</p>
+      <p class="ask">Is a free hit on the newcomer too harsh?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Swap%20creatures%20whenever%20you%20like%2C%20for%20a%20turn&amp;rule=Swap%20creatures%20whenever%20you%20like%2C%20for%20a%20turn">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="trainer-switching">
+      <h3>Gym leaders and champions switch back</h3>
+      <p class="said">Gym leaders, everyone in a villain hideout or guarding a shrine, the Elite Four and Hall of Fame champions read your creature's type. If it hits theirs hard, they call it back for one that takes it better, and when one falls they send out whichever suits the fight. Their ace always comes out last. They see your switch a turn late, and they never guess: the same position gets the same answer. Route and gym trainers send theirs out in order.</p>
+      <p class="ask">Should ordinary trainers switch too, or is that best kept for the big fights?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Gym%20leaders%20and%20champions%20switch%20back&amp;rule=Gym%20leaders%20and%20champions%20switch%20back">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="wild-pay">
+      <h3>Beating wild creatures pays a little</h3>
+      <p class="said">Three coins a level. Trainers are the real money, but once you've beaten them all there needs to be some way to afford balls again.</p>
+      <p class="ask">Is grinding wild creatures for coins something you'd do?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Beating%20wild%20creatures%20pays%20a%20little&amp;rule=Beating%20wild%20creatures%20pays%20a%20little">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="ailments">
+      <h3>Poison, burns, paralysis, sleep and freeze last until they're cured</h3>
+      <p class="said">A creature has one at a time, and it carries it from battle to battle until a Centre, a cure from the bag or a berry fixes it. Fire types can't be burned, electric types can't be paralysed, and so on. Poison doesn't hurt between battles, because there's no walking. A sleeping or frozen creature is twice as easy to catch.</p>
+      <p class="ask">Should poison bite between battles, the way it did with every step in Red and Blue?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Poison%2C%20burns%2C%20paralysis%2C%20sleep%20and%20freeze%20last%20until%20they%27re%20cured&amp;rule=Poison%2C%20burns%2C%20paralysis%2C%20sleep%20and%20freeze%20last%20until%20they%27re%20cured">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="stat-moves">
+      <h3>Growl, Swords Dance and Confuse Ray are in</h3>
+      <p class="said">Creatures learn their status moves as well as their attacks. Stat changes go up to six steps either way and wear off when it's called back. Confusion wears off after a few turns and sometimes makes it hit itself. Attacks like Bite can make the target flinch.</p>
+      <p class="ask">Do opponents using Growl and Tail Whip slow battles down too much?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Growl%2C%20Swords%20Dance%20and%20Confuse%20Ray%20are%20in&amp;rule=Growl%2C%20Swords%20Dance%20and%20Confuse%20Ray%20are%20in">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="crits">
+      <h3>One hit in 24 is a critical hit</h3>
+      <p class="said">A critical hit does half as much again, and ignores the attacker's lowered Attack, the target's raised Defense and any screen. Slash, Razor Leaf and the like land them one time in eight. This is the later games' rule; in Red and Blue fast creatures crit far more.</p>
+      <p class="ask">Do critical hits feel fair, or just random?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20One%20hit%20in%2024%20is%20a%20critical%20hit&amp;rule=One%20hit%20in%2024%20is%20a%20critical%20hit">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="healing-moves">
+      <h3>Recover, Rest, Giga Drain and Leech Seed are in</h3>
+      <p class="said">Recover and its like heal half your HP. Rest sleeps for two turns, cures whatever ailed it and wakes at full HP; hold a berry that cures sleep and it wakes at once. Draining moves heal half of what they deal, and Take Down and Double-Edge cost recoil. Leech Seed saps an eighth of the target's HP each turn for whoever is out on your side. Grass types can't be seeded. Dream Eater only works on a sleeping target. Stockpile stores up to three and toughens you as it does; Spit Up hits harder and Swallow heals more for each one stored, and both use them all up.</p>
+      <p class="ask">Does Recover make battles drag?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Recover%2C%20Rest%2C%20Giga%20Drain%20and%20Leech%20Seed%20are%20in&amp;rule=Recover%2C%20Rest%2C%20Giga%20Drain%20and%20Leech%20Seed%20are%20in">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="screens-weather">
+      <h3>Screens and weather last five turns</h3>
+      <p class="said">Reflect halves physical damage to your side and Light Screen halves special, and they stay up if you swap. Rain powers up water moves and weakens fire ones, and harsh sun does the reverse. Sandstorm and hail chip everyone a sixteenth a turn, except rock, ground and steel types in sand and ice types in hail. Snow, from the newest games, hurts nobody but toughens ice types' Defense, and a sandstorm toughens rock types' Special Defense. Red and Blue had no weather, so in a Kanto world only abilities bring it. You can see it, too: rain falls, sand blows and snow drifts across the battle picture.</p>
+      <div class="screen"><img src="{{ '/assets/handbook/weather.png' | relative_url }}" alt="A battle in the rain: a grey-blue wash over the field and slanted streaks falling past both creatures, with the health boxes clear on top." width="480" height="320"></div>
+      <p class="ask">Would you build a team around weather?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Screens%20and%20weather%20last%20five%20turns&amp;rule=Screens%20and%20weather%20last%20five%20turns">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="priority">
+      <h3>Quick Attack goes first</h3>
+      <p class="said">Some moves jump the queue whatever the speed: Quick Attack, Extreme Speed, Aqua Jet. A few, like Roar and Counter, always go last. Between two moves of the same kind, the faster creature goes first, as ever. Prankster puts its user's status moves ahead.</p>
+      <p class="ask">Do quick moves make slow creatures worth using?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Quick%20Attack%20goes%20first&amp;rule=Quick%20Attack%20goes%20first">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="many-hits">
+      <h3>Fury Attack, Wrap and Hyper Beam work like the later games</h3>
+      <p class="said">Moves that hit two to five times hit two or three times most often, and each hit can crit. Wrap, Bind and Fire Spin trap the target for four or five turns, taking an eighth a turn. A trapped creature can't run or swap, but it can still fight, unlike in Red and Blue. Hyper Beam costs you the next turn to recharge.</p>
+      <p class="ask">Is trapping annoying or fun when it's done to you?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Fury%20Attack%2C%20Wrap%20and%20Hyper%20Beam%20work%20like%20the%20later%20games&amp;rule=Fury%20Attack%2C%20Wrap%20and%20Hyper%20Beam%20work%20like%20the%20later%20games">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="abilities">
+      <h3>Every creature has an ability</h3>
+      <p class="said">Each has one of its species' usual abilities, and keeps it when it evolves. One wild creature in twenty has its species' <b>hidden ability</b> instead, and your party screen marks it. Levitate dodges ground moves, Intimidate lowers the other's Attack as it comes out, Swift Swim doubles speed in rain, Static may paralyse whoever hits it, and so on. When one does something, the battle says so. Your party screen says what each one does. Around two in three do something here. The rest are for exploring or double battles, which this game doesn't have. Abilities that care about the kind of move work as in the games: Static only triggers on moves that make contact, Iron Fist powers up punches, and Soundproof blocks sound moves. Opponents know your ability too: they won't throw an electric move at a Volt Absorb.</p>
+      <p class="ask">Is one in twenty the right rate for hidden abilities?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Every%20creature%20has%20an%20ability&amp;rule=Every%20creature%20has%20an%20ability">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="relearn">
+      <h3>Teach a move back whenever you like</h3>
+      <p class="said">With four moves full, a new one gets skipped, but it isn't lost. From the bag, a creature can swap any move it knows for one it's learned by its level. The new move takes over whatever share of PP the old one had left, so swapping isn't a free heal.</p>
+      <p class="ask">Should relearning cost something, like the Move Reminder did?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Teach%20a%20move%20back%20whenever%20you%20like&amp;rule=Teach%20a%20move%20back%20whenever%20you%20like">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="evolution">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 5</p>
+    <h2>Evolution</h2>
+    <p>Creatures evolve the way they did in their own games: by level, by stone, or, for the ones that needed a trade, by trading or a Linking Cord.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/evolution.png' | relative_url }}" alt="A creature's new form, as a silhouette, in rings of blue light with sparkles around it, and the line EMBERKIT evolved into BLAZECAT! in the message box." width="480" height="320"></div>
+      <figcaption>The moment it happens. (This page uses made-up test creatures; in play it's the real sprite.)</figcaption>
+    </figure>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="evolve-level">
+      <h3>By level, after a battle you win</h3>
+      <p class="said">Once a creature has reached its level, it evolves when the battle's over, one step at a time. It learns anything its new form learns at that level. A fainted creature waits for the next win, and nothing evolves after a loss.</p>
+      <p class="ask">Is waiting until after the battle the right moment?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20By%20level%2C%20after%20a%20battle%20you%20win&amp;rule=By%20level%2C%20after%20a%20battle%20you%20win">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="everstone">
+      <h3>Hold an Everstone to stay as you are</h3>
+      <p class="said">Shops sell the <b>Everstone</b> for 3,000 coins. While a creature holds it, it won't evolve by levelling up, and it's never used up. Take it back and the creature evolves after its next win. A stone or the Linking Cord still works on it, because using one is already your choice. Now and then a wild creature is found holding one.</p>
+      <p class="ask">Would you rather have a "don't evolve" button after each win?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Hold%20an%20Everstone%20to%20stay%20as%20you%20are&amp;rule=Hold%20an%20Everstone%20to%20stay%20as%20you%20are">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="evolve-stones">
+      <h3>Stones, as in the games</h3>
+      <p class="said">Pikachu needs a Thunder Stone, and the stone you choose decides whether Eevee becomes Vaporeon, Jolteon or Flareon. Use one on a creature from your bag. Shops sell stones from the third gym's town, at 3,000 each.</p>
+      <p class="ask">Is 3,000 about right for a stone?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Stones%2C%20as%20in%20the%20games&amp;rule=Stones%2C%20as%20in%20the%20games">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="linking-cord">
+      <h3>Trade evolutions happen when you trade, or with a Linking Cord</h3>
+      <p class="said">Trade Kadabra, Machoke, Graveler or Haunter to a friend and it evolves as it arrives, unless it's holding an Everstone. With nobody to trade with, a Linking Cord from the shop does the same, the way a later game did it. It costs 8,000.</p>
+      <p class="ask">Would you trade a creature away just to evolve it, knowing you'd have to ask for it back?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Trade%20evolutions%20happen%20when%20you%20trade%2C%20or%20with%20a%20Linking%20Cord&amp;rule=Trade%20evolutions%20happen%20when%20you%20trade%2C%20or%20with%20a%20Linking%20Cord">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="stone-rewards">
+      <h3>Every hideout's boss leaves a stone behind</h3>
+      <p class="said">Clear a villain hideout and its boss drops an evolution item: one that evolves something you've got, if anything you've got needs one. It leaves a piece of held gear too (see Shops and items).</p>
+      <p class="ask">What else should bosses and gym leaders give you?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Every%20hideout%27s%20boss%20leaves%20a%20stone%20behind&amp;rule=Every%20hideout%27s%20boss%20leaves%20a%20stone%20behind">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="shops">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 6</p>
+    <h2>Shops and items</h2>
+    <p>Every town has a shop. The first two towns' shops never close; after that a shop isn't open every day, and what's on the shelf changes. Everybody in your server sees the same shop on the same day, and nobody can buy anyone else out. Each creature can also hold one item: a berry from the shop, or gear you earn.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Price</th><th>What it does</th><th>Sold from</th></tr></thead>
+      <tbody>
+        <tr><td>Plain ball</td><td class="num">200</td><td>A plain throw</td><td>The start</td></tr>
+        <tr><td>Potion</td><td class="num">200</td><td>Restores 20 HP</td><td>The start</td></tr>
+        <tr><td>Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal</td><td class="num">200</td><td>Cure one ailment each</td><td>The start</td></tr>
+        <tr><td>Oran Berry</td><td class="num">100</td><td>Held: restores 10 HP at half health</td><td>The start</td></tr>
+        <tr><td>Cheri, Chesto, Pecha, Rawst, Aspear, Persim Berries</td><td class="num">150</td><td>Held: cures one ailment, or confusion, the moment it strikes</td><td>The start</td></tr>
+        <tr><td>Great Ball</td><td class="num">600</td><td>1.5× as likely to catch</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Super Potion</td><td class="num">700</td><td>Restores 50 HP</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Revive</td><td class="num">2,000</td><td>Brings a fainted creature back at half HP</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Full Heal</td><td class="num">400</td><td>Cures anything, confusion included</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Sitrus Berry</td><td class="num">400</td><td>Held: restores 30 HP at half health</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Evolution stones</td><td class="num">3,000</td><td>Evolve the creatures that need one: Fire, Water, Thunder, Leaf, Moon and the rest</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Linking Cord</td><td class="num">8,000</td><td>Evolves the creatures that evolved by trading</td><td>From the 3rd gym's town</td></tr>
+        <tr><td>Ultra Ball</td><td class="num">800</td><td>2× as likely to catch</td><td>From the 6th gym's town</td></tr>
+        <tr><td>Hyper Potion</td><td class="num">1,500</td><td>Restores 200 HP</td><td>From the 6th gym's town</td></tr>
+        <tr><td>Lum Berry</td><td class="num">1,000</td><td>Held: cures anything the moment it strikes</td><td>From the 6th gym's town</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="shop-days">
+      <h3>The first two towns never close; the rest open about two days in three</h3>
+      <p class="said">So you can always restock at the start. When a shop's open, it always has plain balls. Everything else is a coin toss, with better stock further into the map.</p>
+      <p class="ask">Fun to plan around, or just irritating?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20The%20first%20two%20towns%20never%20close%3B%20the%20rest%20open%20about%20two%20days%20in%20three&amp;rule=The%20first%20two%20towns%20never%20close%3B%20the%20rest%20open%20about%20two%20days%20in%20three">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="items-battle">
+      <h3>Using an item in battle takes your turn</h3>
+      <p class="said">Same as the games: heal, and the other side still attacks. Outside battle, items are free to use on anyone in your party.</p>
+      <p class="ask">Which items do you want next: PP restores, Repels, something else?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Using%20an%20item%20in%20battle%20takes%20your%20turn&amp;rule=Using%20an%20item%20in%20battle%20takes%20your%20turn">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="held">
+      <h3>Each creature holds one item</h3>
+      <p class="said">Give it from the bag, take it back whenever you're out of battle. Berries get eaten when they're needed, at half HP or the moment an ailment strikes. Now and then a wild creature is carrying a berry, and if you catch it, the berry comes too.</p>
+      <p class="ask">Should beating a wild creature that's holding something drop it?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Each%20creature%20holds%20one%20item&amp;rule=Each%20creature%20holds%20one%20item">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="gear">
+      <h3>Gear is earned, never bought</h3>
+      <p class="said">Every gym leader hands over the booster for their type, like Charcoal for fire, which makes those moves hit 20% harder. Every hideout boss leaves you Leftovers, a Quick Claw or a Focus Band, one you haven't got while there's one left. Very rarely a wild creature carries one. Like the Exp. Share, it all belongs to that world's run.</p>
+      <p class="ask">Is a type booster from every gym leader too generous?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Gear%20is%20earned%2C%20never%20bought&amp;rule=Gear%20is%20earned%2C%20never%20bought">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="preserve">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 7</p>
+    <h2>The preserve</h2>
+    <p>Our Safari Zone. One town in the middle of the map, somewhere between the fourth and sixth gyms, has a fenced preserve behind it.</p>
+  </div>
+  <div class="numbers">
+    <div><b>500</b><span>coins to get in</span></div>
+    <div><b>20</b><span>balls in the bag</span></div>
+    <div><b>2</b><span>rares found nowhere else</span></div>
+    <div><b>0</b><span>coins paid per catch</span></div>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="safari">
+      <h3>Red and Blue's Safari rules</h3>
+      <p class="said">Your team never fights. Each turn you throw a ball, bait or a rock, or leave. Bait makes it stay but harder to catch; a rock makes it easier to catch but likelier to run. Fast creatures bolt often.</p>
+      <p class="ask">Were Safari rules fun or frustrating when you played the originals?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Red%20and%20Blue%27s%20Safari%20rules&amp;rule=Red%20and%20Blue%27s%20Safari%20rules">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="safari-stock">
+      <h3>Two of the rarest live only in there</h3>
+      <p class="said">Before the caves pick their rares, the preserve takes two. In Kanto that's usually two of Chansey, Lapras, Ditto and Snorlax. If you want them in this world, the preserve is the only place.</p>
+      <p class="ask">Should the preserve have more, or different, creatures?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Two%20of%20the%20rarest%20live%20only%20in%20there&amp;rule=Two%20of%20the%20rarest%20live%20only%20in%20there">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="legends">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 8</p>
+    <h2>Legendaries</h2>
+    <p>Some of the region's legendaries sleep at shrines in the back half of the map. The rest roam, turning up about once in a hundred searches in the late wilderness, well above the level of anything around them.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/shrine.png' | relative_url }}" alt="A battle in a shrine of purple stone, both creatures on pale stone bases." width="480" height="320"></div>
+      <figcaption>Every kind of place gets its own backdrop. This is a shrine.</figcaption>
+    </figure>
+    <div class="legend">
+      <span><b>Shrines</b> are guarded by two to four "seekers" digging for the legend. Beat them all and it wakes.</span>
+      <span><b>Roamers</b> keep turning up, rarely, and aren't one-shot.</span>
+      <span><b>Visitors:</b> a world can borrow up to three legendaries from other regions installed on the bot. They only ever roam.</span>
+    </div>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="one-shot">
+      <h3>A legend that gets away can be earned back</h3>
+      <p class="said">Catch it or beat it and it's gone for good. If it runs or beats you, it watches you, and it'll face you again once you've proved yourself: <b>25 worthiness</b> for a second try, 60 for a third, 120 each time after. Worthiness is what you do in the meantime: 1 per trainer beaten, 2 per new dex entry, 3 per hideout cleared, 5 per badge. Coins can't buy it. Your chances are yours alone, and a shrine's legend is six levels above that stretch's gym leader.</p>
+      <p class="ask">Too easy, too hard, or about right?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20legend%20that%20gets%20away%20can%20be%20earned%20back&amp;rule=A%20legend%20that%20gets%20away%20can%20be%20earned%20back">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="aura">
+      <h3>A wild legend fights half as hard again</h3>
+      <p class="said">Met at a shrine or roaming, a legend has half as much again in every stat except HP. The battle screen says so. Catch it and it loses that, and is only as strong as its level, so a caught legend doesn't break the rest of the game.</p>
+      <p class="ask">Should the aura be stronger, or cover HP too?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20wild%20legend%20fights%20half%20as%20hard%20again&amp;rule=A%20wild%20legend%20fights%20half%20as%20hard%20again">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="blessing">
+      <h3>Beating a legend instead of catching it blesses your creature</h3>
+      <p class="said">Whichever creature lands the knockout is permanently 10% stronger in every stat. It's the one power-up training can't give you, so passing on the catch is a real choice.</p>
+      <p class="ask">Would you ever choose the blessing over the legend?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Beating%20a%20legend%20instead%20of%20catching%20it%20blesses%20your%20creature&amp;rule=Beating%20a%20legend%20instead%20of%20catching%20it%20blesses%20your%20creature">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="seasons">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 9</p>
+    <h2>Seasons</h2>
+    <p>A server's world lasts a season. When it ends, the server starts again on a brand new map, and your character doesn't disappear.</p>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="season-length">
+      <h3>Your server picks its pace</h3>
+      <p class="said">Server admins choose one of four with <code>/pace set</code>. The map is about fifteen stretches, so every pace leaves slack for real life.</p>
+      <div class="table-wrap"><table style="min-width: 0">
+        <thead><tr><th>Pace</th><th>New stretches a day</th><th>Season</th></tr></thead>
+        <tbody>
+          <tr><td>Relaxed</td><td class="num">1</td><td class="num">45 days</td></tr>
+          <tr><td>Standard</td><td class="num">1</td><td class="num">30 days</td></tr>
+          <tr><td>Brisk</td><td class="num">2</td><td class="num">21 days</td></tr>
+          <tr><td>Sprint</td><td class="num">3</td><td class="num">14 days</td></tr>
+        </tbody>
+      </table></div>
+      <p class="said">Standard is where every server starts. A new pace changes the stretches a day from tomorrow, and the season length from the next season, so nobody's season is cut short.</p>
+      <p class="ask">Which would your server pick?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Your%20server%20picks%20its%20pace&amp;rule=Your%20server%20picks%20its%20pace">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="joining">
+      <h3>You can join any day of a season</h3>
+      <p class="said">Ground somebody has already opened costs no day, so a latecomer can walk straight up to where everyone else is and catch up on the way.</p>
+      <p class="ask">Would you join a season that's nearly over, or wait for the next?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20You%20can%20join%20any%20day%20of%20a%20season&amp;rule=You%20can%20join%20any%20day%20of%20a%20season">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="retirement">
+      <h3>When a season ends, your world becomes yours</h3>
+      <p class="said">You get a private copy of the world you played, with your team, your box and your progress, and you can keep playing it forever at your own pace, with no daily limit. A reset is a graduation, not a wipe.</p>
+      <p class="ask">Would you actually go back and finish old worlds?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20When%20a%20season%20ends%2C%20your%20world%20becomes%20yours&amp;rule=When%20a%20season%20ends%2C%20your%20world%20becomes%20yours">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<section class="chapter" id="winning">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 10</p>
+    <h2>Winning, and after</h2>
+    <p>Beat all eight gyms and then the Elite Four, fought back to back with nowhere to heal, and you've won the map.</p>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="elite-four">
+      <h3>The same Elite Four in every region</h3>
+      <p class="said">Lorelei (Ice), Bruno (Fighting), Agatha (Ghost), Lance (Dragon) and the Champion (Normal) wait at the end of every world, whatever the region. Their teams change from world to world, but always come from that region, stick to their own type and are fully evolved and strong: no Ditto, no Delibird, no legendaries. When a region is short of a type, they bring a Haunter or Dragonair, or a second copy of something strong, the way Agatha had two Gengar.</p>
+      <p class="ask">Should the Champion bring a mixed team, like your rival did?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20The%20same%20Elite%20Four%20in%20every%20region&amp;rule=The%20same%20Elite%20Four%20in%20every%20region">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="hall">
+      <h3>Your winning team enters the Hall of Fame</h3>
+      <p class="said">The team is saved exactly as it was when you won: every creature, level and move. Your server hears about it, a trophy goes on the back of your trainer card, and your team can turn up in other people's Elite Four rematches.</p>
+      <p class="ask">What should winning get you besides bragging rights?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Your%20winning%20team%20enters%20the%20Hall%20of%20Fame&amp;rule=Your%20winning%20team%20enters%20the%20Hall%20of%20Fame">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="challengers">
+      <h3>After you win, real champions take the Elite Four's seats</h3>
+      <p class="said">Once a day you can run the Elite Four again, and other players' Hall of Fame teams sit in it, from any region: a Johto champion brings their Johto team into your Kanto world, with their exact creatures, levels and moves. Champions take the last seats; any seat left over keeps its original member. New faces tomorrow.</p>
+      <p class="ask">Would you rather fight your friends' teams or strangers'?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20After%20you%20win%2C%20real%20champions%20take%20the%20Elite%20Four%27s%20seats&amp;rule=After%20you%20win%2C%20real%20champions%20take%20the%20Elite%20Four%27s%20seats">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="leaderboard">
+      <h3>A leaderboard, for your server and for everyone</h3>
+      <p class="said">Five boards: maps won, total levels across every creature you own, legendaries caught, dex entries, and your record: trainer battles won, with losses beside them. You can see just your server, counting every season it has played, or everyone on the bot. The top three stand on a podium in their own clothes.</p>
+      <div class="screen"><img src="{{ '/assets/handbook/leaderboard.png' | relative_url }}" alt="A drawn leaderboard: the top three trainers standing on a gold, silver and bronze podium in their own clothes, the top ten in rows below with names in several scripts, and your own place highlighted in yellow underneath." width="480" height="474"></div>
+      <p class="ask">What else should be ranked?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20leaderboard%2C%20for%20your%20server%20and%20for%20everyone&amp;rule=A%20leaderboard%2C%20for%20your%20server%20and%20for%20everyone">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="trading">
+      <h3>Trade with anyone in your server</h3>
+      <p class="said"><code>/trade offer @friend</code> puts up one of yours, from your party or box. They answer with one of theirs using <code>/trade answer</code>, you accept, and they confirm, from <code>/trade list</code>. Until it's done or called off, both creatures wait on offer, out of your party. A traded creature arrives rested, but can't be traded on until its new owner heals at a Center, so nobody trades just to skip one. Your server hears about finished trades.</p>
+      <p class="ask">Four steps: careful enough, or too many?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Trade%20with%20anyone%20in%20your%20server&amp;rule=Trade%20with%20anyone%20in%20your%20server">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="challenge">
+      <h3>Challenge a friend's team</h3>
+      <p class="said"><code>/challenge @friend</code> in your server asks them in the channel. If they take it on, you fight a copy of their team, played by the bot the way champions play: switching to suit the fight and saving their best for last. Your team walks in fit too, so there's no need to heal first. No items, and running means conceding. The result goes on both your win-loss records, with a tally between you two: <em>"You lead 3–1."</em> There's no experience or money in it.</p>
+      <p class="ask">Do you like that the bot plays their team, or would you always rather they played it?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Challenge%20a%20friend%27s%20team&amp;rule=Challenge%20a%20friend%27s%20team">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="live-battles">
+      <h3>Or battle them live</h3>
+      <p class="said"><code>/challenge @friend live:True</code> and, once they take it on, the two of you fight in the channel where anyone can watch. Each of you presses <b>Pick your move</b> for a screen only you see, and the turn plays out when you've both picked. You have two minutes a turn: if you haven't picked by then, you lose, and if neither of you has, it's called off. When one of yours faints, you choose who comes out next, and the battle waits on you. Otherwise it's a challenge like any other: both teams fit, no items, and it counts on both your records.</p>
+      <p class="ask">Is two minutes a turn about right?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Or%20battle%20them%20live&amp;rule=Or%20battle%20them%20live">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="raids">
+      <h3>A raid boss every week, brought down together</h3>
+      <p class="said">A week into the season, and every week after, something strong turns up in your server's world for the day: fully evolved, a little above the gym you should have reached by now, and never a legendary. It has HP enough for everyone playing. <code>/raid</code> shows it, and you can fight it three times with a fit copy of your team, so it costs you nothing. Whatever you knock off counts for everyone. When it falls, everyone who helped gets one throw at catching it: likely, but not certain. Catch it, and it joins you at the boss's level.</p>
+      <p class="ask">Would you rather have more fights at it, or better odds on the throw?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20raid%20boss%20every%20week%2C%20brought%20down%20together&amp;rule=A%20raid%20boss%20every%20week%2C%20brought%20down%20together">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="announcements">
+      <h3>Each server picks what gets announced</h3>
+      <p class="said">By default it's only the big moments: a new season, someone opening the way to a new town, a legendary caught, a new Hall of Fame entry, the vote on the next region opening, and the week's raid turning up and going down. A server can turn it up. <em>Normal</em> adds gym badges, villain hideouts cleared, legends knocked out (and who got blessed), roaming legends spotted, rare catches, Elite Four rematches won, challenges won and trades. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Any one of them can be switched on or off by itself.</p>
+      <p class="ask">Which would you want your server to hear about?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Each%20server%20picks%20what%20gets%20announced&amp;rule=Each%20server%20picks%20what%20gets%20announced">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+  <section class="chapter" id="trainer">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 11</p>
+    <h2>Your trainer</h2>
+    <p>You're not a background character. Your trainer stands on every map, steps into every battle and has a trainer card, dressed how you choose, in things you've earned.</p>
+  </div>
+  <div class="figure">
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/card.png' | relative_url }}" alt="A trainer card: name, dex, legends, Hall of Fame, money, wins and losses, and wardrobe on the left, the trainer in a cap, hoodie and backpack on the right, and a row of eight badges along the bottom, three gold." width="480" height="288"></div>
+      <figcaption>A trainer card. <b>/card</b> shows yours, or anyone's.</figcaption>
+    </figure>
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/card-back.png' | relative_url }}" alt="The back of a trainer card, headed HALL OF FAME x5: five gold cups on a wooden shelf, each with a coloured band and a label under it, KANT S1, KANT S2, JOHT, HOEN S3 and PALD S4." width="480" height="288"></div>
+      <figcaption>Flip it over for the trophy shelf: a cup for every Hall of Fame entry, with its region and season.</figcaption>
+    </figure>
+    <figure>
+      <div class="screen"><img src="{{ '/assets/handbook/wardrobe.png' | relative_url }}" alt="The same trainer from the front and from behind." width="256" height="192"></div>
+      <figcaption><b>/wardrobe</b> shows you front and back while you choose.</figcaption>
+    </figure>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="dress">
+      <h3>Dress how you like</h3>
+      <p class="said">Skin tone, hair colour, hairstyle (short, spiky, long, a ponytail or pigtails), shirt, and trousers, shorts or a skirt are free to change whenever you want. There's no boy or girl to pick: anyone can wear anything. On top of that you wear one hat, one outfit and one accessory, from what you've earned.</p>
+      <p class="ask">What would you want to wear that isn't here?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Dress%20how%20you%20like&amp;rule=Dress%20how%20you%20like">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="earn">
+      <h3>Earn the rest, and keep it forever</h3>
+      <p class="said">Nothing is for sale. A cap for your first badge, a hoodie for two, a backpack for three, a beanie for four and a champion's jacket for all eight. A bandana for clearing a hideout, glasses, a sun hat, a ranger vest and a lab coat as your dex fills, a scarf from a legend's blessing, a cape for the Hall of Fame, and a crown for beating a rematch full of champions. They carry over to every world and season.</p>
+      <p class="ask">Which achievement deserves something special we haven't thought of?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Earn%20the%20rest%2C%20and%20keep%20it%20forever&amp;rule=Earn%20the%20rest%2C%20and%20keep%20it%20forever">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="show">
+      <h3>Everyone sees it</h3>
+      <p class="said">You stand on every area's picture, and if friends are in the same place they stand beside you. You step into battle from behind before sending your first creature out. And when you sit in someone's Elite Four rematch as a champion, you're wearing what you wear.</p>
+      <p class="ask">The card shows your win-loss record and your trophies now. What else should it show?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Everyone%20sees%20it&amp;rule=Everyone%20sees%20it">Give feedback</a>
+    </article>
+  </div>
+</section>
+<section class="chapter" id="missing">
+  <div class="chapter-head">
+    <p class="eyebrow">Chapter 12</p>
+    <h2>What next</h2>
+    <p>Everything planned so far is in, live battles and raids included. What comes next is up to you.</p>
+  </div>
+  <div class="rules">
+    <article class="rule" data-rule="next">
+      <h3>What should come next?</h3>
+      <p class="said">A feature you miss from the games, something that would bring your server together, or a rule you'd change.</p>
+      <p class="ask">If you could have one of these tomorrow, which?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20What%20should%20come%20next%3F&amp;rule=What%20should%20come%20next%3F">Give feedback</a>
+    </article>
+    <article class="rule" data-rule="anything">
+      <h3>Anything else?</h3>
+      <p class="said">A rule that bugs you, a favourite bit of the games we've left out, a name for the bot that isn't "Super Adventure Bot".</p>
+      <p class="ask">What would make you play every day?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Anything%20else%3F&amp;rule=Anything%20else%3F">Give feedback</a>
+    </article>
+  </div>
+</section>
+
+<footer class="handbook-foot">
+  <p>"Give feedback" needs a free GitHub account. No account? Tell Mark on Discord and he'll put it on the board for you.</p>
+  <p>Numbers here are starting values and are expected to change once people play.</p>
+</footer>

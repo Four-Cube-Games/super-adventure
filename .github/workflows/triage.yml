@@ -1,0 +1,73 @@
+name: Triage
+
+on:
+  issues:
+    types: [opened, reopened, labeled]
+
+concurrency:
+  group: triage-${{ github.event.issue.number }}
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep one triage label, and the board's column, in step
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
+          BOARD: ${{ vars.BOARD }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.html_url }}
+          ADDED: ${{ github.event.label.name }}
+        run: |
+          set -euo pipefail
+          triage=("won't do" "bug" "enhancement" "new feature" "needs triage")
+          is_triage() { for t in "${triage[@]}"; do [[ "$1" == "$t" ]] && return 0; done; return 1; }
+
+          issue=$(gh issue view "$NUMBER" --repo "$REPO" --json labels,state,stateReason)
+          mapfile -t labels < <(jq -r '.labels[].name' <<<"$issue")
+
+          state=""
+          if [[ -n "$ADDED" ]] && is_triage "$ADDED"; then
+            state="$ADDED"
+          else
+            for t in "${triage[@]}"; do
+              for l in "${labels[@]}"; do [[ "$l" == "$t" ]] && state="$t" && break 2; done
+            done
+          fi
+          if [[ -z "$state" ]]; then
+            [[ "${{ github.event.action }}" == "opened" ]] || exit 0
+            gh issue edit "$NUMBER" --repo "$REPO" --add-label "needs triage"
+            state="needs triage"
+          fi
+
+          for l in "${labels[@]}"; do
+            if is_triage "$l" && [[ "$l" != "$state" ]]; then
+              gh issue edit "$NUMBER" --repo "$REPO" --remove-label "$l"
+            fi
+          done
+
+          open=$(jq -r '.state' <<<"$issue")
+          reason=$(jq -r '.stateReason // ""' <<<"$issue")
+          if [[ "$state" == "won't do" && "$open" == "OPEN" ]]; then
+            gh issue close "$NUMBER" --repo "$REPO" --reason "not planned"
+          elif [[ "$state" != "won't do" && "$open" == "CLOSED" && "$reason" == "NOT_PLANNED" && -n "$ADDED" ]]; then
+            gh issue reopen "$NUMBER" --repo "$REPO"
+          fi
+
+          if [[ -z "$BOARD_TOKEN" || -z "$BOARD" ]]; then
+            echo "No BOARD_TOKEN secret or BOARD variable, so the board is left alone."
+            exit 0
+          fi
+          export GH_TOKEN="$BOARD_TOKEN"
+          project=$(gh project view "$BOARD" --owner "$OWNER" --format json --jq .id)
+          field=$(gh project field-list "$BOARD" --owner "$OWNER" --format json --jq '.fields[] | select(.name == "Triage")')
+          option=$(jq -r --arg s "$state" '.options[] | select((.name | ascii_downcase) == $s) | .id' <<<"$field")
+          item=$(gh project item-add "$BOARD" --owner "$OWNER" --url "$URL" --format json --jq .id)
+          gh project item-edit --project-id "$project" --id "$item" \
+            --field-id "$(jq -r .id <<<"$field")" --single-select-option-id "$option"

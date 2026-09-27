@@ -1,0 +1,25 @@
+name: Feedback
+description: A rule you'd change, something you'd like added, or something that went wrong.
+labels: ["needs triage"]
+body:
+  - type: input
+    id: rule
+    attributes:
+      label: Which rule or part of the game?
+      description: Filled in for you if you came from the handbook. Leave it blank if it's about something else.
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What would you change, or what happened?
+      description: Hate a rule? Say so. Love one? Say that too. For a bug, say what you did and what you expected.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where do you play?
+      options:
+        - The stable bot, in a server
+        - The stable bot, in a private world
+        - The beta
+        - I haven't played yet

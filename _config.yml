@@ -1,0 +1,30 @@
+title: Super Adventure
+description: A creature-collecting RPG you play inside Discord, with your whole server, on a map nobody has seen before.
+lang: en-GB
+
+# Fill these in before going live. Each TODO is used on more than one page.
+url: https://TODO-your-domain
+baseurl: ""
+contact: TODO@your-domain
+stable_client_id: "TODO"
+beta_form: https://formspree.io/f/TODO
+
+repo: https://github.com/Four-Cube-Games/super-adventure
+board: https://github.com/orgs/Four-Cube-Games/projects/TODO
+
+tabs:
+  - title: Home
+    url: /
+  - title: Handbook
+    url: /handbook/
+  - title: Play
+    url: /play/
+  - title: Terms
+    url: /terms/
+  - title: Privacy
+    url: /privacy/
+
+permalink: pretty
+markdown: kramdown
+exclude:
+  - README.md
