@@ -93,7 +93,9 @@ Its fonts come from Google Fonts, so your browser asks Google for them.
 ## Children
 
 You need to be old enough to use Discord in your country to play. We don't knowingly hold data
-about anyone younger. If you think we do, email us and we'll delete it.
+about anyone younger. If you have questions about a child's use of the game, email
+[{{ site.contact }}](mailto:{{ site.contact }}): we'll give you a thorough breakdown of what's
+stored and how, and if you'd like it removed, we're happy to do that.
 
 ## Changes
 
