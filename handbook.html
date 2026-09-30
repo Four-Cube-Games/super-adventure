@@ -8,10 +8,10 @@ styles: /assets/handbook.css
   <div>
     <p class="eyebrow">Super Adventure</p>
     <h1>Player Handbook</h1>
-    <p class="lede">Mark is building <strong>the classic Red and Blue games, played inside Discord</strong>, with your friends, on a map nobody has seen before. This is every rule we've settled on so far. Some are straight from the games; plenty are new. <strong>Tell us which ones you'd change.</strong></p>
+    <p class="lede">Mark is building <strong>a creature-collecting adventure, played inside Discord</strong>, with your friends, on a map nobody has seen before. This is every rule we've settled on so far. Some are as the classics did them; plenty are new. <strong>Tell us which ones you'd change.</strong></p>
   </div>
   <div class="screen">
-    <img src="{{ '/assets/handbook/battle.png' | relative_url }}" alt="A battle in the style of Ruby and Sapphire: your creature from behind on the near base, a wild one on the far base, a box with name, level and health for each, your HP as numbers, and "What will EMBERKIT do?" in the message box." width="480" height="320">
+    <img src="{{ '/assets/handbook/battle.png' | relative_url }}" alt="A battle: your creature from behind on the near base, a wild one on the far base, a box with name, level and health for each, your HP as numbers, and "What will EMBERKIT do?" in the message box." width="480" height="320">
   </div>
 </header>
 
@@ -41,7 +41,7 @@ styles: /assets/handbook.css
   <div class="chapter-head">
     <p class="eyebrow">Chapter 1</p>
     <h2>Getting started</h2>
-    <p>There's no overworld to walk around. You play with slash commands and buttons, and everything you see is private to you, so a whole server can play in one channel without spamming it.</p>
+    <p>On the alpha server you walk the world in a Discord Activity, opened with <b>/activity</b>: tile by tile, with a start menu for your party, bag and map. Other servers still play with slash commands and buttons until they're switched over. Either way, everything you see is private to you, so a whole server can play in one channel without spamming it.</p>
   </div>
   <div class="figure">
     <figure>
@@ -57,13 +57,13 @@ styles: /assets/handbook.css
   <div class="rules">
     <article class="rule" data-rule="starters">
       <h3>Your starter is one of three, but not always the famous three</h3>
-      <p class="said">Every world offers three starters: uncommon creatures that can evolve, each of a different type. One server might choose between Eevee, Dratini and Bulbasaur. Everyone in a server is offered the same three.</p>
-      <p class="ask">Would you rather always get Bulbasaur, Charmander and Squirtle?</p>
+      <p class="said">Every world offers three starters: uncommon creatures that can evolve, each of a different type. One server might choose between a fox-like one, a dragon-like one and a leafy one. Everyone in a server is offered the same three.</p>
+      <p class="ask">Would you rather always get a grass, a fire and a water starter?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Your%20starter%20is%20one%20of%20three%2C%20but%20not%20always%20the%20famous%20three&amp;rule=Your%20starter%20is%20one%20of%20three%2C%20but%20not%20always%20the%20famous%20three">Give feedback</a>
     </article>
     <article class="rule" data-rule="kit">
       <h3>You set out with 5 balls and 500 coins</h3>
-      <p class="said">Enough to catch a few things before your first trainer battle pays out. In Red and Blue you started with 3,000 money and no balls at all.</p>
+      <p class="said">Enough to catch a few things before your first trainer battle pays out. The classics started you with 3,000 money and no balls at all.</p>
       <p class="ask">Is that too stingy?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20You%20set%20out%20with%205%20balls%20and%20500%20coins&amp;rule=You%20set%20out%20with%205%20balls%20and%20500%20coins">Give feedback</a>
     </article>
@@ -79,8 +79,8 @@ styles: /assets/handbook.css
   </div>
   <div class="figure">
     <figure>
-      <div class="screen"><img src="{{ '/assets/handbook/map.png' | relative_url }}" alt="A region map in Ruby and Sapphire's style: colored squares for each place along a winding route on an island, with you standing in a red cursor and ground not yet opened in gray." width="480" height="384"></div>
-      <figcaption>The region map, one button away, in the style of Ruby and Sapphire's map.</figcaption>
+      <div class="screen"><img src="{{ '/assets/handbook/map.png' | relative_url }}" alt="A region map: colored squares for each place along a winding route on an island, with you standing in a red cursor and ground not yet opened in gray." width="480" height="384"></div>
+      <figcaption>The region map, one button away, in a handheld-adventure style.</figcaption>
     </figure>
     <div class="legend">
       <span><b>Red squares</b> are towns with a gym, marked gold once you've got the badge. <b>Blue squares</b> are towns without one.</span>
@@ -92,7 +92,7 @@ styles: /assets/handbook.css
   <div class="figure">
     <figure>
       <div class="screen"><img src="{{ '/assets/handbook/town.png' | relative_url }}" alt="A top-down town: a Center with a red roof, a Mart with a blue roof and a bigger gym with a gray star, its leader waiting outside, trees along the edges." width="480" height="320"></div>
-      <figcaption>Wherever you are, the bot draws the place from above, the way Ruby and Sapphire did. This town has a gym whose badge you haven't won yet.</figcaption>
+      <figcaption>Wherever you are, the bot draws the place from above, in the old handheld style. This town has a gym whose badge you haven't won yet.</figcaption>
     </figure>
     <div class="legend">
       <span><b>Towns</b> show their buildings: the Center (red roof), the shop (blue), a gym with a star that turns gold once you've got its badge, and the preserve's gate if the town has one.</span>
@@ -103,7 +103,7 @@ styles: /assets/handbook.css
   <div class="rules">
     <article class="rule" data-rule="regions">
       <h3>A world is one region, with that game's dex and moves</h3>
-      <p class="said">A Johto world has the 251 species in Gold and Silver's Johto dex, Pidgey and Onix included, and they learn the moves they learned in Gold and Silver. Every region from Kanto to Paldea works the same way. In the last three days of a season, everyone playing in your server votes on where the next one goes with <code>/region vote</code>, and can change their vote until it closes; the season you're in stays where it is. The most votes wins, a tie is drawn between the leaders, and with no votes at all it's the bot's home region. <code>/region show</code> has the tally. A private world can pick its own when you <code>/start</code> it in a direct message.</p>
+      <p class="said">There are nine regions, and a world is one of them: it has that region's creatures and they learn the moves they learned there. In the last three days of a season, everyone playing in your server votes on where the next one goes with <code>/region vote</code>, and can change their vote until it closes; the season you're in stays where it is. The most votes wins, a tie is drawn between the leaders, and with no votes at all it's the bot's home region. <code>/region show</code> has the tally. A private world can pick its own when you <code>/start</code> it in a direct message.</p>
       <p class="ask">Which region would you vote for next season, and is three days long enough to vote?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20A%20world%20is%20one%20region%2C%20with%20that%20game%27s%20dex%20and%20moves&amp;rule=A%20world%20is%20one%20region%2C%20with%20that%20game%27s%20dex%20and%20moves">Give feedback</a>
     </article>
@@ -196,12 +196,12 @@ styles: /assets/handbook.css
   <div class="chapter-head">
     <p class="eyebrow">Chapter 4</p>
     <h2>Battles and catching</h2>
-    <p>Battles work like Red and Blue: faster creatures go first, same-type moves hit harder, type matchups matter, moves can poison, paralyze or put to sleep, you can swap creatures mid-fight, and you can run from wild ones but not trainers. On top of that come later games' pieces: critical hits, abilities, weather and screens. Catching uses the original formula: the weaker it is, the easier it is to catch.</p>
+    <p>Battles work like the classics: faster creatures go first, same-type moves hit harder, type matchups matter, moves can poison, paralyze or put to sleep, you can swap creatures mid-fight, and you can run from wild ones but not trainers. On top of that come later games' pieces: critical hits, abilities, weather and screens. Catching uses the original formula: the weaker it is, the easier it is to catch.</p>
   </div>
   <div class="figure">
     <figure>
       <div class="screen"><img src="{{ '/assets/handbook/ailments.png' | relative_url }}" alt="A battle with a paralyzed foe and a poisoned creature of your own: a small colored PAR plate and PSN plate sit where each one's level would be." width="480" height="320"></div>
-      <figcaption>An ailment's plate takes the level's place, as in Ruby and Sapphire. (Made-up test creatures; in play it's the real sprites.)</figcaption>
+      <figcaption>An ailment's plate takes the level's place, as in the classics. (Made-up test creatures; in play it's the real sprites.)</figcaption>
     </figure>
     <div class="legend">
       <span><b>PSN</b> poisoned and <b>BRN</b> burned: they lose an eighth of their HP every turn, and a burn halves physical attacks.</span>
@@ -218,7 +218,7 @@ styles: /assets/handbook.css
     </article>
     <article class="rule" data-rule="shiny">
       <h3>One wild creature in 1,024 is shiny</h3>
-      <p class="said">A shiny comes in its own colors, with a sparkle beside it and a ✨ by its name, and a shiny encounter opens with <em>“✨ A shiny Pidgey appeared!”</em> It's no stronger than any other. It stays shiny when you catch it and when it evolves, your server hears when you catch one, and your trainer card counts the shinies you own.</p>
+      <p class="said">A shiny comes in its own colors, with a sparkle beside it and a ✨ by its name, and a shiny encounter opens with <em>“✨ A shiny Sparrowling appeared!”</em> It's no stronger than any other. It stays shiny when you catch it and when it evolves, your server hears when you catch one, and your trainer card counts the shinies you own.</p>
       <p class="ask">Is 1 in 1,024 rare enough to feel special, but common enough that you'll meet one?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20One%20wild%20creature%20in%201%2C024%20is%20shiny&amp;rule=One%20wild%20creature%20in%201%2C024%20is%20shiny">Give feedback</a>
     </article>
@@ -230,13 +230,13 @@ styles: /assets/handbook.css
     </article>
     <article class="rule" data-rule="exp">
       <h3>Everyone who fought shares the experience</h3>
-      <p class="said">Like Red and Blue: every creature that was out against a foe and is still standing splits its experience evenly, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>, and from then on the rest of your party takes half as well. It's part of that world's run, not something you keep: nothing you carry between worlds makes you better at the game.</p>
+      <p class="said">Like the classics: every creature that was out against a foe and is still standing splits its experience evenly, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>, and from then on the rest of your party takes half as well. It's part of that world's run, not something you keep: nothing you carry between worlds makes you better at the game.</p>
       <p class="ask">Is the third badge the right time for the Exp. Share?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Everyone%20who%20fought%20shares%20the%20experience&amp;rule=Everyone%20who%20fought%20shares%20the%20experience">Give feedback</a>
     </article>
     <article class="rule" data-rule="training">
       <h3>No two creatures are quite alike, and they grow by what they beat</h3>
-      <p class="said">Like the later games. Every wild creature, and your starter, has a <b>nature</b>: most raise one stat by a tenth and lower another, a few do neither. It also has <b>potential</b>, 0 to 31 in each stat, which your party screen grades S to D. Both are fixed for life, so a second Pidgey can be a better Pidgey. Beating a creature <b>trains</b> everyone who earns experience from it in the stat its species teaches: a Pidgey teaches Speed, an Onix Defense. That's up to 252 in a stat and 510 in all. Trainers' creatures have more potential the higher up the trainer: the Elite Four have the most.</p>
+      <p class="said">Like the later games. Every wild creature, and your starter, has a <b>nature</b>: most raise one stat by a tenth and lower another, a few do neither. It also has <b>potential</b>, 0 to 31 in each stat, which your party screen grades S to D. Both are fixed for life, so a second Sparrowling can be a better Sparrowling. Beating a creature <b>trains</b> everyone who earns experience from it in the stat its species teaches: a small bird teaches Speed, a rock snake Defense. That's up to 252 in a stat and 510 in all. Trainers' creatures have more potential the higher up the trainer: the Elite Four have the most.</p>
       <p class="ask">Is this fun to chase, or too much to keep track of?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20No%20two%20creatures%20are%20quite%20alike%2C%20and%20they%20grow%20by%20what%20they%20beat&amp;rule=No%20two%20creatures%20are%20quite%20alike%2C%20and%20they%20grow%20by%20what%20they%20beat">Give feedback</a>
     </article>
@@ -261,7 +261,7 @@ styles: /assets/handbook.css
     <article class="rule" data-rule="ailments">
       <h3>Poison, burns, paralysis, sleep and freeze last until they're cured</h3>
       <p class="said">A creature has one at a time, and it carries it from battle to battle until a Center, a cure from the bag or a berry fixes it. Fire types can't be burned, electric types can't be paralyzed, and so on. Poison doesn't hurt between battles, because there's no walking. A sleeping or frozen creature is twice as easy to catch.</p>
-      <p class="ask">Should poison bite between battles, the way it did with every step in Red and Blue?</p>
+      <p class="ask">Should poison bite between battles, the way it did with every step in the classics?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Poison%2C%20burns%2C%20paralysis%2C%20sleep%20and%20freeze%20last%20until%20they%27re%20cured&amp;rule=Poison%2C%20burns%2C%20paralysis%2C%20sleep%20and%20freeze%20last%20until%20they%27re%20cured">Give feedback</a>
     </article>
     <article class="rule" data-rule="stat-moves">
@@ -272,7 +272,7 @@ styles: /assets/handbook.css
     </article>
     <article class="rule" data-rule="crits">
       <h3>One hit in 24 is a critical hit</h3>
-      <p class="said">A critical hit does half as much again, and ignores the attacker's lowered Attack, the target's raised Defense and any screen. Slash, Razor Leaf and the like land them one time in eight. This is the later games' rule; in Red and Blue fast creatures crit far more.</p>
+      <p class="said">A critical hit does half as much again, and ignores the attacker's lowered Attack, the target's raised Defense and any screen. Slash, Razor Leaf and the like land them one time in eight. This is the later games' rule; in the classics fast creatures crit far more.</p>
       <p class="ask">Do critical hits feel fair, or just random?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20One%20hit%20in%2024%20is%20a%20critical%20hit&amp;rule=One%20hit%20in%2024%20is%20a%20critical%20hit">Give feedback</a>
     </article>
@@ -343,7 +343,7 @@ styles: /assets/handbook.css
     </article>
     <article class="rule" data-rule="evolve-stones">
       <h3>Stones, as in the games</h3>
-      <p class="said">Pikachu needs a Thunder Stone, and the stone you choose decides whether Eevee becomes Vaporeon, Jolteon or Flareon. Use one on a creature from your bag. Shops sell stones from the third gym's town, at 3,000 each.</p>
+      <p class="said">Some creatures need a particular stone, and for others the stone you choose decides which form they take. Use one on a creature from your bag. Shops sell stones from the third gym's town, at 3,000 each.</p>
       <p class="ask">Is 3,000 about right for a stone?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Stones%2C%20as%20in%20the%20games&amp;rule=Stones%2C%20as%20in%20the%20games">Give feedback</a>
     </article>
@@ -423,7 +423,7 @@ styles: /assets/handbook.css
   <div class="chapter-head">
     <p class="eyebrow">Chapter 7</p>
     <h2>The preserve</h2>
-    <p>Our Safari Zone. One town in the middle of the map, somewhere between the fourth and sixth gyms, has a fenced preserve behind it.</p>
+    <p>Our catching preserve. One town in the middle of the map, somewhere between the fourth and sixth gyms, has a fenced preserve behind it.</p>
   </div>
   <div class="numbers">
     <div><b>500</b><span>coins to get in</span></div>
@@ -433,14 +433,14 @@ styles: /assets/handbook.css
   </div>
   <div class="rules">
     <article class="rule" data-rule="safari">
-      <h3>Red and Blue's Safari rules</h3>
+      <h3>The preserve's rules</h3>
       <p class="said">Your team never fights. Each turn you throw a ball, bait or a rock, or leave. Bait makes it stay but harder to catch; a rock makes it easier to catch but likelier to run. Fast creatures bolt often.</p>
-      <p class="ask">Were Safari rules fun or frustrating when you played the originals?</p>
-      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Red%20and%20Blue%27s%20Safari%20rules&amp;rule=Red%20and%20Blue%27s%20Safari%20rules">Give feedback</a>
+      <p class="ask">Are the preserve rules fun or frustrating?</p>
+      <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20The%20preserve%27s%20rules&amp;rule=The%20preserve%27s%20rules">Give feedback</a>
     </article>
     <article class="rule" data-rule="safari-stock">
       <h3>Two of the rarest live only in there</h3>
-      <p class="said">Before the caves pick their rares, the preserve takes two. In Kanto that's usually two of Chansey, Lapras, Ditto and Snorlax. If you want them in this world, the preserve is the only place.</p>
+      <p class="said">Before the caves pick their rares, the preserve takes two. Usually it takes two of the region's famous rarities. If you want them in this world, the preserve is the only place.</p>
       <p class="ask">Should the preserve have more, or different, creatures?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20Two%20of%20the%20rarest%20live%20only%20in%20there&amp;rule=Two%20of%20the%20rarest%20live%20only%20in%20there">Give feedback</a>
     </article>
@@ -533,7 +533,7 @@ styles: /assets/handbook.css
   <div class="rules">
     <article class="rule" data-rule="elite-four">
       <h3>The same Elite Four in every region</h3>
-      <p class="said">Lorelei (Ice), Bruno (Fighting), Agatha (Ghost), Lance (Dragon) and the Champion (Normal) wait at the end of every world, whatever the region. Their teams change from world to world, but always come from that region, stick to their own type and are fully evolved and strong: no Ditto, no Delibird, no legendaries. When a region is short of a type, they bring a Haunter or Dragonair, or a second copy of something strong, the way Agatha had two Gengar.</p>
+      <p class="said">The Elite Four (Ice, Fighting, Ghost and Dragon) and the Champion (Normal) wait at the end of every world, whatever the region. Their teams change from world to world, but always come from that region, stick to their own type and are fully evolved and strong: no weak novelties, no legendaries. When a region is short of a type, they bring a lesser form or a second copy of something strong.</p>
       <p class="ask">Should the Champion bring a mixed team, like your rival did?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20The%20same%20Elite%20Four%20in%20every%20region&amp;rule=The%20same%20Elite%20Four%20in%20every%20region">Give feedback</a>
     </article>
@@ -545,7 +545,7 @@ styles: /assets/handbook.css
     </article>
     <article class="rule" data-rule="challengers">
       <h3>After you win, real champions take the Elite Four's seats</h3>
-      <p class="said">Once a day you can run the Elite Four again, and other players' Hall of Fame teams sit in it, from any region: a Johto champion brings their Johto team into your Kanto world, with their exact creatures, levels and moves. Champions take the last seats; any seat left over keeps its original member. New faces tomorrow.</p>
+      <p class="said">Once a day you can run the Elite Four again, and other players' Hall of Fame teams sit in it, from any region: a champion from one region brings their team into another region's world, with their exact creatures, levels and moves. Champions take the last seats; any seat left over keeps its original member. New faces tomorrow.</p>
       <p class="ask">Would you rather fight your friends' teams or strangers'?</p>
       <a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Handbook%3A%20After%20you%20win%2C%20real%20champions%20take%20the%20Elite%20Four%27s%20seats&amp;rule=After%20you%20win%2C%20real%20champions%20take%20the%20Elite%20Four%27s%20seats">Give feedback</a>
     </article>
@@ -601,7 +601,7 @@ styles: /assets/handbook.css
       <figcaption>A trainer card. <b>/card</b> shows yours, or anyone's.</figcaption>
     </figure>
     <figure>
-      <div class="screen"><img src="{{ '/assets/handbook/card-back.png' | relative_url }}" alt="The back of a trainer card, headed HALL OF FAME x5: five gold cups on a wooden shelf, each with a colored band and a label under it, KANT S1, KANT S2, JOHT, HOEN S3 and PALD S4." width="480" height="288"></div>
+      <div class="screen"><img src="{{ '/assets/handbook/card-back.png' | relative_url }}" alt="The back of a trainer card, headed HALL OF FAME x5: five gold cups on a wooden shelf, each with a colored band and a short region label under it." width="480" height="288"></div>
       <figcaption>Flip it over for the trophy shelf: a cup for every Hall of Fame entry, with its region and season.</figcaption>
     </figure>
     <figure>
