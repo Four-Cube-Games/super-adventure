@@ -1,7 +1,7 @@
 ---
 layout: redirect
-title: Licenses
-permalink: /licenses/
+title: Credits
+permalink: /thanks/
 redirect_to: /credits/
 sitemap: false
 ---
