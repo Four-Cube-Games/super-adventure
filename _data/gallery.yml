@@ -6,11 +6,11 @@
 - file: birchton-town.png
   title: Birchton Town
   kind: Town
-  caption: A farming town of fenced flower fields, with benches round the well and straw hats everywhere.
+  caption: A farming town of cottages along two streets, with bunting across the square, a vegetable plot and a wheat field at the foot, and straw hats about.
 - file: junipervale-town.png
   title: Junipervale Town
   kind: Town
-  caption: A woodland town on two levels, with stone steps up to the well and the Center among the trees at the top.
+  caption: A woodland town on two levels, with a stone ledge and steps across the middle, the well in a paved square and the Center among the trees at the top.
 - file: millgate-town.png
   title: Millgate Town
   kind: Town
@@ -18,11 +18,11 @@
 - file: copperwick-town.png
   title: Copperwick Town
   kind: Town
-  caption: Snow, cobbles and pine forest, with the Center up on a stone terrace and benches round the well.
+  caption: Snow, cobbles and pine forest, with a candy-striped Mart up on a stone terrace, bunting over the square and benches by the well.
 - file: copperhaven-town.png
   title: Copperhaven Town
   kind: Town
-  caption: A mountain town under snow, split by a stone terrace, with a haunted tower at the end of the lower street.
+  caption: A mountain town under snow, with a haunted tower behind a fence on a high terrace and the Center at the top of the street.
 - file: rowanport-city.png
   title: Rowanport City
   kind: City
@@ -46,7 +46,7 @@
 - file: brightbury-gym.png
   title: Brightbury City Gym
   kind: Gym
-  caption: A Water gym, with channels down both walls and the leader waiting on the dais.
+  caption: A Water gym, with canals down both walls, busts of past champions along the walls and the leader waiting behind a portcullis on the dais.
 - file: route-4-coast.png
   title: Route 4
   kind: Route
@@ -58,15 +58,15 @@
 - file: cascade-cave.png
   title: Cascade Cave
   kind: Cave
-  caption: Ledges and stairs wind through a cave, with a plank bridge over a pool and boulders in the side passages.
+  caption: Stone shelves and stairs split a cave into levels, with a plank bridge over a pool and torchlight at the ways out.
 - file: coral-tunnel.png
   title: Coral Tunnel
   kind: Tunnel
-  caption: A tunnel through the hills, with a trainer waiting among the crates in the narrows and boulders where it opens out.
+  caption: A tunnel through the hills, with a trainer waiting among the crates in the narrows and stalagmites where it opens out.
 - file: old-foundry.png
   title: Old Foundry
   kind: Hideout
-  caption: A villain hideout. The arrow tiles slide you along until you hit something, and a grunt guards the forges.
+  caption: A villain hideout. The arrow tiles slide you along until you hit something, and a grunt guards the war table and the chest, with hazard-striped catwalks between the rooms.
 - file: crystal-shrine.png
   title: Warden Shrine
   kind: Shrine
@@ -94,8 +94,8 @@
 - file: elite-four-ice.png
   title: The Elite Four
   kind: Elite Four
-  caption: The first of the Elite Four's chambers, lined with crystals.
+  caption: The first of the Elite Four's courts, in the castle's grounds: ice crystals among the lawns, a fountain pool and a knight at the gate.
 - file: elite-four-champion.png
   title: The Elite Four
   kind: Elite Four
-  caption: The champion's hall at the very end, with a long red carpet up to the last fight.
+  caption: The champion's keep at the very end, with banners up a stone stair to the doors where the last fight waits.
