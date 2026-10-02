@@ -55,7 +55,7 @@ permalink: /rules/
 
 <section class="rules-section" id="start">
   <h2>Getting started</h2>
-  <p>Super Adventure is a <strong>Discord Activity</strong>: the game opens inside Discord, on a computer, in a browser or on a phone, and you walk its world tile by tile. Type <code>/activity</code> in a channel of a server that has the bot. Servers are approved by hand, so a new one waits until it's let in (see <a href="{{ '/play/' | relative_url }}">Play</a>).</p>
+  <p>Super Adventure is a <strong>Discord Activity</strong>: the game opens inside Discord, on a computer, in a browser or on a phone, and you walk its world tile by tile. Type <code>/play</code> or <code>/activity</code> in a channel of a server that has the bot. Servers are approved by hand, so a new one waits until it's let in (see <a href="{{ '/play/' | relative_url }}">Play</a>).</p>
 
   <h3 id="partner">Your partner</h3>
   <p>The first time you open it, you choose your partner from three: creatures that can evolve, each of a different type, and one of them always one of the region's original starters. Everyone in a server is offered the same three. You also choose how your trainer looks, and can change it any time.</p>
@@ -91,8 +91,7 @@ permalink: /rules/
   <div class="table-wrap"><table>
     <thead><tr><th>Command</th><th>Does</th></tr></thead>
     <tbody>
-      <tr><td><code>/activity</code></td><td>opens the adventure</td></tr>
-      <tr><td><code>/start</code></td><td>in a direct message with the bot, starts a world of your own</td></tr>
+      <tr><td><code>/play</code>, <code>/activity</code></td><td>open the adventure</td></tr>
       <tr><td><code>/card</code></td><td>shows your trainer card, or anyone's</td></tr>
       <tr><td><code>/leaderboard</code></td><td>the five boards, for your server</td></tr>
       <tr><td><code>/trade</code></td><td>swap creatures with someone in your server</td></tr>
@@ -542,7 +541,7 @@ permalink: /rules/
   <p>Your winning team enters the <b>Hall of Fame</b> exactly as it stood: every creature, level and move. Your server hears about it, a cup goes on the back of your trainer card, you earn a cape, and your team can turn up in other players' rematches.</p>
 
   <h3 id="rematch">After you win</h3>
-  <p>Once a day you can run the Elite Four again, and <b>real champions take the seats</b>: other players' Hall of Fame teams, from any region, with their exact creatures, levels and moves. Champions take the last seats, and a seat nobody fills keeps its original member. Each seat pays like any trainer, and there are new faces every day. Win a rematch and you earn a crown.</p>
+  <p>Once a day you can run the Elite Four again, and <b>real champions take the seats</b>: other players' Hall of Fame teams, from any region, with their exact creatures, levels and moves. Champions take the last seats, and a seat nobody fills keeps its original member. Each seat pays like any trainer, and there are new faces every day. Win a rematch and you earn a crown. The rematch isn't in the Activity yet.</p>
   {% include feedback.html topic="The Elite Four and Hall of Fame" %}
 </section>
 
@@ -587,7 +586,7 @@ permalink: /rules/
   <h2>Raids</h2>
   <p>A week into each season, and every week after, a <b>raid boss</b> turns up in your server's world for two days (one, if it lands on the season's last). It's something strong and fully evolved from the region, a little above the gym the season should have reached by now, and never a legend, with HP enough for everyone playing.</p>
   <ul>
-    <li><code>/raid</code> shows it and how it stands.</li>
+    <li><code>/raid</code> shows it and how it stands; its Fight button opens the Activity, and the fight's last lines say how much you took off.</li>
     <li>You can fight it <b>three times</b> in all, across both days, with a fit copy of your team, so it costs you nothing.</li>
     <li>Whatever you knock off counts for everyone.</li>
     <li>When it falls, <b>everyone who helped gets one throw</b> at catching one: likely, but not certain. Caught, it joins you at the boss's level.</li>
@@ -664,7 +663,7 @@ permalink: /rules/
   <p><b>When a season ends, your world becomes yours.</b> You get a private copy of the world you played, with your team, your box and your progress, to keep playing at your own pace forever, with no daily limit and no season clock. A reset is a graduation, not a wipe. Meanwhile your server starts again on a brand-new map.</p>
   <ul>
     <li><b>Worlds</b> in the start menu switches between your server's world and every private world you have.</li>
-    <li><code>/start</code> in a direct message with the bot makes a new world just for you, and can pick its region.</li>
+    <li>A new private world is made in the bot's own region; choosing another isn't in the Activity yet.</li>
     <li>Private worlds have the daily goal too, on the UTC day, but nothing you do in them counts on the leaderboards.</li>
   </ul>
   {% include feedback.html topic="Private and retired worlds" %}

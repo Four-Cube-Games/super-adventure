@@ -27,7 +27,7 @@ first, and plays in one test server.
 3. **Wait to be approved.** Every server is approved by hand while the game is young, so we know
    who's playing. Until then, the bot answers any command with a note that the server is waiting.
    The server's owner gets a direct message when the request arrives, and another with the answer.
-4. **Play.** Once approved, anyone in the server types `/activity` in a channel, and the adventure
+4. **Play.** Once approved, anyone in the server types `/play` or `/activity` in a channel, and the adventure
    opens right there. The first time, they choose a partner and set off. The
    [rules]({{ '/rules/' | relative_url }}) explain the rest.
 {:.steps}
