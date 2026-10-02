@@ -78,6 +78,8 @@ h1, h2 {
   outline-offset: 2px;
 }
 
+[hidden] { display: none !important; }
+
 .kind {
   display: grid;
   gap: 16px;
