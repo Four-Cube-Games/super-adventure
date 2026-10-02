@@ -1,15 +1,17 @@
 ---
 layout: default
 title: Play
-description: Add Super Adventure to your Discord server, or ask to join the beta.
+description: Add Super Adventure to your Discord server, open the adventure with /activity, or ask to join the beta.
 prose: true
 permalink: /play/
 ---
 
 # Play
 
-Super Adventure runs as two bots. **Super Adventure** is the stable game, for any server. **Super
-Adventure (beta)** gets new features first, and plays in one test server.
+Super Adventure is a Discord Activity: an adventure that opens inside Discord, on a computer, in a
+browser or on a phone, where you walk your server's world tile by tile. It runs as two bots.
+**Super Adventure** is the stable game, for any server. **Super Adventure (beta)** gets new features
+first, and plays in one test server.
 
 ## Add Super Adventure to your server {#stable}
 
@@ -19,12 +21,15 @@ Adventure (beta)** gets new features first, and plays in one test server.
    don't have it, send this page to someone who does.
 2. **Press "Add to Discord"** and pick the server. The bot asks for four permissions: *View
    Channels*, *Send Messages*, *Embed Links* and *Attach Files*. It needs Attach Files to draw
-   battles and maps, and the rest to post announcements. It never reads your messages.
+   battles and maps, and the rest to post announcements. It never reads your messages. The
+   Activity needs nothing more: Discord asks each player who opens it to let the game know who they
+   are.
 3. **Wait to be approved.** Every server is approved by hand while the game is young, so we know
    who's playing. Until then, the bot answers any command with a note that the server is waiting.
    The server's owner gets a direct message when the request arrives, and another with the answer.
-4. **Play.** Once approved, anyone in the server types `/start` to join its world, and `/play` to
-   pick up where they left off. The [handbook]({{ '/handbook/' | relative_url }}) explains the rest.
+4. **Play.** Once approved, anyone in the server types `/activity` in a channel, and the adventure
+   opens right there. The first time, they choose a partner and set off. The
+   [rules]({{ '/rules/' | relative_url }}) explain the rest.
 {:.steps}
 
 ### Setting it up for your server

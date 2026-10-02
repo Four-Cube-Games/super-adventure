@@ -1,0 +1,101 @@
+# Places drawn by the game from a world's seed, with the people the Activity puts in them. A bare file name is looked for in assets/gallery/.
+- file: hollyby-town.png
+  title: Hollyby Town
+  kind: Town
+  caption: A harbour town round a fountain, with jetties out over the water and sailors about the square.
+- file: birchton-town.png
+  title: Birchton Town
+  kind: Town
+  caption: A farming town of fenced flower fields, with benches round the well and straw hats everywhere.
+- file: junipervale-town.png
+  title: Junipervale Town
+  kind: Town
+  caption: A woodland town on two levels, with stone steps up to the well and the Center among the trees at the top.
+- file: millgate-town.png
+  title: Millgate Town
+  kind: Town
+  caption: A desert town of flat-roofed stone houses, with low walls and steps across the sand, a little oasis pool and palms all round.
+- file: copperwick-town.png
+  title: Copperwick Town
+  kind: Town
+  caption: Snow, cobbles and pine forest, with the Center up on a stone terrace and benches round the well.
+- file: copperhaven-town.png
+  title: Copperhaven Town
+  kind: Town
+  caption: A mountain town under snow, split by a stone terrace, with a haunted tower at the end of the lower street.
+- file: rowanport-city.png
+  title: Rowanport City
+  kind: City
+  caption: A city laid out round a great old tree, with paths ringing it and market stalls along the way in.
+- file: tidestead-city-park.png
+  title: Tidestead City
+  kind: City
+  caption: One of a city's districts is a park, with a tree in a ring of paths, benches, two ponds and a stone terrace at the back.
+- file: tidehurst-gym-district.png
+  title: Tidehurst City
+  kind: Gym
+  caption: A desert city's last district, with hedge gardens and a fountain on the way up to the gym and an oasis pool below.
+- file: thornhurst-gym-district.png
+  title: Thornhurst City
+  kind: Gym
+  caption: Another city's gym district, with a great fountain, statues and ornamental pools on the way up to the gym.
+- file: cloverholm-gym.png
+  title: Cloverholm City Gym
+  kind: Gym
+  caption: An Electric gym. Step on a switch to drop one colour of barrier and raise the other, then work your way past the trainers to the leader.
+- file: brightbury-gym.png
+  title: Brightbury City Gym
+  kind: Gym
+  caption: A Water gym, with channels down both walls and the leader waiting on the dais.
+- file: route-4-coast.png
+  title: Route 4
+  kind: Route
+  caption: A coastal route along the beach, with patches of tall grass and items to pick up among the trees.
+- file: route-4-stream.png
+  title: Route 4
+  kind: Route
+  caption: A route of raised meadows ringed with boulders, where a stream drops in little waterfalls and plank bridges cross it.
+- file: cascade-cave.png
+  title: Cascade Cave
+  kind: Cave
+  caption: Ledges and stairs wind through a cave, with a plank bridge over a pool and boulders in the side passages.
+- file: coral-tunnel.png
+  title: Coral Tunnel
+  kind: Tunnel
+  caption: A tunnel through the hills, with a trainer waiting among the crates in the narrows and boulders where it opens out.
+- file: old-foundry.png
+  title: Old Foundry
+  kind: Hideout
+  caption: A villain hideout. The arrow tiles slide you along until you hit something, and a grunt guards the forges.
+- file: crystal-shrine.png
+  title: Warden Shrine
+  kind: Shrine
+  caption: A crystal shrine of terraces and stairs, with seekers on the way up to the altar where a legend waits.
+- file: cloverholm-center.png
+  title: Cloverholm City Center
+  kind: Building
+  caption: Inside a Center. The nurse heals your team for free, and the tutor by the door teaches moves again.
+- file: cloverholm-mart.png
+  title: Cloverholm City Mart
+  kind: Building
+  caption: Inside a Mart. The shelves are restocked every day, and the clerk buys things back at half price.
+- file: glendale-house.png
+  title: Glendale Town House
+  kind: Building
+  caption: Some houses open, with a kitchen on one side, a bedroom on the other and the people who live there to talk to.
+- file: copperwick-dojo.png
+  title: Copperwick Town Dojo
+  kind: Building
+  caption: A mountain town's dojo, hung with shields and spears, where students wait round the mat and the master at the top.
+- file: scree-bike-road.png
+  title: Scree Bike Road
+  kind: Bike road
+  caption: A long road down the coast, where the trainers ride their bikes.
+- file: elite-four-ice.png
+  title: The Elite Four
+  kind: Elite Four
+  caption: The first of the Elite Four's chambers, lined with crystals.
+- file: elite-four-champion.png
+  title: The Elite Four
+  kind: Elite Four
+  caption: The champion's hall at the very end, with a long red carpet up to the last fight.

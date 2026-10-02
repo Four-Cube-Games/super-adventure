@@ -8,7 +8,7 @@ permalink: /privacy/
 
 # Privacy Policy
 
-<p class="updated">Last updated 26 September 2026</p>
+<p class="updated">Last updated 1 October 2026</p>
 
 This covers the Super Adventure Discord applications (the stable bot and the beta bot) and this
 website, run by Four Cube Games ("we", "us"). In short: we keep what the game needs to work,
@@ -37,16 +37,23 @@ We also keep a weekly count of servers and players, to see how the game is doing
 
 ## What we don't collect
 
-- **Your messages.** You play with slash commands and buttons. The bot has no access to message
-  content and asks for no privileged Discord permissions.
-- Your email, your real name, your IP address, or anything about you from outside the game. Discord
-  handles your connection, and the bot only sees what Discord passes on when you use a command.
+- **Your messages.** You play in the Activity, a page Discord opens for the game, and with a few slash
+  commands. The bot has no access to message content and asks for no privileged
+  Discord permissions. When you open the Activity, Discord tells the game who you are, and a
+  sign-in cookie, kept by Discord's app or your browser for twelve hours, keeps you signed in while
+  you play.
+- Your email, your real name, or anything about you from outside the game. Discord handles your
+  connection, and the bot only sees what Discord passes on when you use a command or open the Activity.
+  The game never reads or stores your IP address, though the web server in front of the Activity,
+  like any web server, may keep routine connection logs for a short time.
 - Anything for advertising or analytics. There are no ads and no trackers.
 
 ## Who can see it
 
+- **Anyone in the same place as you** in the Activity, who sees your trainer walk about with your
+  display name over its head.
 - **Other players**, in your server and elsewhere: your display name, your trainer's looks, your
-  rankings on the leaderboards (per server and across the whole bot), your announced achievements,
+  rankings on the leaderboards (within your server), your announced achievements,
   your trainer card, and your Hall of Fame teams, which can appear in other servers' Elite Four
   rematches and challenges.
 - **Us**, to run the game, approve servers and fix problems.

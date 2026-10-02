@@ -1,5 +1,5 @@
 title: Super Adventure
-description: A creature-collecting RPG you play inside Discord, with your whole server, on a map nobody has seen before.
+description: A creature-collecting adventure you walk through inside Discord, with your whole server, in a world nobody has seen before.
 lang: en-GB
 
 url: https://adventure.4cube.org
@@ -16,10 +16,14 @@ board: https://github.com/orgs/Four-Cube-Games/projects/1
 tabs:
   - title: Home
     url: /
-  - title: Handbook
-    url: /handbook/
+  - title: Rules
+    url: /rules/
+  - title: Gallery
+    url: /gallery/
   - title: Play
     url: /play/
+  - title: Thanks
+    url: /thanks/
   - title: Terms
     url: /terms/
   - title: Privacy

@@ -1,0 +1,80 @@
+---
+layout: default
+title: Gallery
+description: Places from Super Adventure, every one laid out from a seed.
+styles: /assets/gallery.css
+permalink: /gallery/
+---
+{%- assign kinds = site.data.gallery | group_by: "kind" -%}
+<header class="gallery-head">
+  <p class="eyebrow">Gallery</p>
+  <h1>Places a seed made</h1>
+  <p class="lede">Nobody drew these maps. <strong>Every place in Super Adventure is generated from its world's seed</strong>: the streets of a town, the bends of a route, the floors of a cave, the puzzle in a gym. The same seed always makes the same place, and a new season makes a new region. These are a few we liked.</p>
+</header>
+
+{%- if kinds.size > 1 %}
+<nav class="filters" aria-label="Show places of one kind" hidden>
+  <button type="button" data-kind="" aria-pressed="true">All <span>{{ site.data.gallery.size }}</span></button>
+  {%- for kind in kinds %}
+  <button type="button" data-kind="{{ kind.name | slugify }}" aria-pressed="false">{{ kind.name }} <span>{{ kind.size }}</span></button>
+  {%- endfor %}
+</nav>
+{%- endif %}
+
+{%- for kind in kinds %}
+<section class="kind" id="{{ kind.name | slugify }}" data-kind="{{ kind.name | slugify }}">
+  <h2>{{ kind.name }}</h2>
+  <div class="shots">
+    {%- for shot in kind.items -%}
+    {%- if shot.file contains '/' -%}{%- assign src = shot.file -%}{%- else -%}{%- assign src = '/assets/gallery/' | append: shot.file -%}{%- endif %}
+    <figure>
+      <a class="shot" href="{{ src | relative_url }}" data-title="{{ shot.title | escape }}" data-caption="{{ shot.caption | escape }}">
+        <img src="{{ src | relative_url }}" alt="{{ shot.title | escape }}: {{ shot.caption | escape }}" loading="lazy">
+      </a>
+      <figcaption><b>{{ shot.title }}</b> {{ shot.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+
+<p class="gallery-foot">Pictures are drawn by the game itself, from tile and character packs by the artists on the <a href="{{ '/thanks/' | relative_url }}">Thanks</a> page.</p>
+
+<dialog class="lightbox" aria-label="Enlarged picture">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <img alt="">
+  <p></p>
+</dialog>
+
+<script>
+(() => {
+  const filters = document.querySelector('.filters');
+  if (filters) {
+    filters.hidden = false;
+    const sections = document.querySelectorAll('.kind');
+    filters.addEventListener('click', event => {
+      const button = event.target.closest('button');
+      if (!button) return;
+      const kind = button.dataset.kind;
+      filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      sections.forEach(section => { section.hidden = kind !== '' && section.dataset.kind !== kind; });
+    });
+  }
+
+  const box = document.querySelector('.lightbox');
+  if (!box || typeof box.showModal !== 'function') return;
+  const picture = box.querySelector('img');
+  const caption = box.querySelector('p');
+  document.querySelectorAll('a.shot').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    picture.src = link.href;
+    picture.alt = link.querySelector('img').alt;
+    caption.textContent = '';
+    const title = document.createElement('b');
+    title.textContent = link.dataset.title;
+    caption.append(title, ' ', link.dataset.caption);
+    box.showModal();
+  }));
+  box.addEventListener('click', event => { if (event.target === box) box.close(); });
+})();
+</script>

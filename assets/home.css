@@ -49,6 +49,32 @@ h1, h2 {
   box-shadow: var(--shadow);
 }
 
+.hero-shot {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.hero-shot figcaption,
+.gallery figcaption b {
+  display: block;
+  color: var(--ink);
+}
+
+.more { margin: -24px 0 40px; }
+
+a.screen {
+  display: block;
+  transition: transform 120ms ease;
+}
+
+a.screen:hover { transform: translateY(-2px); }
+
+a.screen:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
 .screen img {
   display: block;
   width: 100%;
@@ -57,9 +83,20 @@ h1, h2 {
   image-rendering: pixelated;
 }
 
+.gallery .screen img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.hero-shot .screen img {
+  max-height: 520px;
+  object-fit: cover;
+}
+
 .pitch {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 8px;
   gap: 16px;
 }
 
@@ -92,10 +129,12 @@ h1, h2 {
   gap: 8px;
 }
 
-.gallery figcaption {
-  font-size: 15px;
-  color: var(--ink-soft);
+.gallery figcaption b {
+  display: block;
+  color: var(--ink);
 }
+
+.more { margin: -24px 0 40px; }
 
 .next {
   max-width: 46em;
@@ -107,6 +146,19 @@ h1, h2 {
 
 .next p { margin: 0; }
 
+@media (max-width: 900px) {
+  .pitch, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 760px) {
-  .hero, .pitch, .gallery { grid-template-columns: minmax(0, 1fr); }
+  .hero, .pitch { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.screen { transition: none; }
+  a.screen:hover { transform: none; }
 }

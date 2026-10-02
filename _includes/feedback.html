@@ -1,0 +1,2 @@
+{%- assign feedback_topic = include.topic | url_encode | replace: '+', '%20' -%}
+<a class="tell" href="{{ site.repo }}/issues/new?template=feedback.yml&amp;title=Rules%3A%20{{ feedback_topic }}&amp;rule={{ feedback_topic }}">Feedback on {{ include.label | default: include.topic | downcase }}</a>

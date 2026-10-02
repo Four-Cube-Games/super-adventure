@@ -6,7 +6,7 @@ body:
     id: rule
     attributes:
       label: Which rule or part of the game?
-      description: Filled in for you if you came from the handbook. Leave it blank if it's about something else.
+      description: Filled in for you if you came from the rules page. Leave it blank if it's about something else.
   - type: textarea
     id: feedback
     attributes:

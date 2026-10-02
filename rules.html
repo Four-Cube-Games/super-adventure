@@ -1,0 +1,685 @@
+---
+layout: default
+title: Rules
+description: Every rule of Super Adventure, in plain language, with a feedback button on each section.
+styles: /assets/rules.css
+permalink: /rules/
+---
+<header class="masthead">
+  <p class="eyebrow">Super Adventure</p>
+  <h1>The rules</h1>
+  <p class="lede">Everything the game does, in one place: how to get about, how battles and catching work, what gyms, hideouts and shrines ask of you, and how a server plays a season together. <strong>Every section has a feedback button.</strong> Press it to tell us what you'd change; it lands on the public <a href="{{ site.board }}">feedback board</a>.</p>
+  <p class="hint">Numbers here are starting values, and they change as people play.</p>
+</header>
+
+<div class="rulebook">
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#start">Getting started</a></li>
+    <li><a href="#moving">Moving about</a></li>
+    <li><a href="#towns">Towns and cities</a></li>
+    <li><a href="#wild">Wild creatures</a></li>
+    <li><a href="#battles">Battles</a>
+      <ol>
+        <li><a href="#turns">Turns and moves</a></li>
+        <li><a href="#types">Types</a></li>
+        <li><a href="#ailments">Ailments</a></li>
+        <li><a href="#stages">Stat stages</a></li>
+        <li><a href="#crits">Critical hits</a></li>
+        <li><a href="#weather">Weather and screens</a></li>
+        <li><a href="#more-moves">Moves that do more</a></li>
+        <li><a href="#abilities">Abilities</a></li>
+        <li><a href="#held">Held items</a></li>
+        <li><a href="#winning-battles">Winning and losing</a></li>
+      </ol>
+    </li>
+    <li><a href="#growing">Growing and evolving</a></li>
+    <li><a href="#catching">Catching</a></li>
+    <li><a href="#centers">Centers and Marts</a></li>
+    <li><a href="#gyms">Gyms and gauntlets</a></li>
+    <li><a href="#hideouts">Hideouts</a></li>
+    <li><a href="#legends">Shrines, legends and blessings</a></li>
+    <li><a href="#elite">The Elite Four and Hall of Fame</a></li>
+    <li><a href="#days">Days and seasons</a></li>
+    <li><a href="#raids">Raids</a></li>
+    <li><a href="#trades">Trades</a></li>
+    <li><a href="#challenges">Challenges</a></li>
+    <li><a href="#leaderboards">Leaderboards and announcements</a></li>
+    <li><a href="#looks">Looks and the wardrobe</a></li>
+    <li><a href="#worlds">Private and retired worlds</a></li>
+  </ol>
+</nav>
+
+<div class="sections">
+
+<section class="rules-section" id="start">
+  <h2>Getting started</h2>
+  <p>Super Adventure is a <strong>Discord Activity</strong>: the game opens inside Discord, on a computer, in a browser or on a phone, and you walk its world tile by tile. Type <code>/activity</code> in a channel of a server that has the bot. Servers are approved by hand, so a new one waits until it's let in (see <a href="{{ '/play/' | relative_url }}">Play</a>).</p>
+
+  <h3 id="partner">Your partner</h3>
+  <p>The first time you open it, you choose your partner from three: creatures that can evolve, each of a different type, and one of them always one of the region's original starters. Everyone in a server is offered the same three. You also choose how your trainer looks, and can change it any time.</p>
+  <p>You set out with <strong>5 balls and 500 coins</strong>.</p>
+
+  <h3 id="controls">Controls</h3>
+  <ul>
+    <li><b>Walk</b> with the arrow keys or the on-screen pad. Options can hide the pad; with it hidden, tap a square to walk there. <b>Hold B</b> (the B button, or X, Esc or Backspace on a keyboard) while you move to run at twice the pace. Running is only quicker, and it doesn't work while surfing. On its own B still opens the menu.</li>
+    <li><b>A</b>, or a tap, speaks to whoever you're facing. Tapping another player opens their trainer card.</li>
+    <li>Held upright, the screen sits above the pad and A/B, like a handheld. Turned sideways, the pad goes left of the screen and A/B right.</li>
+    <li>Two small buttons at the bottom middle open <b>☰ Start</b> and show or hide the pad (<b>✥ Select</b>). With the pad showing, tapping the map doesn't walk you.</li>
+    <li>Sound has its own switch in Options and a mute button in the corner, and it plays alongside your music rather than stopping it. Text speed and animations are in Options too.</li>
+  </ul>
+
+  <h3 id="menu">The start menu</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Entry</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td>Party</td><td>your six, with each one's stats, nature, potential, training, ability and moves; change their order, the first leading</td></tr>
+      <tr><td>Bag</td><td>your items, in pockets; use them, or give one to a creature to hold</td></tr>
+      <tr><td>Dex</td><td>every creature in this world's region: seen, caught, and where it lives</td></tr>
+      <tr><td>Map</td><td>the region, what's open, and where you are</td></tr>
+      <tr><td>Card</td><td>your trainer card</td></tr>
+      <tr><td>Wardrobe</td><td>what you wear</td></tr>
+      <tr><td>Options</td><td>the pad, sound, text speed, animations, and the credits</td></tr>
+      <tr><td>Worlds</td><td>switch between your server's world and your private ones</td></tr>
+    </tbody>
+  </table></div>
+  <p>Today's goal shows at the top of the menu (see <a href="#daily-goal">the daily goal</a>).</p>
+
+  <h3 id="commands">In Discord itself</h3>
+  <p>What's shared with your server stays in Discord, as slash commands:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Command</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td><code>/activity</code></td><td>opens the adventure</td></tr>
+      <tr><td><code>/start</code></td><td>in a direct message with the bot, starts a world of your own</td></tr>
+      <tr><td><code>/card</code></td><td>shows your trainer card, or anyone's</td></tr>
+      <tr><td><code>/leaderboard</code></td><td>the five boards, for your server</td></tr>
+      <tr><td><code>/trade</code></td><td>swap creatures with someone in your server</td></tr>
+      <tr><td><code>/challenge</code></td><td>fight a copy of a friend's team, or battle them live</td></tr>
+      <tr><td><code>/raid</code></td><td>the week's raid boss</td></tr>
+      <tr><td><code>/region vote</code>, <code>/region show</code></td><td>where next season goes, and the tally</td></tr>
+    </tbody>
+  </table></div>
+  {% include feedback.html topic="Getting started" %}
+</section>
+
+<section class="rules-section" id="moving">
+  <span class="alias" id="map"></span>
+  <h2>Moving about</h2>
+  <p><strong>Every place is laid out from your world's seed</strong>, so the same place is always the same, and no two worlds are alike. The world is a line of areas: routes, caves, tunnels and bike roads, broken up by towns. The way on is at the top of an area and the way back at the bottom.</p>
+
+  <h3 id="frontier">New ground</h3>
+  <p>The map opens a stretch at a time (see <a href="#days">Days and seasons</a>). At the edge of ground you can't enter yet, <b>a ranger stands in the way</b> and tells you why: the server hasn't opened it, or you've used today's new ground. To move on from an area you also need to beat its trainers.</p>
+
+  <h3 id="walking-back">Walking back</h3>
+  <p>Walk off the bottom of an area into the one behind, and forward again over ground you've cleared. It's free, costs no day, and works in every world. Leaving a gym or gauntlet part way puts its trainers back, as losing there would, but costs no coins.</p>
+
+  <h3 id="trainers">Trainers spot you</h3>
+  <p>Each trainer faces one way and sees three or four squares straight ahead, stopped by walls, other people and any change of level. Walk into their sight and they call out, walk up and fight. You can't slip past, and you can run from wild creatures but never from a trainer. Trainers suit where they stand: Youngsters and Lasses on routes, Hikers underground, Bikers on the bike road, Ace Trainers in gyms, Grunts in hideouts. Each has a line to start the fight and one to end it.</p>
+
+  <h3 id="land">The lie of the land</h3>
+  <ul>
+    <li><b>Every stretch between towns has a biome</b>: meadow, forest, coast, mountain, snow, desert, volcano or swamp. The way to the first gym is all meadow; after that the land shifts gradually, a gym's type pulls its stretch toward home (a water gym by the coast, a fire gym near a volcano), and the last stretch, to the Elite Four, is mountain.</li>
+    <li><b>Routes have height and water</b>: terraces joined by stairs, rivers with bridges, lakes, and the sea along the coast. You climb only by stairs, going north or south, never up a cliff.</li>
+    <li><b>Caves</b> have one to three floors, deeper ones later on, and the last cave before the Elite Four has three. Hideouts have floors too. Walk off the top edge to go up a floor and off the bottom to come back down; each floor has its own trainers and item balls.</li>
+    <li><b>Caves in the second half of the map are dark</b>, showing only a circle around you, until someone in your party can use Flash.</li>
+    <li><b>Bike roads and tunnels</b> are packed with trainers, with no way around.</li>
+  </ul>
+
+  <h3 id="field-moves">Field moves</h3>
+  <p>Badges open new ways across the land. They take no move slot, and no particular creature has to know them: walk into the obstacle and whoever in your party suits it best does it, and the game says who. If nobody fits, any healthy creature does it. Obstacles are back the next time you come in.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Badge</th><th>Opens</th><th>Done best by</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1st</td><td>Cut: small trees</td><td>grass, bug, steel, dark and normal types</td></tr>
+      <tr><td class="num">2nd</td><td>Flash: dark caves</td><td>electric, psychic, fire and fairy types</td></tr>
+      <tr><td class="num">3rd</td><td>Rock Smash: cracked rocks</td><td>fighting, rock, ground and steel types, or a strong Attack</td></tr>
+      <tr><td class="num">4th</td><td>Strength: boulders, pushed a square</td><td>the same as Rock Smash</td></tr>
+      <tr><td class="num">5th</td><td>Surf: water</td><td>water types</td></tr>
+      <tr><td class="num">6th</td><td>Rock Climb: a rock face, up or down a terrace's cliff</td><td>rock, ground and fighting types</td></tr>
+      <tr><td class="num">7th</td><td>Waterfall: up while surfing, or down</td><td>water types</td></tr>
+    </tbody>
+  </table></div>
+  <p>Field moves mostly open side paths. From after the first gym, about one route in five puts one in your way, but only ever one your badges already open, so nobody gets stuck. Nothing wild bothers you while you surf.</p>
+
+  <h3 id="item-balls">Item balls</h3>
+  <p>Balls lying on the ground hold an item. Look behind small trees and, from the fourth gym, cracked rocks and boulders, across streams once you can surf, and loose about routes and caves. You find each once, what's inside is the same for everyone in a world, and it gets better further along.</p>
+
+  <h3 id="others">Other players</h3>
+  <p>Anyone else in the same place walks about live, with their name over their head. They don't block your way.</p>
+  {% include feedback.html topic="Moving about" %}
+</section>
+
+<section class="rules-section" id="towns">
+  <h2>Towns and cities</h2>
+  <p>Every town has a <b>Center</b> and a <b>Mart</b>, each a room you walk into; every Center wears a medical cross and every Mart a coin sign over its door. About two houses in five open: knock and walk in to a cottage or a house with a kitchen and a bedroom, furnished to suit the town and home to a resident or two, and now and then one gives you a small gift, once. The other doors stay shut. Towns grow their own streets, with squares, yards and gardens, laid out by where they are, and each town's locals have something to say that changes daily, often a real tip about what's ahead. A few tame creatures live in towns: they answer with a cry and never fight.</p>
+
+  <h3 id="specials">Every town has a character</h3>
+  <p>Each has one special building to match, and each gift is given once.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Town</th><th>Special building</th><th>Gives</th></tr></thead>
+    <tbody>
+      <tr><td>Farming village</td><td>barn</td><td>3 healing berries</td></tr>
+      <tr><td>Market town</td><td>department store</td><td>sells everything the shops have reached so far</td></tr>
+      <tr><td>Woodland village</td><td>ranger's lodge</td><td>5 of the best ball</td></tr>
+      <tr><td>Port</td><td>lighthouse</td><td>an evolution item</td></tr>
+      <tr><td>Oasis</td><td>seer's tent</td><td>names the next shrine and today's roaming legends</td></tr>
+      <tr><td>Mountain village</td><td>dojo</td><td>a held item that sometimes lets its holder move first, once you beat its master</td></tr>
+      <tr><td>Mushroom hamlet</td><td>herbalist</td><td>3 cures</td></tr>
+      <tr><td>Hot springs</td><td>bathhouse</td><td>heals your team, as often as you like</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>The dojo fights.</b> Two Black Belts stand at the sides and a master at the top, and only beating the master earns the gift. <b>The haunted tower</b>: once a world, in the first town without a gym after the third gym, there may be one. It has three floors, two mediums with ghost teams on each, and mist on the upper floors that wakes wild ghosts. A keeper at the top gives 3 revives, once. Tower and dojo trainers don't ask for rematches.</p>
+
+  <h3 id="cities">Cities</h3>
+  <p>A town with a gym is a city of two to four parts. You arrive in the town part, with the Center, Mart, houses and the preserve's gate if it has one. Walk on through a far edge to the next part. Through the fourth gym a city is two parts; the fifth and sixth add a market quarter, and the seventh and eighth a park with a canal too. The last part is always the gym district, and the way on to the next stretch leaves from there.</p>
+  {% include feedback.html topic="Towns and cities" %}
+</section>
+
+<section class="rules-section" id="wild">
+  <h2>Wild creatures</h2>
+  <p>Tall grass and the floors of caves and tunnels wake creatures as you walk, and every route, cave, tunnel and bike road has two to five more <b>wandering in view</b>: grass creatures on the grass, water creatures in the water, cave creatures on the floor. Walk into one and the battle starts. Once you've met it, it's gone for you for the rest of the day, however the battle ended, and the next day brings new ones.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Where</th><th>Odds</th></tr></thead>
+    <tbody>
+      <tr><td>A step in tall grass</td><td class="num">about 1 in 10</td></tr>
+      <tr><td>A step on cave or tunnel floor</td><td class="num">about 1 in 16</td></tr>
+      <tr><td>Bike roads, and the water while you surf</td><td class="num">nothing wild</td></tr>
+      <tr><td>A wild creature is shiny</td><td class="num">1 in 2,048</td></tr>
+      <tr><td>It has its species' hidden ability</td><td class="num">1 in 50</td></tr>
+      <tr><td>It's holding a berry</td><td class="num">1 in 10</td></tr>
+      <tr><td>It's holding gear</td><td class="num">1 in 100</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><b>Where you are changes what you meet.</b> Caves have fewer trainers and more unusual creatures. A biome tilts its routes toward its own kinds: water and flying on the coast; ground, rock and fire in the desert; ice and water in the snow; fire and rock by a volcano; grass and bug in the forest; poison, water and grass in the swamp; rock, fighting, flying and dragon in the mountains.</li>
+    <li><b>Rares hide in one spot each</b>, usually a cave, and some aren't in your world at all. Which ones you can't get changes from world to world.</li>
+    <li><b>Shinies</b> come in their own colours, with a sparkle and a ✨ by the name. They're no stronger, they stay shiny when caught and evolved, and your server hears when you catch one.</li>
+    <li>Beating a wild creature pays <b>5 coins a level</b>.</li>
+  </ul>
+  {% include feedback.html topic="Wild creatures" %}
+</section>
+
+<section class="rules-section" id="battles">
+  <h2>Battles</h2>
+  <p>Battles are animated, with sound and cries: creatures slide in, health bars drain, and the text waits for a tap. They play like the classics, with the later games' best pieces added.</p>
+
+  <h3 id="turns">Turns and moves</h3>
+  <ul>
+    <li>Each turn you pick from <b>Fight, Bag, Run and Party</b>: use a move, use an item or throw a ball, run from a wild battle, or switch.</li>
+    <li><b>Switching</b> calls yours back and sends another out. It costs your turn, like an item, and the other side gets a free hit on whoever comes in.</li>
+    <li>The faster creature moves first. <b>Priority moves</b> jump the queue whatever the speed (Quick Attack, Extreme Speed, Aqua Jet), and a few, like Roar and Counter, always go last. Prankster puts its user's status moves ahead.</li>
+    <li>A move of the creature's own type hits <b>half as hard again</b>, and every hit varies a little, from 85% to 100%.</li>
+    <li>Each creature knows up to four moves. A move it learns with four full is skipped, not lost: the Move Tutor in any Center teaches it back (see <a href="#centers">Centers</a>).</li>
+  </ul>
+
+  <h3 id="types">Types</h3>
+  <p>Eighteen types, the same chart in every region. A move that's strong against a type does double; one that's weak does half; one with no effect does nothing. Against two types, both count.</p>
+  <div class="table-wrap"><table class="types">
+    <thead><tr><th>Attacking type</th><th>Strong against (×2)</th><th>Weak against (×½)</th><th>No effect on</th></tr></thead>
+    <tbody>
+      <tr><td>Bug</td><td>Dark, Grass, Psychic</td><td>Fairy, Fighting, Fire, Flying, Ghost, Poison, Steel</td><td></td></tr>
+      <tr><td>Dark</td><td>Ghost, Psychic</td><td>Dark, Fairy, Fighting</td><td></td></tr>
+      <tr><td>Dragon</td><td>Dragon</td><td>Steel</td><td>Fairy</td></tr>
+      <tr><td>Electric</td><td>Flying, Water</td><td>Dragon, Electric, Grass</td><td>Ground</td></tr>
+      <tr><td>Fairy</td><td>Dark, Dragon, Fighting</td><td>Fire, Poison, Steel</td><td></td></tr>
+      <tr><td>Fighting</td><td>Dark, Ice, Normal, Rock, Steel</td><td>Bug, Fairy, Flying, Poison, Psychic</td><td>Ghost</td></tr>
+      <tr><td>Fire</td><td>Bug, Grass, Ice, Steel</td><td>Dragon, Fire, Rock, Water</td><td></td></tr>
+      <tr><td>Flying</td><td>Bug, Fighting, Grass</td><td>Electric, Rock, Steel</td><td></td></tr>
+      <tr><td>Ghost</td><td>Ghost, Psychic</td><td>Dark</td><td>Normal</td></tr>
+      <tr><td>Grass</td><td>Ground, Rock, Water</td><td>Bug, Dragon, Fire, Flying, Grass, Poison, Steel</td><td></td></tr>
+      <tr><td>Ground</td><td>Electric, Fire, Poison, Rock, Steel</td><td>Bug, Grass</td><td>Flying</td></tr>
+      <tr><td>Ice</td><td>Dragon, Flying, Grass, Ground</td><td>Fire, Ice, Steel, Water</td><td></td></tr>
+      <tr><td>Normal</td><td></td><td>Rock, Steel</td><td>Ghost</td></tr>
+      <tr><td>Poison</td><td>Fairy, Grass</td><td>Ghost, Ground, Poison, Rock</td><td>Steel</td></tr>
+      <tr><td>Psychic</td><td>Fighting, Poison</td><td>Psychic, Steel</td><td>Dark</td></tr>
+      <tr><td>Rock</td><td>Bug, Fire, Flying, Ice</td><td>Fighting, Ground, Steel</td><td></td></tr>
+      <tr><td>Steel</td><td>Fairy, Ice, Rock</td><td>Electric, Fire, Steel, Water</td><td></td></tr>
+      <tr><td>Water</td><td>Fire, Ground, Rock</td><td>Dragon, Grass, Water</td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="ailments">Ailments</h3>
+  <p>A creature has <b>one ailment at a time, and it lasts until cured</b>, battle after battle: a Center, a cure from the bag or a berry fixes it. An ailment's plate takes the level's place on the battle screen.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Ailment</th><th>Effect</th><th>Can't happen to</th><th>Catching</th></tr></thead>
+    <tbody>
+      <tr><td><b>PSN</b> poisoned</td><td>loses 1/8 of its HP each turn</td><td>poison and steel types</td><td class="num">×1.5</td></tr>
+      <tr><td><b>BRN</b> burned</td><td>loses 1/16 of its HP each turn; physical attacks halved</td><td>fire types</td><td class="num">×1.5</td></tr>
+      <tr><td><b>PAR</b> paralyzed</td><td>half speed; can't move 1 turn in 4</td><td>electric types</td><td class="num">×1.5</td></tr>
+      <tr><td><b>SLP</b> asleep</td><td>can't move for 1 to 3 turns</td><td></td><td class="num">×2</td></tr>
+      <tr><td><b>FRZ</b> frozen</td><td>can't move; thaws 1 turn in 5</td><td>ice types</td><td class="num">×2</td></tr>
+    </tbody>
+  </table></div>
+  <p>Some things last only while the creature is out: <b>confusion</b> (2 to 5 turns, and 1 turn in 3 it hits itself instead), <b>flinching</b> (attacks like Bite can make a slower target lose its turn), being <b>seeded</b> and being <b>trapped</b>.</p>
+
+  <h3 id="stages">Stat stages</h3>
+  <p>Moves like Growl and Swords Dance push stats up or down, up to six stages either way. Stages wear off when the creature is called back.</p>
+  <div class="table-wrap"><table class="stages">
+    <thead><tr><th>Stage</th><th class="num">−6</th><th class="num">−4</th><th class="num">−2</th><th class="num">−1</th><th class="num">0</th><th class="num">+1</th><th class="num">+2</th><th class="num">+4</th><th class="num">+6</th></tr></thead>
+    <tbody>
+      <tr><td>Attack, Defense, Sp. Atk, Sp. Def, Speed</td><td class="num">×¼</td><td class="num">×⅓</td><td class="num">×½</td><td class="num">×⅔</td><td class="num">×1</td><td class="num">×1.5</td><td class="num">×2</td><td class="num">×3</td><td class="num">×4</td></tr>
+      <tr><td>Accuracy against evasion</td><td class="num">×⅓</td><td class="num">×3/7</td><td class="num">×⅗</td><td class="num">×¾</td><td class="num">×1</td><td class="num">×1⅓</td><td class="num">×1⅔</td><td class="num">×2⅓</td><td class="num">×3</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="crits">Critical hits</h3>
+  <p>A critical hit does <b>half as much again</b>, and ignores the attacker's lowered Attack, the target's raised Defense and any screen.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Move</th><th>Critical</th></tr></thead>
+    <tbody>
+      <tr><td>Most moves</td><td class="num">1 in 24</td></tr>
+      <tr><td>Slash, Razor Leaf and other high-critical moves</td><td class="num">1 in 8</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="weather">Weather and screens</h3>
+  <p>Weather and screens last <b>five turns</b>. You can see the weather too: rain falls, sand blows and snow drifts across the battle.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Weather</th><th>Does</th></tr></thead>
+    <tbody>
+      <tr><td>Rain</td><td>water moves ×1.5, fire moves ×½</td></tr>
+      <tr><td>Harsh sun</td><td>fire moves ×1.5, water moves ×½</td></tr>
+      <tr><td>Sandstorm</td><td>everyone but rock, ground and steel types loses 1/16 a turn; rock types' Sp. Def ×1.5</td></tr>
+      <tr><td>Hail</td><td>everyone but ice types loses 1/16 a turn</td></tr>
+      <tr><td>Snow</td><td>hurts nobody; ice types' Defense ×1.5</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Reflect</b> halves physical damage to your side and <b>Light Screen</b> special damage, and both stay up through switches. The first region's games had no weather, so in a world of that region only abilities bring it.</p>
+
+  <h3 id="more-moves">Moves that do more</h3>
+  <ul>
+    <li><b>Healing:</b> Recover and its like heal half your HP. Rest sleeps two turns, cures whatever ailed it and wakes at full HP; holding a berry that cures sleep wakes it at once.</li>
+    <li><b>Draining</b> moves heal half of what they deal. Take Down and Double-Edge cost <b>recoil</b>.</li>
+    <li><b>Leech Seed</b> saps 1/8 of the target's HP a turn for whoever is out on your side. Grass types can't be seeded.</li>
+    <li><b>Hitting two to five times:</b> two hits 35% of the time, three 35%, four 15%, five 15%. Each hit can be critical.</li>
+    <li><b>Wrap, Bind and Fire Spin</b> trap the target for 4 or 5 turns at 1/8 a turn. A trapped creature can't run or switch, but can still fight.</li>
+    <li><b>Hyper Beam</b> costs the next turn to recharge. <b>Dream Eater</b> only works on a sleeping target. <b>Stockpile</b> stores up to three, toughening you as it does; Spit Up and Swallow spend them all.</li>
+  </ul>
+
+  <h3 id="abilities">Abilities</h3>
+  <p>Every creature has one of its species' abilities, and keeps it when it evolves. One wild creature in fifty has its species' hidden ability instead, and your party screen marks it. Levitate dodges ground moves, Intimidate lowers the other's Attack as it comes out, Swift Swim doubles speed in rain, Static may paralyze whoever touches it. Abilities that care what kind of move it is work as in the games: Static only on moves that make contact, Iron Fist powers up punches, Soundproof blocks sounds. When one does something, the battle says so, and the party screen says what each one does. About two in three do something here; the rest are for things this game doesn't have, like double battles. Opponents know your ability too.</p>
+
+  <h3 id="held">Held items</h3>
+  <p>Each creature can <b>hold one item</b>, given from the bag and taken back whenever you're out of battle. Catch a wild creature that's holding something and it comes too.</p>
+  <ul>
+    <li><b>Berries</b> are sold in Marts and eaten when they're needed: at half HP, or the moment an ailment strikes.</li>
+    <li><b>Gear</b> is earned, never bought or sold. Every gym leader hands over the booster for their type, which makes those moves hit 20% harder. Every hideout boss leaves Leftovers, a Quick Claw or a Focus Band, one you haven't got while there's one left. The mountain dojo's master gives one too.</li>
+    <li>An <b>Everstone</b>, held, stops evolution by level (see <a href="#growing">Growing</a>).</li>
+  </ul>
+  <p>Gear, like the Exp. Share, belongs to that world's run: nothing you carry between worlds makes you better at the game.</p>
+
+  <h3 id="winning-battles">Winning and losing</h3>
+  <ul>
+    <li>A trainer pays <b>25 coins a level</b> of their strongest creature, so an early trainer pays about a ball and a gym leader far more.</li>
+    <li>If your whole party faints, you <b>black out</b>: you wake in the last Center you passed, in front of the nurse, with <b>half your coins gone</b>. Your day goes on.</li>
+    <li>If both sides' last creatures fall in the same action, the attacker's side wins when its own faint came from its attack: recoil, say, or the other side's ability. A win that leaves your whole party fainted still carries you to the last Center, healed, with your coins kept and the trainers you had beaten in a gym or hideout still beaten.</li>
+  </ul>
+  {% include feedback.html topic="Battles" %}
+</section>
+
+<section class="rules-section" id="growing">
+  <span class="alias" id="evolution"></span>
+  <h2>Growing and evolving</h2>
+
+  <h3 id="experience">Experience</h3>
+  <p>Every creature that was out against a foe and is still standing <b>splits its experience evenly</b>, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>: from then on the rest of your party takes half as well.</p>
+
+  <h3 id="natures">Natures, potential and training</h3>
+  <p>No two creatures are quite alike. Every wild creature, and your partner, has a <b>nature</b>: most raise one stat by a tenth and lower another, a few do neither. It has <b>potential</b>, 0 to 31 in each stat, graded S to D on your party screen. Both are fixed for life. Beating a creature <b>trains</b> everyone who earns experience from it in the stats its species teaches, up to 252 in a stat and 510 in all.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Trainers' creatures</th><th>Potential in every stat</th></tr></thead>
+    <tbody>
+      <tr><td>Most trainers</td><td class="num">8</td></tr>
+      <tr><td>Ace Trainers, grunts and shrine seekers</td><td class="num">16</td></tr>
+      <tr><td>Gym leaders, hideout bosses and dojo masters</td><td class="num">24</td></tr>
+      <tr><td>The Elite Four and champions</td><td class="num">31</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="evolving">Evolution</h3>
+  <ul>
+    <li><b>By level:</b> once a creature reaches its level, it evolves after a battle you win, one step at a time, and learns anything its new form learns at that level. A fainted creature waits for the next win.</li>
+    <li><b>By stone:</b> use it from the bag. For some creatures, the stone you choose decides what they become.</li>
+    <li><b>By trade:</b> a creature that evolved by trading evolves when it's traded to you, or with a <b>Linking Cord</b> from the bag.</li>
+    <li><b>The Everstone</b>, held, stops evolution by level and is never used up. Take it back and it evolves after its next win. A stone or the Cord still works on it.</li>
+    <li>Every hideout's boss leaves an evolution item: one that evolves something you own, if anything does.</li>
+  </ul>
+  {% include feedback.html topic="Growing and evolving" %}
+</section>
+
+<section class="rules-section" id="catching">
+  <h2>Catching</h2>
+  <p>Throw a ball from the Bag in a wild battle. The weaker it is, the easier it is to catch, as in the original games, and every throw uses up a ball.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>What helps</th><th>Catch chance</th></tr></thead>
+    <tbody>
+      <tr><td>Plain ball</td><td class="num">×1</td></tr>
+      <tr><td>Great Ball</td><td class="num">×1.5</td></tr>
+      <tr><td>Ultra Ball</td><td class="num">×2</td></tr>
+      <tr><td>Asleep or frozen</td><td class="num">×2</td></tr>
+      <tr><td>Poisoned, burned or paralyzed</td><td class="num">×1.5</td></tr>
+      <tr><td>Low HP</td><td>the lower, the better</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li>A catch pays <b>10 coins a level</b> and the experience of a knockout.</li>
+    <li><b>You carry six.</b> Anything caught with six already goes to your <b>box</b>, which has no limit. The box is the PC in every Center; creatures go in and out as they are, so the box won't heal them. Your party always keeps one that can fight.</li>
+    <li><b>The dex</b> in your start menu is this world's: a numbered grid of the region, a question mark for anything you haven't seen, a silhouette once you have, and in full once caught, with the areas of this world it lives in. A creature is seen when it appears in front of you, in the wild or on a trainer's side. Your global dex counts everything you've ever caught, in every world.</li>
+  </ul>
+
+  <h3 id="preserve">The preserve</h3>
+  <p>One town in the middle of the map, between the fourth and sixth gyms, keeps a fenced preserve behind it. Pay the warden at the gatehouse and walk in.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>The preserve</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>To get in</td><td class="num">500 coins</td></tr>
+      <tr><td>Balls in your bag</td><td class="num">20</td></tr>
+      <tr><td>Rares found nowhere else in the world</td><td class="num">2</td></tr>
+      <tr><td>Coins paid per catch</td><td class="num">0</td></tr>
+    </tbody>
+  </table></div>
+  <p>Your team never fights. Each turn you throw a ball, some bait or a rock, or leave. Bait keeps it around but makes it harder to catch; a rock makes it easier to catch but likelier to run. After every miss it may bolt, and fast ones usually do. The visit lasts until the balls run out or you walk out, and leftover balls stay behind. Going in costs no day, and you can't heal or move on while you're inside.</p>
+  {% include feedback.html topic="Catching" %}
+</section>
+
+<section class="rules-section" id="centers">
+  <span class="alias" id="shops"></span>
+  <h2>Centers and Marts</h2>
+
+  <h3 id="center">The Center</h3>
+  <ul>
+    <li><b>The nurse heals your whole party for nothing</b>, as often as you like, curing every ailment. It never ends your day.</li>
+    <li><b>The PC</b> holds your box.</li>
+    <li><b>The Move Tutor</b> teaches a creature again any move it has learned by its level, for free, in place of one it knows. The new move keeps the share of PP the old one had left, so swapping isn't a free refill.</li>
+    <li><b>A board</b> shows today's goal, and how many in your server have met it.</li>
+  </ul>
+  <p>Inside a gym's town, healing at the Center while you're part way through the gym puts its trainers back (see <a href="#gyms">Gyms</a>).</p>
+
+  <h3 id="mart">The Mart</h3>
+  <p>Every town has a Mart. The first two towns' Marts never close; after that, a Mart is open about two days in three, and what's on the shelf changes. When it's open it always has plain balls and Potions, and better stock further into the map. Your whole server sees the same shelf on the same day, and nobody can buy anyone else out. The counter has <b>Buy</b> and <b>Sell</b>: while the Mart is open, anything but gear sells back for <b>half its price</b>. Using an item in battle takes your turn; outside battle, it's free.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Item</th><th class="num">Price</th><th>What it does</th><th>Sold from</th></tr></thead>
+    <tbody>
+      <tr><td>Plain ball</td><td class="num">200</td><td>a plain throw</td><td>the start</td></tr>
+      <tr><td>Potion</td><td class="num">200</td><td>restores 20 HP</td><td>the start</td></tr>
+      <tr><td>Antidote, Paralyze Heal, Awakening, Burn Heal, Ice Heal</td><td class="num">200</td><td>cure one ailment each</td><td>the start</td></tr>
+      <tr><td>Oran Berry</td><td class="num">100</td><td>held: restores 10 HP at half health</td><td>the start</td></tr>
+      <tr><td>Cheri, Chesto, Pecha, Rawst, Aspear, Persim Berries</td><td class="num">150</td><td>held: cures one ailment, or confusion, the moment it strikes</td><td>the start</td></tr>
+      <tr><td>Everstone</td><td class="num">3,000</td><td>held: stops evolution by level</td><td>the start</td></tr>
+      <tr><td>Great Ball</td><td class="num">600</td><td>×1.5 as likely to catch</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Super Potion</td><td class="num">700</td><td>restores 50 HP</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Revive</td><td class="num">2,000</td><td>brings a fainted creature back at half HP</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Full Heal</td><td class="num">400</td><td>cures anything, confusion included</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Sitrus Berry</td><td class="num">400</td><td>held: restores 30 HP at half health</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Evolution stones</td><td class="num">3,000</td><td>evolve the creatures that need one</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Linking Cord</td><td class="num">8,000</td><td>evolves the creatures that evolved by trading</td><td>the 3rd gym's town</td></tr>
+      <tr><td>Ultra Ball</td><td class="num">800</td><td>×2 as likely to catch</td><td>the 6th gym's town</td></tr>
+      <tr><td>Hyper Potion</td><td class="num">1,500</td><td>restores 200 HP</td><td>the 6th gym's town</td></tr>
+      <tr><td>Lum Berry</td><td class="num">1,000</td><td>held: cures anything the moment it strikes</td><td>the 6th gym's town</td></tr>
+    </tbody>
+  </table></div>
+  <p class="hint">What an item is called and what it costs can differ a little from region to region.</p>
+  {% include feedback.html topic="Centers and Marts" %}
+</section>
+
+<section class="rules-section" id="gyms">
+  <h2>Gyms and gauntlets</h2>
+  <p><b>Eight gyms, each a random type</b>, drawn from the region and as different from each other as they can be. Levels climb steadily: the first leader is level 14 and the last level 56. The way to the first gym starts gently, with at least three stretches of wild starting at level 2.</p>
+
+  <h3 id="gym-trainers">Trainers before the leader</h3>
+  <p>Every gym has trainers before its leader: two at the first gym, rising to four at the eighth, using the gym's type a few levels below the leader. You fight them in order, back to back, and the leader won't see you until they're all down. Lose to any of them, or step out to heal at the Center, and they're all waiting again, until only the leader is left (see <a href="#checkpoints">checkpoints</a>).</p>
+
+  <h3 id="puzzles">Every gym is a puzzle</h3>
+  <p>Between the door and the leader, each gym is built around a puzzle chosen by the leader's type, made from the seed and always solvable. Later gyms have bigger ones. Once you hold a gym's badge, it comes back solved when you run it again.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Leader's type</th><th>Puzzle</th></tr></thead>
+    <tbody>
+      <tr><td>Ice</td><td>floors you slide across until something stops you</td></tr>
+      <tr><td>Electric</td><td>red and blue switches that raise and lower barriers</td></tr>
+      <tr><td>Psychic</td><td>warp panels that carry you to their partners</td></tr>
+      <tr><td>Rock, ground, fighting</td><td>crates to push, some into holes</td></tr>
+      <tr><td>Fire</td><td>cracked floors that break once you cross; fall in and you're back at the start</td></tr>
+      <tr><td>Ghost, dark</td><td>a dark maze, dark even with Flash, and darker at each later gym</td></tr>
+      <tr><td>Flying, steel</td><td>arrow tiles that carry you</td></tr>
+      <tr><td>Every other type</td><td>aisles, with a smaller switch puzzle and the trainers standing in it</td></tr>
+    </tbody>
+  </table></div>
+  <p>If you get stuck, <b>Stuck?</b> in the menu puts the puzzle you're in back to its start.</p>
+
+  <h3 id="rest">The attendant</h3>
+  <p>About halfway through every gym, hideout, shrine and the Elite Four stands an <b>attendant</b>. Speak to them and your whole party is healed, for free, as often as you like. Nothing else changes: the trainers you've beaten stay beaten.</p>
+
+  <h3 id="checkpoints">Checkpoints</h3>
+  <p>Once only the last trainer of a run is left, you're at its <b>checkpoint</b>. From then on, losing, walking out or healing at the Center keeps everyone else beaten, so the next try is against the one who beat you.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Where</th><th>At the checkpoint when</th></tr></thead>
+    <tbody>
+      <tr><td>A gym whose badge you haven't won</td><td>every gym trainer is down, only the leader left</td></tr>
+      <tr><td>A hideout</td><td>only the boss is left</td></tr>
+      <tr><td>A shrine</td><td>only the last seeker is left</td></tr>
+      <tr><td>The Elite Four, and its daily rematch</td><td>only the Champion, or the last seat, is left</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="leaders">Leaders fight smart</h3>
+  <p>Gym leaders, everyone in a hideout or at a shrine, the Elite Four and champions read your creature's type. If it hits theirs hard, they call it back for one that takes it better, and when one falls they send out whichever suits the fight. Their ace always comes out last. Route and gym trainers send theirs out in order.</p>
+
+  <h3 id="gym-rewards">What a leader gives</h3>
+  <p>Their badge, the booster for their type, and balls the first time you beat them. Leaders talk about their type and hand the badge over themselves.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Gyms</th><th>Balls on the first win</th></tr></thead>
+    <tbody>
+      <tr><td>1st and 2nd</td><td>5 plain balls</td></tr>
+      <tr><td>3rd to 5th</td><td>3 Great Balls, and the Exp. Share from the 3rd</td></tr>
+      <tr><td>6th to 8th</td><td>3 Ultra Balls</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="reruns">Reruns and rematches</h3>
+  <ul>
+    <li><b>Reruns.</b> Once you've won a badge or cleared a hideout, speak to the beaten leader or boss to run it again, as often as you like. Its trainers rise to where you've got to, the last at the level of the next gym you haven't beaten, and they switch to suit the fight. A rerun pays experience and training, but no coins, worthiness, badge or gear, and isn't on your record. Walking out or healing ends it.</li>
+    <li><b>Trainer rematches.</b> Each day, three trainers you've beaten on routes, in caves, tunnels and on bike roads want a rematch, picked for you alone. They stand with a speech bubble; speak to them to fight. They come back a little below the next gym's level, and pay and count like any trainer.</li>
+  </ul>
+  {% include feedback.html topic="Gyms and gauntlets" %}
+</section>
+
+<section class="rules-section" id="hideouts">
+  <h2>Hideouts</h2>
+  <p>From the third gym on, a couple of villain hideouts sit in the way. Each has three or four grunts, then a boss, fought straight through.</p>
+  <ul>
+    <li>Bigger hideouts have up to three floors, the boss on the top one; in the first half of the map, never more than two.</li>
+    <li>Every floor has a puzzle between its grunts and the way up: switches and barriers, warp panels, or arrows. Once you've walked past one it stays solved for good, and coming down onto a floor from above counts as passing it.</li>
+    <li>An <a href="#rest">attendant</a> heals your team for free about halfway in.</li>
+    <li>Black out and you start again from the first grunt, unless it was the boss who beat you: then the grunts stay beaten.</li>
+    <li>The boss leaves an <b>evolution item</b> and a piece of <b>gear</b>. Your first hideout cleared earns a bandana for your wardrobe, and each one cleared is worth 3 <a href="#worthiness">worthiness</a>.</li>
+  </ul>
+  {% include feedback.html topic="Hideouts" %}
+</section>
+
+<section class="rules-section" id="legends">
+  <h2>Shrines, legends and blessings</h2>
+  <p>Some of the region's legends sleep at <b>shrines</b> in the back half of the map. The rest <b>roam</b>, turning up rarely in the late wilderness, well above the level of anything around them. A world can also borrow up to three legends from other regions installed on the bot; visitors only ever roam. An oasis town's seer names the next shrine and today's roamers.</p>
+
+  <h3 id="shrines">Shrines</h3>
+  <p>Two to four seekers guard a shrine, digging for what's buried there, with an <a href="#rest">attendant</a> on the way up. Beat them all, and the legend sleeps on its altar: speak to it to wake it. A shrine's legend is six levels above that stretch's gym leader.</p>
+
+  <h3 id="aura">The aura</h3>
+  <p>A legend met in the wild, at a shrine or roaming, fights with <b>half as much again in every stat but HP</b>, and the battle says so. Caught, it loses the aura and is only as strong as its level.</p>
+
+  <h3 id="worthiness">When a legend gets away</h3>
+  <p>Catch it or beat it and it's settled for good. If it runs, or beats you, it <b>watches you</b>, and faces you again once you've proved yourself. Your chances are yours alone: losing yours costs nobody else theirs. Roamers just keep turning up, rarely.</p>
+  <div class="table-wrap two"><table>
+    <thead><tr><th>Another try</th><th class="num">Worthiness</th></tr></thead>
+    <tbody>
+      <tr><td>Second</td><td class="num">25</td></tr>
+      <tr><td>Third</td><td class="num">60</td></tr>
+      <tr><td>Each after</td><td class="num">120</td></tr>
+    </tbody>
+  </table><table>
+    <thead><tr><th>Worthiness for</th><th class="num">Each</th></tr></thead>
+    <tbody>
+      <tr><td>A trainer beaten</td><td class="num">1</td></tr>
+      <tr><td>A new dex entry</td><td class="num">2</td></tr>
+      <tr><td>A hideout cleared</td><td class="num">3</td></tr>
+      <tr><td>A badge</td><td class="num">5</td></tr>
+    </tbody>
+  </table></div>
+  <p>Coins can't buy it, and reruns and rematches don't earn it.</p>
+
+  <h3 id="blessing">Blessings</h3>
+  <p>Beat a legend instead of catching it, and the creature that landed the knockout is <b>permanently 10% stronger in every stat</b>, and you earn a scarf for your wardrobe. It's the one power-up training can't give, so passing on the catch is a real choice.</p>
+  {% include feedback.html topic="Shrines, legends and blessings" %}
+</section>
+
+<section class="rules-section" id="elite">
+  <span class="alias" id="winning"></span>
+  <h2>The Elite Four and Hall of Fame</h2>
+  <p>Beat all eight gyms, then the <b>Elite Four</b> and the <b>Champion</b>, back to back, and you've won the map. The four are the same in every region: <b>Ice, Fighting, Ghost and Dragon</b>, and a <b>Normal</b> Champion. Their teams change from world to world but always come from that region, keep to their type and are fully evolved and strong, never legends. An <a href="#rest">attendant</a> stands halfway, and lose to the Champion and the four stay beaten.</p>
+
+  <h3 id="hall">The Hall of Fame</h3>
+  <p>Your winning team enters the <b>Hall of Fame</b> exactly as it stood: every creature, level and move. Your server hears about it, a cup goes on the back of your trainer card, you earn a cape, and your team can turn up in other players' rematches.</p>
+
+  <h3 id="rematch">After you win</h3>
+  <p>Once a day you can run the Elite Four again, and <b>real champions take the seats</b>: other players' Hall of Fame teams, from any region, with their exact creatures, levels and moves. Champions take the last seats, and a seat nobody fills keeps its original member. Each seat pays like any trainer, and there are new faces every day. Win a rematch and you earn a crown.</p>
+  {% include feedback.html topic="The Elite Four and Hall of Fame" %}
+</section>
+
+<section class="rules-section" id="days">
+  <span class="alias" id="seasons"></span>
+  <h2>Days and seasons</h2>
+  <p>This is the biggest difference from the classics. A server's world is shared, and its map is split into <b>stretches</b> that each end at a town with a Center.</p>
+
+  <h3 id="new-ground">One new stretch a day</h3>
+  <ul>
+    <li><b>The server opens the map together.</b> A stretch opens when anyone reaches the town before it, and nobody can go past the furthest town anyone has reached. Whoever gets there first holds the door for everyone else, and the server hears about it.</li>
+    <li><b>You can push into one new stretch a day</b>, or more at a faster pace. Inside a stretch you can go as far as you like, so a day can always end somewhere safe.</li>
+    <li><b>Ground already opened is free</b>, whether you're catching up from behind, walking back or coming back from a blackout. Once you've used today's new ground, there's still plenty to do: reruns, rematches, catching, training and the daily goal.</li>
+    <li>Healing never costs a day. Only new ground does.</li>
+  </ul>
+
+  <h3 id="time-zone">When a day starts</h3>
+  <p>At midnight where your server is. Admins pick the time zone with <code>/timezone set</code>; until they do, days turn over at midnight UTC. Changing it never costs or gives anyone a day: the day in progress runs on to the next midnight in the new zone, so it can get longer but never shorter. Private worlds stay on UTC.</p>
+
+  <h3 id="daily-goal">The daily goal</h3>
+  <p>Each day has <b>one goal for everyone in a world</b>: catch 2 to 4 creatures, beat 2 to 4 trainers, or knock out 4 to 8 wild ones. Meeting it pays <b>300 coins, plus 100 for each badge</b>, once a day. It shows at the top of the start menu and on the board in every Center, with how many in your server have met it. Challenges, live battles and raids don't count toward beating trainers.</p>
+
+  <h3 id="pace">Seasons, and your server's pace</h3>
+  <p>A server's world lasts a <b>season</b>. <b>When the season ends, the world is generated anew</b> from a new seed: new towns, routes, gyms and shrines, in the region your server voted for, and everyone sets off again. Admins choose its pace with <code>/pace set</code>:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Pace</th><th class="num">New stretches a day</th><th class="num">Season</th></tr></thead>
+    <tbody>
+      <tr><td>Relaxed</td><td class="num">1</td><td class="num">45 days</td></tr>
+      <tr><td>Standard</td><td class="num">1</td><td class="num">30 days</td></tr>
+      <tr><td>Brisk</td><td class="num">2</td><td class="num">21 days</td></tr>
+      <tr><td>Sprint</td><td class="num">3</td><td class="num">14 days</td></tr>
+    </tbody>
+  </table></div>
+  <p>Standard is where every server starts. A new pace changes the stretches a day from tomorrow, and the season's length from the next season, so nobody's season is cut short. You can <b>join on any day</b> of a season: opened ground costs no day, so a latecomer walks straight up to everyone else. When you choose your partner, it tells you how many days are left.</p>
+
+  <h3 id="regions">Regions, and the vote</h3>
+  <p>There are nine regions, and a world is one of them, with that region's creatures and the moves they learned there. In the last three days of a season, everyone playing in your server votes on where the next one goes with <code>/region vote</code>, and can change their vote until it closes; <code>/region show</code> has the tally. The most votes wins, a tie is drawn between the leaders, and with no votes at all it's the bot's home region.</p>
+  {% include feedback.html topic="Days and seasons" %}
+</section>
+
+<section class="rules-section" id="raids">
+  <h2>Raids</h2>
+  <p>A week into each season, and every week after, a <b>raid boss</b> turns up in your server's world for two days (one, if it lands on the season's last). It's something strong and fully evolved from the region, a little above the gym the season should have reached by now, and never a legend, with HP enough for everyone playing.</p>
+  <ul>
+    <li><code>/raid</code> shows it and how it stands.</li>
+    <li>You can fight it <b>three times</b> in all, across both days, with a fit copy of your team, so it costs you nothing.</li>
+    <li>Whatever you knock off counts for everyone.</li>
+    <li>When it falls, <b>everyone who helped gets one throw</b> at catching one: likely, but not certain. Caught, it joins you at the boss's level.</li>
+  </ul>
+  {% include feedback.html topic="Raids" %}
+</section>
+
+<section class="rules-section" id="trades">
+  <h2>Trades</h2>
+  <p>Swap creatures with anyone in your server's world, in four steps:</p>
+  <ol class="steps">
+    <li><code>/trade offer @friend</code> puts up one of yours, from your party or box.</li>
+    <li>They answer with one of theirs, with <code>/trade answer</code>.</li>
+    <li>You accept.</li>
+    <li>They confirm. <code>/trade list</code> shows what's waiting on you.</li>
+  </ol>
+  <p>Until it's done or called off, both creatures wait on offer, out of your party and box. A traded creature arrives rested, but can't be traded on until its new owner has healed at a Center, so nobody trades just to skip one. A creature that evolves by trading evolves as it arrives, unless it's holding an Everstone. Your server hears about finished trades.</p>
+  {% include feedback.html topic="Trades" %}
+</section>
+
+<section class="rules-section" id="challenges">
+  <h2>Challenges</h2>
+  <p><code>/challenge @friend</code> asks them in the channel. If they take it on, you fight a <b>copy of their team</b>, played by the bot the way champions play: switching to suit the fight and saving their best for last. Your team walks in fit too, so there's no need to heal first.</p>
+  <p><b>Or battle them live</b> with <code>/challenge @friend live:True</code>: once they accept, the two of you fight in the channel for anyone to watch. Each of you presses <b>Pick your move</b> for a screen only you see, and the turn plays out when you've both picked. You have <b>two minutes a turn</b>: whoever hasn't picked by then loses, and if neither has, it's called off. When one of yours faints, you choose who comes out next.</p>
+  <p>Either way: no items, running means conceding, and there's no experience, money or blackout in it. The result goes on both your win-loss records, with a tally between you two: <em>"You lead 3–1."</em></p>
+  {% include feedback.html topic="Challenges" %}
+</section>
+
+<section class="rules-section" id="leaderboards">
+  <h2>Leaderboards and announcements</h2>
+  <p><code>/leaderboard</code> has five boards, each ranked on its own:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Board</th><th>Counts</th></tr></thead>
+    <tbody>
+      <tr><td>Clears</td><td>maps won: Hall of Fame entries</td></tr>
+      <tr><td>Levels</td><td>total levels across every creature you own</td></tr>
+      <tr><td>Legends</td><td>legends caught</td></tr>
+      <tr><td>Dex</td><td>your global dex</td></tr>
+      <tr><td>Record</td><td>trainer battles won, with losses beside them</td></tr>
+    </tbody>
+  </table></div>
+  <p>Standings are for your server only, counting every season it has played. The top three stand on a podium in their own clothes. Only a server's seasons count: when a season ends, the boards keep what you'd done by then, and nothing in your private worlds counts.</p>
+
+  <h3 id="announcements">Announcements</h3>
+  <p>Each server picks what it hears about, in one channel. <em>Quiet</em>, the default, is the big moments: a new season, someone opening the way to a new town, a legend caught, a new Hall of Fame entry, the region vote opening, and the week's raid turning up and going down. <em>Normal</em> adds badges, hideouts cleared, legends knocked out (and who was blessed), roaming legends spotted, rare catches, Elite Four rematches won, challenges won and trades. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Admins can switch any one on or off by itself.</p>
+  {% include feedback.html topic="Leaderboards and announcements" %}
+</section>
+
+<section class="rules-section" id="looks">
+  <span class="alias" id="trainer"></span>
+  <h2>Looks and the wardrobe</h2>
+  <p>Your trainer walks every map, steps into every battle from behind before sending the first creature out, and stands on your trainer card, dressed how you choose. <b>Wardrobe</b> in the start menu changes it, and shows you front and back.</p>
+  <ul>
+    <li><b>Free to change, any time:</b> skin tone, hair colour, hairstyle, shirt, and pants, shorts or a skirt. There's no boy or girl to pick: anyone can wear anything.</li>
+    <li><b>Earned, and kept forever:</b> one hat, one outfit and one accessory at a time, from what you've won. Nothing is for sale, and it carries over to every world and season.</li>
+  </ul>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Earned for</th><th>Wearable</th></tr></thead>
+    <tbody>
+      <tr><td>Badges: 1, 2, 3, 4 and all 8</td><td>a cap, a hoodie, a backpack, a beanie, a champion's jacket</td></tr>
+      <tr><td>Clearing a hideout</td><td>a bandana</td></tr>
+      <tr><td>30, 50, 80 and 120 species in one world's dex</td><td>glasses, a sun hat, a ranger vest, a lab coat</td></tr>
+      <tr><td>A legend's blessing</td><td>a scarf</td></tr>
+      <tr><td>The Hall of Fame</td><td>a cape</td></tr>
+      <tr><td>Winning an Elite Four rematch</td><td>a crown</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Your trainer card</b> (Card in the menu, or <code>/card</code> in Discord) shows your badges, dex, legends, coins, shinies owned and your win-loss record. Flip it over for the trophy shelf: a cup for every Hall of Fame entry, marked with its region and season. When you sit in someone's Elite Four rematch as a champion, you're wearing what you wear.</p>
+  {% include feedback.html topic="Looks and the wardrobe" %}
+</section>
+
+<section class="rules-section" id="worlds">
+  <h2>Private and retired worlds</h2>
+  <p><b>When a season ends, your world becomes yours.</b> You get a private copy of the world you played, with your team, your box and your progress, to keep playing at your own pace forever, with no daily limit and no season clock. A reset is a graduation, not a wipe. Meanwhile your server starts again on a brand-new map.</p>
+  <ul>
+    <li><b>Worlds</b> in the start menu switches between your server's world and every private world you have.</li>
+    <li><code>/start</code> in a direct message with the bot makes a new world just for you, and can pick its region.</li>
+    <li>Private worlds have the daily goal too, on the UTC day, but nothing you do in them counts on the leaderboards.</li>
+  </ul>
+  {% include feedback.html topic="Private and retired worlds" %}
+</section>
+
+<section class="rules-section" id="anything-else">
+  <h2>Anything else?</h2>
+  <p>A feature you miss from the classics, something that would bring your server together, a rule that bugs you, or a line from a trainer that made you smile. Tell us.</p>
+  {% include feedback.html topic="Anything else" label="anything else" %}
+</section>
+
+</div>
+</div>
+
+<footer class="rules-foot">
+  <p>Feedback opens a form on GitHub, which needs a free account. No account? Tell Mark on Discord and he'll put it on the board for you.</p>
+  <p>Numbers here are starting values and are expected to change once people play.</p>
+</footer>

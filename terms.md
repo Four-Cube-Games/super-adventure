@@ -26,7 +26,7 @@ The game costs nothing and sells nothing. Coins, creatures, items and wearables 
 the game. They have no money value and can't be bought, sold or exchanged for anything outside it.
 
 It's a young game, and we change it: rules are rebalanced, features come and go, and numbers in the
-handbook are starting values. In particular:
+[rules]({{ '/rules/' | relative_url }}) are starting values. In particular:
 
 - **Seasons end.** A server's shared world lasts a season. When it ends, your progress in it moves
   into a private world of your own rather than being deleted. That's how the game is designed, not
@@ -57,7 +57,7 @@ Please don't:
 ## What others can see
 
 Your Discord display name, your trainer's looks, your teams and your records appear to other
-players: in your server, on the global leaderboard, and in other servers when your Hall of Fame team
+players: in your server, and in other servers when your Hall of Fame team
 takes an Elite Four seat or someone challenges it. The [Privacy Policy]({{ '/privacy/' | relative_url }})
 has the details.
 

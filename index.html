@@ -2,64 +2,79 @@
 layout: default
 styles: /assets/home.css
 ---
+{%- assign shots = site.data.gallery -%}
+{%- assign hero = shots | where: "hero", true | first -%}
+{%- unless hero -%}{%- assign hero = shots | first -%}{%- endunless -%}
 <section class="hero">
   <div>
-    <p class="eyebrow">A creature-collecting RPG for Discord</p>
-    <h1>Catch them with your whole server.</h1>
-    <p class="lede">Super Adventure is <strong>the classic Red and Blue games, played inside Discord</strong>. Every server gets its own region, generated from scratch: new routes, new towns, gyms of random types, and rare creatures hiding somewhere different every time. Everyone explores it together, one stretch of map a day, racing to be first into the next town.</p>
+    <p class="eyebrow">A creature-collecting adventure inside Discord</p>
+    <h1>Walk a world nobody has seen before.</h1>
+    <p class="lede">Super Adventure is <strong>an adventure you walk through inside Discord, with your whole server</strong>. Every server gets its own region, built from a seed: its own towns and routes, caves and cliffs, gyms of random types, and rare creatures hiding somewhere different every time. <strong>Every season the world is made anew</strong>, so nobody, not even us, knows the map before you walk it. Open it in a channel and you're there, tile by tile, with your friends walking about beside you.</p>
     <p class="actions">
       <a class="button" href="{{ '/play/' | relative_url }}">Add it to your server</a>
-      <a class="button quiet" href="{{ '/handbook/' | relative_url }}">Read the handbook</a>
+      <a class="button quiet" href="{{ '/play/#beta' | relative_url }}">Ask to join the beta</a>
     </p>
   </div>
-  <div class="screen"><img src="{{ '/assets/handbook/battle.png' | relative_url }}" alt="A battle in the style of Ruby and Sapphire: your creature from behind, a wild one ahead, a health box for each, and &quot;What will EMBERKIT do?&quot; in the message box." width="480" height="320"></div>
+  {%- if hero -%}
+  {%- if hero.file contains '/' -%}{%- assign hero_src = hero.file -%}{%- else -%}{%- assign hero_src = '/assets/gallery/' | append: hero.file -%}{%- endif %}
+  <figure class="hero-shot">
+    <a class="screen" href="{{ '/gallery/' | relative_url }}"><img src="{{ hero_src | relative_url }}" alt="{{ hero.title | escape }}: {{ hero.caption | escape }}"></a>
+    <figcaption>{{ hero.title }}, one of the places a seed made. <a href="{{ '/gallery/' | relative_url }}">See more</a></figcaption>
+  </figure>
+  {%- endif %}
 </section>
 
 <section class="pitch">
   <article>
-    <h2>A map nobody has seen</h2>
-    <p>Eight gyms, villain hideouts, legendary shrines and an Elite Four, laid out fresh from a random seed. Each world is one region, from Kanto to Paldea, with that game's creatures and moves. Your server votes on the next one.</p>
+    <h2>A world made for your server</h2>
+    <p>Eight gyms, villain hideouts, legendary shrines and an Elite Four, laid out fresh from a seed. Towns grow their own streets, routes have cliffs, rivers and the sea, and each stretch has its own look, from meadow to snow to volcano. When the season ends, a whole new world takes its place, and your server votes on its region.</p>
   </article>
   <article>
-    <h2>Played together</h2>
-    <p>The whole server shares one world. You can open one new stretch a day, and the first trainer into a town opens the way for everyone else. There's no grinding someone else's lead away, and no falling hopelessly behind.</p>
+    <h2>Walk it, tile by tile</h2>
+    <p>Tall grass rustles, creatures wander the routes in plain view, and trainers spot you from across the path. Every Center, Mart and gym has an inside, and gyms have puzzles: ice to slide on, crates to push, switches, warp panels and dark mazes.</p>
+  </article>
+  <article>
+    <h2>Together, live</h2>
+    <p>Everyone in the same place walks about with you, live, names over their heads. The server opens the map together, a stretch a day, and the first trainer into a town holds the door for everyone else.</p>
   </article>
   <article>
     <h2>Battles you remember</h2>
-    <p>Types, stats, status moves, switching and the original catch formula, with the later games' best bits: abilities, natures, weather, critical hits. Gym leaders and champions switch to suit the fight.</p>
+    <p>Animated, with sound and cries. Types, natures, abilities, weather, critical hits and switching, and gym leaders and champions who switch to suit the fight and keep their ace for last.</p>
   </article>
   <article>
     <h2>Catching is the game</h2>
-    <p>An unlimited box, one shiny in 1,024, rares that only exist in some worlds, a Safari-style preserve, and legends that sleep at shrines or roam the late wilderness.</p>
+    <p>An unlimited box, the odd shiny, rares that only exist in some worlds, a fenced preserve, and legends that sleep at shrines or roam the late wilderness.</p>
   </article>
   <article>
-    <h2>Friends, and rivals</h2>
-    <p>Trade, challenge a friend's team or battle them live in the channel, bring down a weekly raid boss together, and climb the leaderboards for your server and the whole bot.</p>
-  </article>
-  <article>
-    <h2>A reset is a graduation</h2>
-    <p>Seasons last two to six weeks, at a pace your server picks. When one ends, the world you played becomes your own private one, to finish whenever you like.</p>
+    <h2>Friends, rivals, and a reset that's a graduation</h2>
+    <p>Trade, challenge a friend's team or battle them live, bring down the week's raid boss together, and climb the leaderboards. When a season ends, the world you played becomes yours to finish whenever you like.</p>
   </article>
 </section>
 
-<section class="gallery" aria-label="Pictures from the game">
+{%- assign kinds = shots | group_by: "kind" -%}
+{%- if kinds.size > 0 %}
+<section class="gallery" aria-label="Places from the game">
+  {%- assign shown = 0 -%}
+  {%- for kind in kinds -%}
+  {%- if shown >= 6 -%}{%- break -%}{%- endif -%}
+  {%- assign shot = kind.items | first -%}
+  {%- if shot.file == hero.file -%}{%- assign shot = kind.items[1] -%}{%- endif -%}
+  {%- if shot -%}
+  {%- if shot.file contains '/' -%}{%- assign src = shot.file -%}{%- else -%}{%- assign src = '/assets/gallery/' | append: shot.file -%}{%- endif %}
   <figure>
-    <div class="screen"><img src="{{ '/assets/handbook/map.png' | relative_url }}" alt="A region map: colored squares for each place along a winding route on an island." width="480" height="384"></div>
-    <figcaption>Your region, one button away.</figcaption>
+    <a class="screen" href="{{ '/gallery/' | relative_url }}"><img src="{{ src | relative_url }}" alt="{{ shot.title | escape }}: {{ shot.caption | escape }}" loading="lazy"></a>
+    <figcaption><b>{{ shot.title }}</b> {{ shot.caption }}</figcaption>
   </figure>
-  <figure>
-    <div class="screen"><img src="{{ '/assets/handbook/town.png' | relative_url }}" alt="A top-down town with a Center, a shop and a gym, its leader waiting outside." width="480" height="320"></div>
-    <figcaption>Every town, drawn from above.</figcaption>
-  </figure>
-  <figure>
-    <div class="screen"><img src="{{ '/assets/handbook/leaderboard.png' | relative_url }}" alt="A leaderboard with the top three trainers on a podium." width="480" height="474"></div>
-    <figcaption>The leaderboard's podium.</figcaption>
-  </figure>
+  {%- assign shown = shown | plus: 1 -%}
+  {%- endif -%}
+  {%- endfor %}
 </section>
+<p class="more"><a class="button quiet" href="{{ '/gallery/' | relative_url }}">See the gallery</a></p>
+{%- endif %}
 
 <section class="next">
   <h2>How to play</h2>
-  <p>There's no map to walk around: you play with slash commands and buttons, and your screen is private to you, so a whole server can play in one channel without spamming it. Type <code>/start</code> to join your server's world, or send it in a direct message to start a world of your own.</p>
+  <p>Type <code>/activity</code> in any channel of a server that has the bot, and the adventure opens right there in Discord, on a computer, in a browser or on your phone. The first time, you choose your partner from three. Walk with the arrow keys or the on-screen pad, and the start menu holds your party, bag, dex, map, trainer card, wardrobe and options. Trades, challenges, raids and the leaderboard are slash commands in your server. The Activity is reaching servers one by one; until it reaches yours, <code>/play</code> opens the older version, played with buttons.</p>
   <p>Servers are approved by hand while the game is young. <a href="{{ '/play/' | relative_url }}">Add the bot</a>, and you'll hear back by direct message. Want the newest features first? <a href="{{ '/play/#beta' | relative_url }}">Ask to join the beta</a>.</p>
-  <p>Something you'd change? Every rule in the <a href="{{ '/handbook/' | relative_url }}">handbook</a> has a feedback button, and everything sent lands on the public <a href="{{ site.board }}">feedback board</a>.</p>
+  <p>Something you'd change? Every section of the <a href="{{ '/rules/' | relative_url }}">rules</a> has a feedback button, and everything sent lands on the public <a href="{{ site.board }}">feedback board</a>.</p>
 </section>

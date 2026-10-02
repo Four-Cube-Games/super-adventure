@@ -66,7 +66,7 @@ body {
 
 img { max-width: 100%; }
 
-a { color: var(--berry); }
+a { color: var(--berry); overflow-wrap: anywhere; }
 
 code {
   font-size: 0.9em;
@@ -323,6 +323,75 @@ form.request .button { justify-self: start; }
 }
 
 .site-foot a { color: var(--ink-soft); }
+
+.prose .lede-plain {
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.jump a {
+  font: 700 15px var(--display);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--panel);
+}
+
+.jump a:hover,
+.jump a:focus-visible {
+  background: var(--ink);
+  color: var(--panel);
+  outline: none;
+}
+
+.prose h2[id] { scroll-margin-top: 16px; }
+
+.packs {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 16px;
+}
+
+.pack {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.prose .pack h3 { margin: 0; font-size: 20px; }
+
+.prose .pack p { margin: 0; }
+
+.pack .by { color: var(--ink-soft); }
+
+
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 16px;
+}
+
+.table-wrap table { margin: 0; }
+
+@media (max-width: 560px) {
+  .prose th,
+  .prose td { padding: 6px 8px; }
+  .prose table { font-size: 15px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

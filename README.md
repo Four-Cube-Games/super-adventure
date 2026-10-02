@@ -1,8 +1,8 @@
 # Super Adventure site
 
-The public site for Super Adventure: the pitch, the player handbook, how to play, and the policies
-Discord asks for. It's plain Jekyll, built by GitHub Pages, with no build step and nothing generated
-committed.
+The public site for Super Adventure: the pitch, the rules, a gallery of generated places, how to
+play, thanks to the people whose work the game uses, and the policies Discord asks for. It's plain
+Jekyll, built by GitHub Pages, with no build step and nothing generated committed.
 
 Feedback lands in this repo's issues and on the org's feedback board.
 
@@ -10,11 +10,17 @@ Feedback lands in this repo's issues and on the org's feedback board.
 
 | File | Is |
 |---|---|
-| `index.html` | the pitch |
-| `handbook.html` | every rule, each with a feedback button that opens the issue form |
-| `play.md` | adding the stable bot, and asking to join the beta |
-| `terms.md`, `privacy.md` | the policies linked from the Discord applications |
-| `licenses.md` | third-party notices |
+| `index.html` | the pitch, its pictures taken from the gallery |
+| `rules.html` | every rule, in sections with a contents list, each with a feedback button that opens the issue form |
+| `gallery.html` | generated places, built from `_data/gallery.yml` (`file`, `title`, `kind`, `caption`; a bare file name is looked for in `assets/gallery/`), filtered by kind, click to enlarge |
+| `play.md` | adding the stable bot, opening the Activity, and asking to join the beta |
+| `thanks.html` | the artists, data and software the game uses, and their licenses |
+| `terms.md`, `privacy.md` | the policies linked from the Discord applications; keep their URLs |
+| `handbook.html`, `licenses.md` | redirects to `/rules/` and `/thanks/`, for old links (`_layouts/redirect.html`) |
+
+`_includes/feedback.html` makes a section's feedback button: `{% include feedback.html topic="Raids" %}`.
+The site never names the franchise, not even in a URL, and shows no creature art. Before publishing,
+grep for the first three letters of its name (case-insensitive, outside `.git`); it should find nothing.
 
 Settings shared by several pages, such as the contact address, the install link's client id, the
 beta form and the board, are in `_config.yml`.
