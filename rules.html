@@ -96,8 +96,6 @@ permalink: /rules/
       <tr><td><code>/play</code>, <code>/activity</code></td><td>open the adventure</td></tr>
       <tr><td><code>/card</code></td><td>shows your trainer card, or anyone's</td></tr>
       <tr><td><code>/leaderboard</code></td><td>the five boards, for your server</td></tr>
-      <tr><td><code>/trade</code></td><td>swap creatures with someone in your server</td></tr>
-      <tr><td><code>/challenge</code></td><td>fight a copy of a friend's team, or battle them live</td></tr>
       <tr><td><code>/raid</code></td><td>the week's raid boss</td></tr>
       <tr><td><code>/region vote</code>, <code>/region show</code></td><td>where next season goes, and the tally</td></tr>
     </tbody>
@@ -613,22 +611,22 @@ permalink: /rules/
 
 <section class="rules-section" id="trades">
   <h2>Trades</h2>
-  <p>Swap creatures with anyone in your server's world, in four steps:</p>
+  <p>Trading happens face to face, in the game. Walk up to another player in your server's world, face them and press A (or tap them): a menu offers <b>Battle</b>, <b>Trade</b> and <b>Card</b>. There's no list of players, so to trade you have to find each other. Private worlds have nobody to meet.</p>
+  <p>They're asked first: "Ann wants to trade!" with Yes and No, and No already chosen. No answer in 30 seconds is a no, and so is either of you walking away. While you're linked, you both stand still and a <b>LINK</b> tag shows over you.</p>
   <ol class="steps">
-    <li><code>/trade offer @friend</code> puts up one of yours, from your party or box.</li>
-    <li>They answer with one of theirs, with <code>/trade answer</code>.</li>
-    <li>You accept.</li>
-    <li>They confirm. <code>/trade list</code> shows what's waiting on you.</li>
+    <li>You both see both parties and boxes, side by side.</li>
+    <li>Each of you picks one creature to give, and sees the other's pick with its level, nature, moves and held item.</li>
+    <li>Changing a pick, on either side, clears both confirmations. When you've both pressed <b>Trade</b>, the creatures swap.</li>
   </ol>
-  <p>Until it's done or called off, both creatures wait on offer, out of your party and box. A traded creature arrives rested, but can't be traded on until its new owner has healed at a Center, so nobody trades just to skip one. A creature that evolves by trading evolves as it arrives, unless it's holding an Everstone. Your server hears about finished trades.</p>
+  <p>You can't trade away the last creature able to fight, or one you just got. Held items go with the creature. A traded creature arrives healed, but can't be traded on until its new owner has healed at a Center, so nobody trades just to skip one. A creature that evolves by trading evolves as it arrives, unless it's holding an Everstone. A trade left alone for five minutes is called off, and your server hears about finished trades.</p>
   {% include feedback.html topic="Trades" %}
 </section>
 
 <section class="rules-section" id="challenges">
-  <h2>Challenges</h2>
-  <p><code>/challenge @friend</code> asks them in the channel. If they take it on, you fight a <b>copy of their team</b>, played by the bot the way champions play: switching to suit the fight and saving their best for last. Your team walks in fit too, so there's no need to heal first.</p>
-  <p><b>Or battle them live</b> with <code>/challenge @friend live:True</code>: once they accept, the two of you fight in the channel for anyone to watch. Each of you presses <b>Pick your move</b> for a screen only you see, and the turn plays out when you've both picked. You have <b>two minutes a turn</b>: whoever hasn't picked by then loses, and if neither has, it's called off. When one of yours faints, you choose who comes out next.</p>
-  <p>Either way: no items, running means conceding, and there's no experience, money or blackout in it. The result goes on both your win-loss records, with a tally between you two: <em>"You lead 3–1."</em></p>
+  <h2>Battling other players</h2>
+  <p>Walk up to a player as for a trade, press A and choose <b>Battle</b>. They're asked first, the same way, and you both stand still while linked.</p>
+  <p>The battle is live, with both of you in the game at once, each seeing it from your own side. You each pick a move or a switch, and the turn plays out on both screens when you've both picked. You have <b>two minutes a turn</b>, counted down on a clock: whoever hasn't picked by then loses, and if neither has, it's called off. <b>Give up</b> concedes, and when one of yours faints, you choose who comes out next. If you close the game or lose your connection for more than a minute you lose, but reloading inside the minute puts you back where you were.</p>
+  <p>You each fight with a fit copy of your team, so there's no need to heal first. No items, running isn't an option, and there's no experience, money or blackout in it. The result goes on both your win-loss records, with a tally between you two: <em>"You lead Ann 3 to 2."</em></p>
   {% include feedback.html topic="Challenges" %}
 </section>
 
@@ -660,6 +658,7 @@ permalink: /rules/
     <li><b>Free to change, any time:</b> your skin, from ten tones lightest to darkest; your hair, any colour at all, picked on a colour slider with five shades from near black to silver, so purple, teal and lavender are all there; your eyes, on the same slider, and each eye a colour of its own if you like; your hairstyle, from seventeen: short, spiky, long, a ponytail, pigtails, a buzz cut, a bob, a curly crop, shoulder-length curls, an afro, a puff, locs, cornrows, long waves, space buns, a long braid or bald; your shirt; and pants, shorts or a skirt. There's no boy or girl to pick: anyone can wear anything.</li>
     <li><b>Earned, and kept forever:</b> one hat, one outfit and one accessory at a time, from what you've won. Nothing is for sale, and it carries over to every world and season.</li>
   </ul>
+  <p>The townsfolk are dressed the same way: each person in a town has a look of their own, the same on every visit, and a seaside town leans toward sun hats where a mountain one leans toward beanies. Nurses, clerks, guards and trainers keep their uniforms.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Earned for</th><th>Wearable</th></tr></thead>
     <tbody>
