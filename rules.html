@@ -113,7 +113,7 @@ permalink: /rules/
   <p>Some caves on the island <b>change as you cross them</b>: open grass first, then a cave or tunnel through a cave mouth, then a mountain trail, or grass again where the road comes back down. Each open part has its own wild creatures and a trainer of its own, a local on the grass, a hiker, explorer or camper on the trail. About one cave in nine does this. Victory Road, caves before the first gym and caves you enter from the north stay whole.</p>
 
   <h3 id="frontier">New ground</h3>
-  <p>The map opens a stretch at a time (see <a href="#days">Days and seasons</a>). At the edge of ground you can't enter yet, <b>a ranger stands in the way</b> and tells you why: the server hasn't opened it, or you've used today's new ground. To move on from an area you also need to beat its trainers.</p>
+  <p>The roads are open: walk as far as you like in a day. Two things stop you, the trainers on a route, which you beat to move on, and ground your party can't cross yet, such as water, a waterfall or a rock face, which badges open. The big places open one a day (see <a href="#days">Days and seasons</a>). A hideout's or shrine's entrance is a gate beside the road, in the area before it, and leaving puts you back at the gate. Walk into one before its day and you're told when it opens: "The hideout's door is barred. It opens in 2 days." A gym's door says "The gym opens tomorrow." </p>
 
   <h3 id="walking-back">Walking back</h3>
   <p>Walk off the bottom of an area into the one behind, and forward again over ground you've cleared. It's free, costs no day, and works in every world. Leaving a gym or gauntlet part way puts its trainers back, as losing there would, but costs no coins.</p>
@@ -183,7 +183,7 @@ permalink: /rules/
     <li><b>The dojo hall</b> turns up from the second gym on. Two or three students of one type wait in a row, then their master, and you fight them in order, as at a gym but with no badge. Beat a student and they stay beaten, even if the master wins. When the master falls, the keeper lets you pick one of two creatures of that type, once. No two halls in a world share a type, and the early ones go easy on you.</li>
     <li><b>The skirmish</b> only comes before the third gym: two villain grunts pick a fight in town, one after the other, at the area's level. Beat both and they leave you a ball, potion, revive or cure fit for the town, once, and let slip where the next hideout lies.</li>
   </ul>
-  <p>On newer worlds the first gym ends the first stretch, so your first day ends with a badge in reach.</p>
+  <p>On newer worlds the first gym ends the first stretch, and the first day opens it.</p>
 
   <h3 id="cities">Cities</h3>
   <p>A town with a gym is a city of two to four parts. You arrive in the town part, with the Center, Mart, houses and the preserve's gate if it has one. Walk on through a far edge to the next part. Through the fourth gym a city is two parts; the fifth and sixth add a market quarter, and the seventh and eighth a park with a canal too. The last part is always the gym district, and the way on to the next stretch leaves from there.</p>
@@ -564,34 +564,35 @@ permalink: /rules/
 <section class="rules-section" id="days">
   <span class="alias" id="seasons"></span>
   <h2>Days and seasons</h2>
-  <p>This is the biggest difference from the classics. A server's world is shared, and its map is split into <b>stretches</b> that each end at a town with a Center.</p>
+  <p>This is the biggest difference from the classics. A server's world is shared, and one big place opens for everyone each day.</p>
 
-  <h3 id="new-ground">One new stretch a day</h3>
+  <h3 id="new-ground">One big place a day</h3>
   <ul>
-    <li><b>The server opens the map together.</b> A stretch opens when anyone reaches the town before it, and nobody can go past the furthest town anyone has reached. Whoever gets there first holds the door for everyone else, and the server hears about it.</li>
-    <li><b>You can push into one new stretch a day</b>, or more at a faster pace. Inside a stretch you can go as far as you like, so a day can always end somewhere safe.</li>
-    <li><b>Ground already opened is free</b>, whether you're catching up from behind, walking back or coming back from a blackout. Once you've used today's new ground, there's still plenty to do: reruns, rematches, catching, training and the daily goal.</li>
-    <li>Healing never costs a day. Only new ground does.</li>
+    <li><b>The big places open one a day, in map order</b>: gyms, villain hideouts and legend shrines, with the Elite Four last. On the season's day <i>n</i>, the first <i>n</i> are open, and once open they stay open. The first day opens the first gym. In a short season more open each day, so the Elite Four opens two days before the end.</li>
+    <li><b>Any open gym can be taken in any order</b>, though gyms get tougher along the map. The Elite Four needs all eight badges as well as its day. Hideouts and shrines are side trips, for their rewards.</li>
+    <li><b>Nobody waits for anyone else.</b> You can walk as far as you like, and you can join on any day of a season.</li>
+    <li>Healing never costs a day.</li>
+    <li>Private worlds, and worlds with no season, have everything open.</li>
   </ul>
 
   <h3 id="time-zone">When a day starts</h3>
-  <p>At midnight where your server is. Admins pick the time zone with <code>/timezone set</code>; until they do, days turn over at midnight UTC. Changing it never costs or gives anyone a day: the day in progress runs on to the next midnight in the new zone, so it can get longer but never shorter. Private worlds stay on UTC. If anyone used up their new ground the day before, the bot posts in the server's announcement channel when the new day starts.</p>
+  <p>At midnight where your server is. Admins pick the time zone with <code>/timezone set</code>; until they do, days turn over at midnight UTC. Changing it never costs or gives anyone a day: the day in progress runs on to the next midnight in the new zone, so it can get longer but never shorter. Private worlds stay on UTC. When a new day opens something, the bot posts what opened in the server's announcement channel. The season's first day isn't posted, since the new season is, and after a gap one post covers everything opened since.</p>
 
   <h3 id="daily-goal">The daily goal</h3>
   <p>Each day has <b>one goal for everyone in a world</b>: catch 2 to 4 creatures, beat 2 to 4 trainers, or knock out 4 to 8 wild ones. Meeting it pays <b>300 coins, plus 100 for each badge</b>, once a day. It shows at the top of the start menu and on the board in every Center, with how many in your server have met it. Challenges, live battles and raids don't count toward beating trainers.</p>
 
   <h3 id="pace">Seasons, and your server's pace</h3>
-  <p>A server's world lasts a <b>season</b>. <b>When the season ends, the world is generated anew</b> from a new seed: new towns, routes, gyms and shrines, in the region your server voted for, and everyone sets off again. Admins choose its pace with <code>/pace set</code>:</p>
+  <p>A server's world lasts a <b>season</b>. <b>When the season ends, the world is generated anew</b> from a new seed: new towns, routes, gyms and shrines, in the region your server voted for, and everyone sets off again. Admins choose its length with <code>/pace set</code>:</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Pace</th><th class="num">New stretches a day</th><th class="num">Season</th></tr></thead>
+    <thead><tr><th>Pace</th><th class="num">Season</th></tr></thead>
     <tbody>
-      <tr><td>Relaxed</td><td class="num">1</td><td class="num">45 days</td></tr>
-      <tr><td>Standard</td><td class="num">1</td><td class="num">30 days</td></tr>
-      <tr><td>Brisk</td><td class="num">2</td><td class="num">21 days</td></tr>
-      <tr><td>Sprint</td><td class="num">3</td><td class="num">14 days</td></tr>
+      <tr><td>Relaxed</td><td class="num">45 days</td></tr>
+      <tr><td>Standard</td><td class="num">30 days</td></tr>
+      <tr><td>Brisk</td><td class="num">21 days</td></tr>
+      <tr><td>Sprint</td><td class="num">14 days</td></tr>
     </tbody>
   </table></div>
-  <p>Standard is where every server starts. A new pace changes the stretches a day from tomorrow, and the season's length from the next season, so nobody's season is cut short. You can <b>join on any day</b> of a season: opened ground costs no day, so a latecomer walks straight up to everyone else. When you choose your partner, it tells you how many days are left.</p>
+  <p>Standard is where every server starts. A new pace changes the season's length from the next season, so nobody's season is cut short. A private world has no seasons. When you choose your partner, it tells you how many days are left.</p>
 
   <h3 id="regions">Regions, and the vote</h3>
   <p>There are nine regions, and a world is one of them, with that region's creatures and the moves they learned there. In the last three days of a season, everyone playing in your server votes on where the next one goes with <code>/region vote</code>, and can change their vote until it closes; <code>/region show</code> has the tally. The most votes wins, a tie is drawn between the leaders, and with no votes at all it's the bot's home region.</p>
@@ -647,7 +648,7 @@ permalink: /rules/
   <p>Standings are for your server only, counting every season it has played. The top three stand on a podium in their own clothes. Only a server's seasons count: when a season ends, the boards keep what you'd done by then, and nothing in your private worlds counts.</p>
 
   <h3 id="announcements">Announcements</h3>
-  <p>Each server picks what it hears about, in one channel. <em>Quiet</em>, the default, is the big moments: a new season, someone opening the way to a new town, a legend caught, a new Hall of Fame entry, the region vote opening, and the week's raid turning up and going down. <em>Normal</em> adds badges, hideouts cleared, legends knocked out (and who was blessed), roaming legends spotted, rare catches, Elite Four rematches won, challenges won and trades. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Admins can switch any one on or off by itself.</p>
+  <p>Each server picks what it hears about, in one channel. <em>Quiet</em>, the default, is the big moments: a new season, what opened on a new day, a legend caught, a new Hall of Fame entry, the region vote opening, and the week's raid turning up and going down. <em>Normal</em> adds badges, hideouts cleared, legends knocked out (and who was blessed), roaming legends spotted, rare catches, Elite Four rematches won, challenges won and trades. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Admins can switch any one on or off by itself.</p>
   {% include feedback.html topic="Leaderboards and announcements" %}
 </section>
 
