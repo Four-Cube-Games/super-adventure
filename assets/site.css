@@ -322,6 +322,7 @@ form.request .button { justify-self: start; }
 }
 
 .site-foot a { color: var(--ink-soft); }
+.site-foot .disclaimer { font-size: 0.85em; color: var(--ink-soft); max-width: 60ch; }
 
 .prose .lede-plain {
   font-size: 19px;
