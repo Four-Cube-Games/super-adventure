@@ -1,19 +1,19 @@
 ---
 layout: default
 title: Play
-description: Add Super Adventure to your Discord server, open the adventure with /activity, or ask to join the beta.
+description: Add Wildwalk to your Discord server, open the adventure with /activity, or ask to join the beta.
 prose: true
 permalink: /play/
 ---
 
 # Play
 
-Super Adventure is a Discord Activity: an adventure that opens inside Discord, on a computer, in a
+Wildwalk is a Discord Activity: an adventure that opens inside Discord, on a computer, in a
 browser or on a phone, where you walk your server's world tile by tile. It runs as two bots.
-**Super Adventure** is the stable game, for any server. **Super Adventure (beta)** gets new features
+**Wildwalk** is the stable game, for any server. **Wildwalk (beta)** gets new features
 first, and plays in one test server.
 
-## Add Super Adventure to your server {#stable}
+## Add Wildwalk to your server {#stable}
 
 <p><a class="button" href="https://discord.com/oauth2/authorize?client_id={{ site.stable_client_id }}">Add to Discord</a></p>
 
@@ -41,7 +41,8 @@ These need *Manage Server*. All of them are optional.
 | `/announcements here` | posts the server's news in this channel |
 | `/announcements level` | quiet, normal or chatty; `/announcements event` switches one kind on or off |
 | `/timezone set` | when the day turns over; midnight UTC until you set it |
-| `/pace set` | relaxed, standard, brisk or sprint: how many new stretches a day, and how long a season runs |
+| `/pace set` | relaxed, standard, brisk or sprint: how long a season runs |
+| `/names clear` | clears a player's trainer name and creature nicknames |
 
 If a request is turned down, the owner is told why, and the bot leaves. You're welcome to ask
 again later.

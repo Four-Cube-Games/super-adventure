@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Privacy Policy
-description: What the Super Adventure Discord bot stores, who sees it, and how to have it deleted.
+description: What the Wildwalk Discord bot stores, who sees it, and how to have it deleted.
 prose: true
 permalink: /privacy/
 ---
 
 # Privacy Policy
 
-<p class="updated">Last updated 1 October 2026</p>
+<p class="updated">Last updated 10 October 2026</p>
 
-This covers the Super Adventure Discord applications (the stable bot and the beta bot) and this
+This covers the Wildwalk Discord applications (the stable bot and the beta bot) and this
 website, run by Four Cube Games ("we", "us"). In short: we keep what the game needs to work,
 nothing else, and we don't sell or share it.
 
@@ -21,8 +21,8 @@ When you play:
 | What | Why |
 |---|---|
 | Your Discord user id, and your display name as it was when you last played | to know which save is yours, and to show your name on leaderboards and announcements |
-| Your saves: worlds, creatures, box, bag, dex, coins, badges, battles in progress, trainer looks and wearables | it's the game |
-| Your records: Hall of Fame teams, trainer battles won and lost, challenges and their results, trades, region votes, raid attempts | leaderboards, rematches, head-to-heads and votes |
+| Your saves: worlds, creatures, box, bag, dex, coins, badges, battles in progress, trainer looks, wearables, trainer name and creature nicknames | it's the game |
+| Your records: Hall of Fame teams, trainer battles won and lost, battles between players and their results, trades, region votes, raid attempts | leaderboards, rematches, head-to-heads and votes |
 
 When the bot is added to a server:
 
@@ -55,7 +55,7 @@ We also keep a weekly count of servers and players, to see how the game is doing
 - **Other players**, in your server and elsewhere: your display name, your trainer's looks, your
   rankings on the leaderboards (within your server), your announced achievements,
   your trainer card, and your Hall of Fame teams, which can appear in other servers' Elite Four
-  rematches and challenges.
+  rematches.
 - **Us**, to run the game, approve servers and fix problems.
 
 We don't sell, rent or share your data with anyone.

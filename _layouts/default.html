@@ -17,7 +17,7 @@
 </head>
 <body>
   <header class="site-head">
-    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/icon.png' | relative_url }}" alt="" width="32" height="32">Super Adventure</a>
+    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/icon.png' | relative_url }}" alt="" width="32" height="32">Wildwalk</a>
     <nav class="tabs" aria-label="Site">
       {% for tab in site.tabs %}<a href="{{ tab.url | relative_url }}"{% if page.url == tab.url %} aria-current="page"{% endif %}>{{ tab.title }}</a>{% endfor %}
       <a href="{{ site.board }}">Feedback board</a>

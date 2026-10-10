@@ -1,6 +1,6 @@
-# Super Adventure site
+# Wildwalk site
 
-The public site for Super Adventure: the pitch, the rules, a gallery of generated places, how to
+The public site for Wildwalk: the pitch, the rules, a gallery of generated places, how to
 play, thanks to the people whose work the game uses, and the policies Discord asks for. It's plain
 Jekyll, built by GitHub Pages, with no build step and nothing generated committed.
 

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Rules
-description: Every rule of Super Adventure, in plain language, with a feedback button on each section.
+description: Every rule of Wildwalk, in plain language, with a feedback button on each section.
 styles: /assets/rules.css
 permalink: /rules/
 ---
 <header class="masthead">
-  <p class="eyebrow">Super Adventure</p>
+  <p class="eyebrow">Wildwalk</p>
   <h1>The rules</h1>
   <p class="lede">Everything the game does, in one place: how to get about, how battles and catching work, what gyms, hideouts and shrines ask of you, and how a server plays a season together. <strong>Every section has a feedback button.</strong> Press it to tell us what you'd change; it lands on the public <a href="{{ site.board }}">feedback board</a>.</p>
   <p class="hint">Numbers here are starting values, and they change as people play.</p>
@@ -44,7 +44,7 @@ permalink: /rules/
     <li><a href="#days">Days and seasons</a></li>
     <li><a href="#raids">Raids</a></li>
     <li><a href="#trades">Trades</a></li>
-    <li><a href="#challenges">Challenges</a></li>
+    <li><a href="#challenges">Battling other players</a></li>
     <li><a href="#leaderboards">Leaderboards and announcements</a></li>
     <li><a href="#looks">Looks and the wardrobe</a></li>
     <li><a href="#worlds">Private and retired worlds</a></li>
@@ -55,7 +55,7 @@ permalink: /rules/
 
 <section class="rules-section" id="start">
   <h2>Getting started</h2>
-  <p>Super Adventure is a <strong>Discord Activity</strong>: the game opens inside Discord, on a computer, in a browser or on a phone, and you walk its world tile by tile. Type <code>/play</code> or <code>/activity</code> in a channel of a server that has the bot. Servers are approved by hand, so a new one waits until it's let in (see <a href="{{ '/play/' | relative_url }}">Play</a>).</p>
+  <p>Wildwalk is a <strong>Discord Activity</strong>: the game opens inside Discord, on a computer, in a browser or on a phone, and you walk its world tile by tile. Type <code>/play</code> or <code>/activity</code> in a channel of a server that has the bot. Servers are approved by hand, so a new one waits until it's let in (see <a href="{{ '/play/' | relative_url }}">Play</a>).</p>
 
   <h3 id="partner">Your partner</h3>
   <p>The first time you open it, you choose your partner from three: creatures that can evolve, each of a different type, and one of them always one of the region's original starters. Everyone in a server is offered the same three. You also choose how your trainer looks, and can change it any time.</p>
@@ -76,12 +76,12 @@ permalink: /rules/
   <div class="table-wrap"><table>
     <thead><tr><th>Entry</th><th>What it holds</th></tr></thead>
     <tbody>
-      <tr><td>Party</td><td>your six, with each one's stats, nature, potential, training, ability and moves; change their order, the first leading</td></tr>
+      <tr><td>Party</td><td>your six, with each one's stats, nature, potential, training, ability and moves; give one a nickname; change their order, the first leading</td></tr>
       <tr><td>Bag</td><td>your items, in pockets; use them, or give one to a creature to hold</td></tr>
       <tr><td>Dex</td><td>every creature in this world's region: seen, caught, and where it lives; and on <a href="#dex">All regions</a>, everything you've met in every world</td></tr>
-      <tr><td>Map</td><td>the region, what's open, what you've beaten, and where you are; tap a place for its name</td></tr>
+      <tr><td>Map</td><td>the region, what's open, what you've beaten, and where you are; tap a place for its name, or fly to a town you've been to</td></tr>
       <tr><td>Card</td><td>your trainer card</td></tr>
-      <tr><td>Wardrobe</td><td>what you wear</td></tr>
+      <tr><td>Wardrobe</td><td>what you wear, and your trainer name</td></tr>
       <tr><td>Options</td><td>the pad, text speed, animations, where the battle cursor starts, music and its volume, and the credits</td></tr>
       <tr><td>Worlds</td><td>switch between your server's world and your private ones</td></tr>
     </tbody>
@@ -96,7 +96,6 @@ permalink: /rules/
       <tr><td><code>/play</code>, <code>/activity</code></td><td>open the adventure</td></tr>
       <tr><td><code>/card</code></td><td>shows your trainer card, or anyone's</td></tr>
       <tr><td><code>/leaderboard</code></td><td>the five boards, for your server</td></tr>
-      <tr><td><code>/raid</code></td><td>the week's raid boss</td></tr>
       <tr><td><code>/region vote</code>, <code>/region show</code></td><td>where next season goes, and the tally</td></tr>
     </tbody>
   </table></div>
@@ -109,7 +108,7 @@ permalink: /rules/
   <p><strong>Every place is laid out from your world's seed</strong>, so the same place is always the same, and no two worlds are alike. The world is a line of areas: routes, caves, tunnels and bike roads, broken up by towns. In older worlds the way on is at the top of an area and the way back at the bottom; in newer ones a route's way on may lie on any side (see <a href="#island">The island</a>).</p>
 
   <h3 id="island">The island</h3>
-  <p>A world made now is an <b>island grown from its seed</b>, with coasts, mountain ranges, rivers that run to the sea and one volcano. Your towns and routes are laid across it in the same order as ever, so a route can come in at the west and leave at the north, heading whichever way the land takes it. The land decides what each stretch is: its biome, caves and tunnels or open mountain trails where the road climbs over high ground, gym towns in their type's home biome where they can be, and the Elite Four up high. Rivers are crossed by bridges, and there is a town on the beach and one on a small island you reach by <a href="#field-moves">Surf</a>, across sea routes with islets, swimmers and sailors. The last stretch before the Elite Four is always a cave. Every place can be reached with the badges you hold by then. The <b>Map</b> in the start menu draws the island, with fog over the stretches your server hasn't opened yet and a cursor where you are. Tap any place on it, or step to one with the pad, and a bubble names it and says what it is: a gym and its type, a route, a cave, a hideout, a shrine, or where you are; under the fog it says only that the place isn't explored yet. A gym you've beaten wears a gold badge at its corner, and a hideout you've cleared or a shrine whose legend you've woken a gold tick. Worlds made before this keep their old layout and board.</p>
+  <p>A world made now is an <b>island grown from its seed</b>, with coasts, mountain ranges, rivers that run to the sea and one volcano. Your towns and routes are laid across it in the same order as ever, so a route can come in at the west and leave at the north, heading whichever way the land takes it. The land decides what each stretch is: its biome, caves and tunnels or open mountain trails where the road climbs over high ground, gym towns in their type's home biome where they can be, and the Elite Four up high. Rivers are crossed by bridges, and there is a town on the beach and one on a small island you reach by <a href="#field-moves">Surf</a>, across sea routes with islets, swimmers and sailors. The last stretch before the Elite Four is always a cave. Every place can be reached with the badges you hold by then. The <b>Map</b> in the start menu draws the island, with fog over the stretches your server hasn't opened yet and a cursor where you are. Tap any place on it, or step to one with the pad, and a bubble names it and says what it is: a gym and its type, a route, a cave, a hideout, a shrine, or where you are; under the fog it says only that the place isn't explored yet. The map zooms: pinch, scroll or tap + and −, and drag to look around. A gym you've beaten wears a gold badge at its corner, and a hideout you've cleared or a shrine whose legend you've woken a gold tick. Worlds made before this keep their old layout and board.</p>
   <p>Some caves on the island <b>change as you cross them</b>: open grass first, then a cave or tunnel through a cave mouth, then a mountain trail, or grass again where the road comes back down. Each open part has its own wild creatures and a trainer of its own, a local on the grass, a hiker, explorer or camper on the trail. About one cave in nine does this. Victory Road, caves before the first gym and caves you enter from the north stay whole.</p>
 
   <h3 id="frontier">New ground</h3>
@@ -139,10 +138,10 @@ permalink: /rules/
       <tr><td class="num">2nd</td><td>Flash: dark caves</td><td>electric, psychic, fire and fairy types</td></tr>
       <tr><td class="num">3rd</td><td>Rock Smash: cracked rocks</td><td>fighting, rock, ground and steel types, or a strong Attack</td></tr>
       <tr><td class="num">4th</td><td>Strength: boulders, pushed a square</td><td>the same as Rock Smash</td></tr>
+      <tr><td class="num">4th</td><td>Fly: from the map, to a town you've been to</td><td>flying types</td></tr>
       <tr><td class="num">5th</td><td>Surf: water</td><td>water types</td></tr>
       <tr><td class="num">6th</td><td>Rock Climb: a rock face, up or down a terrace's cliff</td><td>rock, ground and fighting types</td></tr>
       <tr><td class="num">7th</td><td>Waterfall: up while surfing, or down</td><td>water types</td></tr>
-      <tr><td class="num">4th</td><td>Fly: from the map, to a town you've been to</td><td>flying types</td></tr>
     </tbody>
   </table></div>
   <p>Field moves mostly open side paths. From after the first gym, about one route in five puts one in your way, but only ever one your badges already open, so nobody gets stuck. Nothing wild bothers you while you surf; what lives in the water is caught by <a href="#fishing">fishing</a>. On newer worlds a signpost on the grass a square or two before deep or falling water tells you which move would get you across, and how many badges it needs.</p>
@@ -238,6 +237,7 @@ permalink: /rules/
   <h3 id="turns">Turns and moves</h3>
   <ul>
     <li>Each turn you pick from <b>Fight, Bag, Run and Party</b>: use a move, use an item or throw a ball, run from a wild battle, or switch.</li>
+    <li>The menu remembers where you left the cursor. Options can instead start each new creature's turn on Fight.</li>
     <li><b>Switching</b> calls yours back and sends another out. It costs your turn, like an item, and the other side gets a free hit on whoever comes in.</li>
     <li>The faster creature moves first. <b>Priority moves</b> jump the queue whatever the speed (Quick Attack, Extreme Speed, Aqua Jet), and a few, like Roar and Counter, always go last. Prankster puts its user's status moves ahead.</li>
     <li>A move of the creature's own type hits <b>half as hard again</b>, and every hit varies a little, from 85% to 100%.</li>
@@ -271,11 +271,12 @@ permalink: /rules/
   </table></div>
 
   <h3 id="ailments">Ailments</h3>
-  <p>A creature has <b>one ailment at a time, and it lasts until cured</b>, battle after battle: a Center, a cure from the bag or a berry fixes it. An ailment's plate takes the level's place on the battle screen.</p>
+  <p>A creature has <b>one ailment at a time, and it lasts until cured</b>, battle after battle: a Center, a cure from the bag or a berry fixes it. An ailment's plate takes the level's place on the battle screen. A move that causes an ailment fails only on the types that can't catch it (as the table says), so Glare, Hypnosis, Sing, Confuse Ray and Swagger work on every type; Toxic is the badly poisoned one, and it never misses when a poison creature uses it. Thunder Wave also fails on ground types.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Ailment</th><th>Effect</th><th>Can't happen to</th><th>Catching</th></tr></thead>
     <tbody>
       <tr><td><b>PSN</b> poisoned</td><td>loses 1/8 of its HP each turn</td><td>poison and steel types</td><td class="num">×1.5</td></tr>
+      <tr><td><b>TOX</b> badly poisoned</td><td>loses 1/16 of its HP the first turn, then 1/16 more each turn (2/16, 3/16 and so on); the count starts over if it switches out</td><td>poison and steel types</td><td class="num">×1.5</td></tr>
       <tr><td><b>BRN</b> burned</td><td>loses 1/16 of its HP each turn; physical attacks halved</td><td>fire types</td><td class="num">×1.5</td></tr>
       <tr><td><b>PAR</b> paralyzed</td><td>half speed; can't move 1 turn in 4</td><td>electric types</td><td class="num">×1.5</td></tr>
       <tr><td><b>SLP</b> asleep</td><td>can't move for 1 to 3 turns</td><td></td><td class="num">×2</td></tr>
@@ -316,6 +317,7 @@ permalink: /rules/
       <tr><td>Snow</td><td>hurts nobody; ice types' Defense ×1.5</td></tr>
     </tbody>
   </table></div>
+  <p>Some moves change with the weather. <b>Thunder</b> and <b>Hurricane</b> can't miss in rain and are shakier in sun; <b>Blizzard</b> can't miss in hail or snow; <b>Solar Beam</b> needs no charge turn in sun but is weaker in rain, sand and snow; <b>Weather Ball</b> hits harder and takes the weather's type; <b>Growth</b> raises Attack and Sp. Atk twice as far in sun; and Synthesis, Moonlight and Morning Sun heal more in sun and less in rain, sand and snow.</p>
   <p><b>Reflect</b> halves physical damage to your side and <b>Light Screen</b> special damage, and both stay up through switches. The first region's games had no weather, so in a world of that region only abilities bring it.</p>
 
   <h3 id="more-moves">Moves that do more</h3>
@@ -325,6 +327,9 @@ permalink: /rules/
     <li><b>Leech Seed</b> saps 1/8 of the target's HP a turn for whoever is out on your side. Grass types can't be seeded.</li>
     <li><b>Hitting two to five times:</b> two hits 35% of the time, three 35%, four 15%, five 15%. Each hit can be critical.</li>
     <li><b>Wrap, Bind and Fire Spin</b> trap the target for 4 or 5 turns at 1/8 a turn. A trapped creature can't run or switch, but can still fight.</li>
+    <li><b>Self-Destruct and Explosion</b> knock out the creature that uses them, whether they hit or miss.</li>
+    <li><b>Two-turn moves:</b> Fly, Dig, Dive, Bounce, Solar Beam and a few more spend a turn charging, then strike on the next without asking you again. While a creature is in the air, underground or underwater, most moves miss it, but not all: Earthquake finds a digger, Thunder and Gust find a flier, and Surf finds a diver. Skull Bash raises Defense as it charges. A charging creature that falls asleep, flinches, is frozen, fully paralyzed or switched out loses the strike.</li>
+    <li><b>Power that changes with the fight:</b> Facade doubles when its user is burned, poisoned or paralyzed; Venoshock when the foe is poisoned; Hex when the foe has any ailment; Eruption and Water Spout weaken as their user does; Rage Fist grows with each hit its user has taken; Payback doubles when it moves after the foe. The battle shows the result, not the sum.</li>
     <li><b>Hyper Beam</b> costs the next turn to recharge. <b>Dream Eater</b> only works on a sleeping target. <b>Stockpile</b> stores up to three, toughening you as it does; Spit Up and Swallow spend them all.</li>
   </ul>
 
@@ -354,7 +359,7 @@ permalink: /rules/
   <h2>Growing and evolving</h2>
 
   <h3 id="experience">Experience</h3>
-  <p>Every creature that was out against a foe and is still standing <b>splits its experience evenly</b>, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>, an item a creature holds. Those who fought share each knockout's experience as usual, and the creature holding it takes half of it on top, even sitting out. Give it to whoever should catch up.</p>
+  <p>Every creature that was out against a foe and is still standing <b>splits its experience evenly</b>, and catching one gives the same experience as knocking it out. The third gym leader hands you the <b>Exp. Share</b>, an item a creature holds. Those who fought share each knockout's experience as if it weren't there, and a holder that sat out takes half of it on top; a holder that fought takes only its share. Give it to whoever should catch up. There is one a run, and it belongs to that world.</p>
 
   <h3 id="natures">Natures, potential and training</h3>
   <p>No two creatures are quite alike. Every wild creature, and your partner, has a <b>nature</b>: most raise one stat by a tenth and lower another, a few do neither. It has <b>potential</b>, 0 to 31 in each stat, graded S to D on your party screen. Both are fixed for life. Beating a creature <b>trains</b> everyone who earns experience from it in the stats its species teaches, up to 252 in a stat and 510 in all.</p>
@@ -403,6 +408,7 @@ permalink: /rules/
   </table></div>
   <ul>
     <li>A catch pays <b>10 coins a level</b> and the experience of a knockout.</li>
+    <li>In a wild battle, a little ball by the creature's name means you've already caught one of its kind.</li>
     <li><b>You carry six.</b> Anything caught with six already goes to your <b>box</b>, which has no limit. The box is the PC in every Center; creatures go in and out as they are, so the box won't heal them. Your party always keeps one that can fight.</li>
   </ul>
 
@@ -444,7 +450,7 @@ permalink: /rules/
   <p>Inside a gym's town, healing at the Center while you're part way through the gym puts its trainers back (see <a href="#gyms">Gyms</a>).</p>
 
   <h3 id="mart">The Mart</h3>
-  <p>Every town has a Mart. The first two towns' Marts never close; after that, a Mart is open about two days in three, and what's on the shelf changes. When it's open it always has plain balls and Potions, and better stock further into the map. Your whole server sees the same shelf on the same day, and nobody can buy anyone else out. The counter has <b>Buy</b> and <b>Sell</b>: while the Mart is open, anything but gear sells back for <b>half its price</b>. Using an item in battle takes your turn; outside battle, it's free. Some things are never on a shelf (Ethers, Elixirs and Max Revives, found lying about instead), some are sold only in a market town's department store, with other Marts selling them now and then from the 3rd gym's town on (the drinks), and herbs are sold only in farming and mushroom towns and the department store.</p>
+  <p>Every town has a Mart. The first two towns' Marts never close; after that, a Mart is open about two days in three, and what's on the shelf changes. When it's open it always has plain balls and Potions, and better stock further into the map. Your whole server sees the same shelf on the same day, and nobody can buy anyone else out. The counter has <b>Buy</b> and <b>Sell</b>, sorted into pocket tabs like your bag, with pages so nothing is buried: while the Mart is open, anything but gear sells back for <b>half its price</b>. Using an item in battle takes your turn; outside battle, it's free. Some things are never on a shelf (Ethers, Elixirs and Max Revives, found lying about instead), some are sold only in a market town's department store, with other Marts selling them now and then from the 3rd gym's town on (the drinks), and herbs are sold only in farming and mushroom towns and the department store.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Item</th><th class="num">Price</th><th>What it does</th><th>Sold from</th></tr></thead>
     <tbody>
@@ -644,7 +650,7 @@ permalink: /rules/
   <p>At midnight where your server is. Admins pick the time zone with <code>/timezone set</code>; until they do, days turn over at midnight UTC. Changing it never costs or gives anyone a day: the day in progress runs on to the next midnight in the new zone, so it can get longer but never shorter. Private worlds stay on UTC. When a new day opens something, the bot posts what opened in the server's announcement channel. The season's first day isn't posted, since the new season is, and after a gap one post covers everything opened since.</p>
 
   <h3 id="daily-goal">The daily goal</h3>
-  <p>Each day has <b>one goal for everyone in a world</b>: catch 2 to 4 creatures, beat 2 to 4 trainers, or knock out 4 to 8 wild ones. Meeting it pays <b>300 coins, plus 100 for each badge</b>, once a day. It shows at the top of the start menu and on the board in every Center, with how many in your server have met it. Challenges, live battles and raids don't count toward beating trainers.</p>
+  <p>Each day has <b>one goal for everyone in a world</b>: catch 2 to 4 creatures, beat 2 to 4 trainers, or knock out 4 to 8 wild ones. Meeting it pays <b>300 coins, plus 100 for each badge</b>, once a day. It shows at the top of the start menu and on the board in every Center, with how many in your server have met it. Battles with players and raids don't count toward beating trainers.</p>
 
   <h3 id="pace">Seasons, and your server's pace</h3>
   <p>A server's world lasts a <b>season</b>. <b>When the season ends, the world is generated anew</b> from a new seed: new towns, routes, gyms and shrines, in the region your server voted for, and everyone sets off again. Admins choose its length with <code>/pace set</code>:</p>
@@ -666,12 +672,13 @@ permalink: /rules/
 
 <section class="rules-section" id="raids">
   <h2>Raids</h2>
-  <p>A week into each season, and every week after, a <b>raid boss</b> turns up in your server's world for two days (one, if it lands on the season's last). It's something strong and fully evolved from the region, a little above the gym the season should have reached by now, and never a legend, with HP enough for everyone playing.</p>
+  <p>Every third day of a season (the 3rd, 6th, 9th and on, never the last), a <b>raid boss</b> stands in your server's world for that day. It's something strong and fully evolved from the region and never a legend, far above the gym the season should have reached by then, drawn twice the size with a shared health bar over it. It stands on wild ground your server has opened and the map marks its area. It doesn't wander, and it's meant to beat most teams.</p>
   <ul>
-    <li><code>/raid</code> shows it and how it stands; its Fight button opens the Activity, and the fight's last lines say how much you took off.</li>
-    <li>You can fight it <b>three times</b> in all, across both days, with a fit copy of your team, so it costs you nothing.</li>
-    <li>Whatever you knock off counts for everyone.</li>
-    <li>When it falls, <b>everyone who helped gets one throw</b> at catching one: likely, but not certain. Caught, it joins you at the boss's level.</li>
+    <li>Walk up and press A to fight it. It asks first, and says how many fights you have left.</li>
+    <li>You can fight it <b>three times</b> in all, with a fit copy of your team and no bag, so it costs you nothing. A fight that loses still counts.</li>
+    <li>Whatever you knock off counts for everyone, and the bar moves for everyone in the place.</li>
+    <li>When it falls it stays, worn out, until the day ends. <b>Everyone who helped presses A at it for one throw</b> at catching it: likely, but not certain. Caught, it joins you at the boss's level.</li>
+    <li>Private worlds have no raids. Your server hears when one turns up and when it falls.</li>
   </ul>
   {% include feedback.html topic="Raids" %}
 </section>
@@ -685,7 +692,7 @@ permalink: /rules/
     <li>Each of you picks one creature to give, and sees the other's pick with its level, nature, moves and held item.</li>
     <li>Changing a pick, on either side, clears both confirmations. When you've both pressed <b>Trade</b>, the creatures swap.</li>
   </ol>
-  <p>You can't trade away the last creature able to fight, Held items go with the creature. A traded creature arrives healed, and you can trade it on, or straight back, at once. A creature that evolves by trading evolves as it arrives, unless it's holding an Everstone. A trade left alone for five minutes is called off, and your server hears about finished trades.</p>
+  <p>You can't trade away the last creature able to fight. Held items go with the creature. A traded creature arrives healed, and you can trade it on, or straight back, at once. A creature that evolves by trading evolves as it arrives, unless it's holding an Everstone. A trade left alone for five minutes is called off, and your server hears about finished trades.</p>
   {% include feedback.html topic="Trades" %}
 </section>
 
@@ -694,7 +701,7 @@ permalink: /rules/
   <p>Walk up to a player as for a trade, press A and choose <b>Battle</b>. They're asked first, the same way, and you both stand still while linked.</p>
   <p>The battle is live, with both of you in the game at once, each seeing it from your own side. You each pick a move or a switch, and the turn plays out on both screens when you've both picked. You have <b>two minutes a turn</b>, counted down on a clock: whoever hasn't picked by then loses, and if neither has, it's called off. <b>Give up</b> concedes, and when one of yours faints, you choose who comes out next. If you close the game or lose your connection for more than a minute you lose, but reloading inside the minute puts you back where you were.</p>
   <p>You each fight with a fit copy of your team, so there's no need to heal first. No items, running isn't an option, and there's no experience, money or blackout in it. The result goes on both your win-loss records, with a tally between you two: <em>"You lead Ann 3 to 2."</em></p>
-  {% include feedback.html topic="Challenges" %}
+  {% include feedback.html topic="Battling other players" %}
 </section>
 
 <section class="rules-section" id="leaderboards">
@@ -713,7 +720,7 @@ permalink: /rules/
   <p>Standings are for your server only, counting every season it has played. The top three stand on a podium in their own clothes, and a prestige star and its count follow the name of anyone who has begun again. Only a server's seasons count: when a season ends, the boards keep what you'd done by then, and nothing in your private worlds counts.</p>
 
   <h3 id="announcements">Announcements</h3>
-  <p>Each server picks what it hears about, in one channel. <em>Quiet</em>, the default, is the big moments: a new season, what opened on a new day, a legend caught, a new Hall of Fame entry, the region vote opening, and the week's raid turning up and going down. <em>Normal</em> adds badges, hideouts cleared, legends knocked out (and who was blessed), roaming legends spotted, rare catches, Elite Four rematches won, challenges won, trades and trainers beginning again. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Admins can switch any one on or off by itself.</p>
+  <p>Each server picks what it hears about, in one channel. <em>Quiet</em>, the default, is the big moments: a new season, what opened on a new day, a legend caught, a new Hall of Fame entry, the region vote opening, and a raid turning up and going down. <em>Normal</em> adds badges, hideouts cleared, legends knocked out (and who was blessed), roaming legends spotted, rare catches, Elite Four rematches won, battles between players won, trades and trainers beginning again. <em>Chatty</em> adds whole teams knocked out and uncommon catches. Admins can switch any one on or off by itself.</p>
   {% include feedback.html topic="Leaderboards and announcements" %}
 </section>
 
@@ -725,6 +732,7 @@ permalink: /rules/
     <li><b>Free to change, any time:</b> your skin, from ten tones lightest to darkest; your hair, any colour at all, picked on a colour slider with five shades from near black to silver, so purple, teal and lavender are all there; your eyes, on the same slider, and each eye a colour of its own if you like; your hairstyle, from seventeen: short, spiky, long, a ponytail, pigtails, a buzz cut, a bob, a curly crop, shoulder-length curls, an afro, a puff, locs, cornrows, long waves, space buns, a long braid or bald; your shirt; and pants, shorts or a skirt. There's no boy or girl to pick: anyone can wear anything.</li>
     <li><b>Earned, and kept forever:</b> one hat, one outfit and one accessory at a time, from what you've won. Nothing is for sale, and it carries over to every world and season.</li>
   </ul>
+  <p><b>Names.</b> The wardrobe has a Name row for your trainer name, up to 12 characters, shown wherever your Discord name was; clear it to go back to your Discord name. Give a creature a nickname, also up to 12 characters, from the party screen or the box, and clear it to get its species name back. Names can hold letters, digits, spaces and ' - . _, and are checked against lists of offensive words, ours and public ones. A nickname travels in a trade, survives evolution and goes into the Hall of Fame, and a server's admins can clear anyone's names.</p>
   <p>The townsfolk are dressed the same way: each person in a town has a look of their own, the same on every visit, and a seaside town leans toward sun hats where a mountain one leans toward beanies. Nurses, clerks, guards and trainers keep their uniforms.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Earned for</th><th>Wearable</th></tr></thead>

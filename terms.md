@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Terms of Service
-description: The terms for using the Super Adventure Discord bot.
+description: The terms for using the Wildwalk Discord bot.
 prose: true
 permalink: /terms/
 ---
 
 # Terms of Service
 
-<p class="updated">Last updated 26 September 2026</p>
+<p class="updated">Last updated 10 October 2026</p>
 
-These terms cover the Super Adventure Discord applications (the stable bot and the beta bot) and
+These terms cover the Wildwalk Discord applications (the stable bot and the beta bot) and
 this website, together "the game", run by Four Cube Games ("we", "us"). By adding the game to a
 server or playing it, you agree to them. If you don't agree, don't use the game.
 
@@ -50,7 +50,7 @@ Please don't:
 - use bugs, automation or scripts to gain an advantage. If you find a bug, tell us on the
   [feedback board]({{ site.board }}) or by [email](mailto:{{ site.contact }}) rather than using it;
 - try to disrupt the game, overload it, or get at data that isn't yours;
-- use the game to harass anyone, including through challenges, trades or anything shown to other
+- use the game to harass anyone, including through battles, trades, names or anything shown to other
   players;
 - pretend to be us, or claim to speak for the game.
 
@@ -58,7 +58,7 @@ Please don't:
 
 Your Discord display name, your trainer's looks, your teams and your records appear to other
 players: in your server, and in other servers when your Hall of Fame team
-takes an Elite Four seat or someone challenges it. The [Privacy Policy]({{ '/privacy/' | relative_url }})
+takes an Elite Four seat. The [Privacy Policy]({{ '/privacy/' | relative_url }})
 has the details.
 
 ## Feedback
