@@ -10,6 +10,7 @@ permalink: /credits/
 <p class="lede-plain">Wildwalk is built on other people's work. The places you walk through are drawn from tile packs made by artists who sell or share them, its battles lean on open data, and it couldn't have been made without open-source software. Thank you to every one of them.</p>
 
 <nav class="jump" aria-label="On this page">
+  <a href="#players">Players</a>
   <a href="#places">Places and tiles</a>
   <a href="#characters">Characters</a>
   <a href="#interiors">Interiors</a>
@@ -18,6 +19,22 @@ permalink: /credits/
   <a href="#software">Software and fonts</a>
   <a href="#ai">About AI</a>
 </nav>
+
+<h2 id="players">Players</h2>
+
+<p>Thank you to everyone who played the beta and told us what they thought:</p>
+
+<p id="player-names" class="player-names">The players' names are on the Credits screen in the game's Options.</p>
+
+<script>
+  fetch("https://sab.beta.4cube.org/api/credits")
+    .then(response => response.ok ? response.json() : Promise.reject())
+    .then(credits => {
+      if (!Array.isArray(credits.players) || credits.players.length === 0) return;
+      document.getElementById("player-names").textContent = credits.players.join(", ");
+    })
+    .catch(() => {});
+</script>
 
 <p>The game draws its own pictures from these packs, a tile at a time. The packs themselves stay with us: what reaches you is only the pictures the game draws from them. Options in the game has a Credits screen listing them too.</p>
 
